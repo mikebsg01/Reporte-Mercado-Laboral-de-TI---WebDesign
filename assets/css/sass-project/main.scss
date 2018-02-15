@@ -2,11 +2,12 @@
 @import 'fira_code';
 
 // Global Variables
-$space_factor: 15px; 
+$spaceFactor: 15px; 
+$blueGray: #253544;
 
 // General Styles
 h2, h3, h4, h5, h6 {
-  font-family: 'Fira Code Retina', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 h1 {
@@ -15,13 +16,40 @@ h1 {
 }
 
 h2 {
-  font-size: 36px;
+  font-size: 32px;
 }
 
-p {
+li, p {
   font-weight: 300;
   font-size: 14px;
   line-height: 28px;
+}
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0;
+}
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em;
+}
+
+ol > li:before {
+  content: counters(item, ".") ". ";
+  display: table-cell;
+  padding-right: 0.6em;    
+}
+
+li ol > li {
+  margin: 0;
+}
+
+li ol > li:before {
+  content: counters(item, ".") " ";
 }
 
 // Presentation Styles
@@ -34,7 +62,12 @@ p {
   }
 
   & > .slide > .slide-content {
-    padding: (5 * $space_factor) (10 * $space_factor);
+    padding: (5 * $spaceFactor) (10 * $spaceFactor);
+
+    .title {
+      margin-top: 3 * $spaceFactor;
+      margin-bottom: 3 * $spaceFactor;
+    }
   }
 
   & > .slide-title {
@@ -47,7 +80,7 @@ p {
     background-size: cover cover;*/
 
     .title {
-      margin-top: 6 * $space_factor;
+      margin-top: 6 * $spaceFactor !important;
 
       span {
         display: block;
@@ -55,24 +88,32 @@ p {
     }
 
     .p-arrow-down {
-      margin-top: 2 * $space_factor;
+      margin-top: 2 * $spaceFactor;
       font-size: 32px;
     }
   }
 
   & > .slide-introduction {
-    background: #485563;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: $blueGray;
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
-
-    .title {
-      margin-top: 2 + $space_factor;
-      margin-bottom: 2 * $space_factor;
-    }
 
     .ceo-name b {
       display: block;
     }
+  }
+
+  & > .slide-table-of-contents {
+    background-color: lighten($blueGray, 5%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+  }
+
+  & > .slide-market-in-mexico {
+    background-color: lighten($blueGray, 10%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
   }
 }

@@ -23,19 +23,41 @@
   font-weight: 700;
   font-style: normal; }
 h2, h3, h4, h5, h6 {
-  font-family: 'Fira Code Retina', sans-serif; }
+  font-family: 'Ubuntu', sans-serif; }
 
 h1 {
   font-family: 'Ubuntu', sans-serif;
   font-size: 64px; }
 
 h2 {
-  font-size: 36px; }
+  font-size: 32px; }
 
-p {
+li, p {
   font-weight: 300;
   font-size: 14px;
   line-height: 28px; }
+
+ol {
+  list-style-type: none;
+  counter-reset: item;
+  margin: 0;
+  padding: 0; }
+
+ol > li {
+  display: table;
+  counter-increment: item;
+  margin-bottom: 0.6em; }
+
+ol > li:before {
+  content: counters(item,".") ". ";
+  display: table-cell;
+  padding-right: 0.6em; }
+
+li ol > li {
+  margin: 0; }
+
+li ol > li:before {
+  content: counters(item,".") " "; }
 
 .presentation {
   font-family: 'Open Sans', sans-serif;
@@ -44,6 +66,9 @@ p {
     margin-bottom: 0; }
   .presentation > .slide > .slide-content {
     padding: 75px 150px; }
+    .presentation > .slide > .slide-content .title {
+      margin-top: 45px;
+      margin-bottom: 45px; }
   .presentation > .slide-title {
     color: white;
     text-shadow: 5px 5px 12px rgba(25, 25, 25, 0.8);
@@ -53,24 +78,22 @@ p {
     background-repeat: no-repeat;
     background-size: cover cover;*/ }
     .presentation > .slide-title .title {
-      margin-top: 90px; }
+      margin-top: 90px !important; }
       .presentation > .slide-title .title span {
         display: block; }
     .presentation > .slide-title .p-arrow-down {
       margin-top: 30px;
       font-size: 32px; }
   .presentation > .slide-introduction {
-    background: #485563;
-    /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #29323c, #485563);
-    /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #29323c, #485563);
-    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background-color: #253544;
     color: white; }
-    .presentation > .slide-introduction .title {
-      margin-top: 17px;
-      margin-bottom: 30px; }
     .presentation > .slide-introduction .ceo-name b {
       display: block; }
+  .presentation > .slide-table-of-contents {
+    background-color: #2e4255;
+    color: white; }
+  .presentation > .slide-market-in-mexico {
+    background-color: #374f65;
+    color: white; }
 
 /*# sourceMappingURL=style.css.map */
