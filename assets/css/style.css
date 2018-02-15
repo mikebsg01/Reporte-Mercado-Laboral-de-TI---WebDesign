@@ -1,2 +1,85 @@
-body{min-height:2048px}h1,h2{font-family:'Ubuntu', sans-serif !important}h1{font-size:56px}h2{font-size:36px}p{font-size:22px}.presentation{font-family:'Open Sans', sans-serif;color:#444}.presentation>.row{margin-bottom:0}.presentation>.p-title{color:white;background-image:url("../img/block-2-blur-3.png");background-attachment:fixed;background-position:center center;background-repeat:no-repeat;background-size:cover cover;text-shadow:5px 5px 12px rgba(25,25,25,0.8)}.presentation>.p-title .title{margin-top:340px;text-align:center;margin-bottom:40px}.presentation>.p-title .p-arrow-down{font-size:32px;margin-bottom:140px}.presentation>.p-introduction{background:#485563;background:-webkit-linear-gradient(to right, #29323c, #485563);background:linear-gradient(to right, #29323c, #485563);color:white;padding-top:30px;padding-bottom:30px}.presentation>.p-introduction .title{margin-bottom:30px}.presentation>.p-introduction p{font-weight:300;font-size:16px;line-height:42px}
+@font-face {
+  font-family: 'Fira Code';
+  src: url("../fonts/FiraCode/eot/FiraCode-Light.eot");
+  src: url("../fonts/FiraCode/eot/FiraCode-Light.eot") format("embedded-opentype"), url("../fonts/FiraCode/woff2/FiraCode-Light.woff2") format("woff2"), url("../fonts/FiraCode/woff/FiraCode-Light.woff") format("woff"), url("../fonts/FiraCode/ttf/FiraCode-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+@font-face {
+  font-family: 'Fira Code';
+  src: url("../fonts/FiraCode/eot/FiraCode-Regular.eot");
+  src: url("../fonts/FiraCode/eot/FiraCode-Regular.eot") format("embedded-opentype"), url("../fonts/FiraCode/woff2/FiraCode-Regular.woff2") format("woff2"), url("../fonts/FiraCode/woff/FiraCode-Regular.woff") format("woff"), url("../fonts/FiraCode/ttf/FiraCode-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+@font-face {
+  font-family: 'Fira Code';
+  src: url("../fonts/FiraCode/eot/FiraCode-Medium.eot");
+  src: url("../fonts/FiraCode/eot/FiraCode-Medium.eot") format("embedded-opentype"), url("../fonts/FiraCode/woff2/FiraCode-Medium.woff2") format("woff2"), url("../fonts/FiraCode/woff/FiraCode-Medium.woff") format("woff"), url("../fonts/FiraCode/ttf/FiraCode-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+@font-face {
+  font-family: 'Fira Code';
+  src: url("../fonts/FiraCode/eot/FiraCode-Bold.eot");
+  src: url("../fonts/FiraCode/eot/FiraCode-Bold.eot") format("embedded-opentype"), url("../fonts/FiraCode/woff2/FiraCode-Bold.woff2") format("woff2"), url("../fonts/FiraCode/woff/FiraCode-Bold.woff") format("woff"), url("../fonts/FiraCode/ttf/FiraCode-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal; }
+body {
+  min-height: 2048px; }
+
+h1, h2 {
+  font-family: 'Fira Code Retina', sans-serif !important; }
+
+h1 {
+  font-size: 64px; }
+
+h2 {
+  font-size: 36px; }
+
+p {
+  font-size: 13px; }
+
+.presentation {
+  font-family: 'Open Sans', sans-serif;
+  color: #444; }
+  .presentation > .row {
+    margin-bottom: 0; }
+  .presentation > .p-title {
+    color: white;
+    text-shadow: 5px 5px 12px rgba(25, 25, 25, 0.8);
+    background-image: url("../img/block-2-blur-3.png");
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover cover; }
+    .presentation > .p-title > .c-1 {
+      padding: 135px 150px; }
+    .presentation > .p-title .title {
+      font-family: 'Ubuntu', sans-serif !important;
+      margin-bottom: 40px; }
+      .presentation > .p-title .title span {
+        display: block; }
+    .presentation > .p-title .p-arrow-down {
+      font-size: 32px;
+      margin-bottom: 140px; }
+  .presentation > .p-introduction {
+    background: #485563;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #29323c, #485563);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #29323c, #485563);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px; }
+    .presentation > .p-introduction > .c-1 {
+      padding-left: 150px;
+      padding-right: 150px; }
+    .presentation > .p-introduction .title {
+      margin-bottom: 30px; }
+    .presentation > .p-introduction p {
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 25px; }
+    .presentation > .p-introduction .ceo-name b {
+      display: block; }
+
 /*# sourceMappingURL=style.css.map */

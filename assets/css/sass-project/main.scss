@@ -1,13 +1,20 @@
+// Import fonts
+@import 'fira_code';
+
+// Global Variables
+$padding_factor: 15px; 
+
+// General Styles
 body {
   min-height: 2048px;
 }
 
 h1, h2 {
-  font-family: 'Ubuntu', sans-serif !important;
+  font-family: 'Fira Code Retina', sans-serif !important;
 }
 
 h1 {
-  font-size: 56px;
+  font-size: 64px;
 }
 
 h2 {
@@ -15,9 +22,10 @@ h2 {
 }
 
 p {
-  font-size: 22px;
+  font-size: 13px;
 }
 
+// Presentation Styles
 .presentation {
   font-family: 'Open Sans', sans-serif;
   color: #444;
@@ -28,23 +36,30 @@ p {
 
   & > .p-title {
     color: white;
+    text-shadow: 5px 5px 12px rgba(25, 25, 25, 0.8);
     background-image: url('../img/block-2-blur-3.png');
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover cover;
-    text-shadow: 5px 5px 12px rgba(25, 25, 25, 0.8);
-  }
+    
+    & > .c-1 {
+      padding: (9 * $padding_factor) (10 * $padding_factor);
+    }
 
-  & > .p-title .title {
-    margin-top: 340px;
-    text-align: center;
-    margin-bottom: 40px;
-  }
+    .title {
+      font-family: 'Ubuntu', sans-serif !important;
+      margin-bottom: 40px;
 
-  & > .p-title .p-arrow-down {
-    font-size: 32px;
-    margin-bottom: 140px;
+      span {
+        display: block;
+      }
+    }
+
+    .p-arrow-down {
+      font-size: 32px;
+      margin-bottom: 140px;
+    }
   }
 
   & > .p-introduction {
@@ -54,16 +69,24 @@ p {
     color: white;
     padding-top: 30px;
     padding-bottom: 30px;
-    
-  }
 
-  & > .p-introduction .title {
-    margin-bottom: 30px;
-  }
+    & > .c-1 {
+      padding-left: 10 * $padding_factor;
+      padding-right: 10 * $padding_factor;
+    }
 
-  & > .p-introduction p {
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 42px;
+    .title {
+      margin-bottom: 30px;
+    }
+
+    p {
+      font-weight: 300;
+      font-size: 13px;
+      line-height: 25px;
+    }
+
+    .ceo-name b {
+      display: block;
+    }
   }
 }
