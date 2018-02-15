@@ -2,18 +2,15 @@
 @import 'fira_code';
 
 // Global Variables
-$padding_factor: 15px; 
+$space_factor: 15px; 
 
 // General Styles
-body {
-  min-height: 2048px;
-}
-
-h1, h2 {
-  font-family: 'Fira Code Retina', sans-serif !important;
+h2, h3, h4, h5, h6 {
+  font-family: 'Fira Code Retina', sans-serif;
 }
 
 h1 {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 64px;
 }
 
@@ -22,7 +19,9 @@ h2 {
 }
 
 p {
+  font-weight: 300;
   font-size: 13px;
+  line-height: 25px;
 }
 
 // Presentation Styles
@@ -34,22 +33,21 @@ p {
     margin-bottom: 0;
   }
 
-  & > .p-title {
+  & > .slide > .slide-content {
+    padding: (5 * $space_factor) (10 * $space_factor);
+  }
+
+  & > .slide-title {
     color: white;
     text-shadow: 5px 5px 12px rgba(25, 25, 25, 0.8);
-    background-image: url('../img/block-2-blur-3.png');
+    /*background-image: url('../img/block-2-blur-3.png');
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover cover;
-    
-    & > .c-1 {
-      padding: (9 * $padding_factor) (10 * $padding_factor);
-    }
+    background-size: cover cover;*/
 
     .title {
-      font-family: 'Ubuntu', sans-serif !important;
-      margin-bottom: 40px;
+      margin-top: 6 * $space_factor;
 
       span {
         display: block;
@@ -57,32 +55,20 @@ p {
     }
 
     .p-arrow-down {
+      margin-top: 2 * $space_factor;
       font-size: 32px;
-      margin-bottom: 140px;
     }
   }
 
-  & > .p-introduction {
+  & > .slide-introduction {
     background: #485563;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #29323c, #485563);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #29323c, #485563); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     color: white;
-    padding-top: 30px;
-    padding-bottom: 30px;
-
-    & > .c-1 {
-      padding-left: 10 * $padding_factor;
-      padding-right: 10 * $padding_factor;
-    }
 
     .title {
-      margin-bottom: 30px;
-    }
-
-    p {
-      font-weight: 300;
-      font-size: 13px;
-      line-height: 25px;
+      margin-top: 2 + $space_factor;
+      margin-bottom: 2 * $space_factor;
     }
 
     .ceo-name b {

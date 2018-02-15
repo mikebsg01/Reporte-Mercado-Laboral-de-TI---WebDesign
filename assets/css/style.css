@@ -22,64 +22,55 @@
   src: url("../fonts/FiraCode/eot/FiraCode-Bold.eot") format("embedded-opentype"), url("../fonts/FiraCode/woff2/FiraCode-Bold.woff2") format("woff2"), url("../fonts/FiraCode/woff/FiraCode-Bold.woff") format("woff"), url("../fonts/FiraCode/ttf/FiraCode-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal; }
-body {
-  min-height: 2048px; }
-
-h1, h2 {
-  font-family: 'Fira Code Retina', sans-serif !important; }
+h2, h3, h4, h5, h6 {
+  font-family: 'Fira Code Retina', sans-serif; }
 
 h1 {
+  font-family: 'Ubuntu', sans-serif;
   font-size: 64px; }
 
 h2 {
   font-size: 36px; }
 
 p {
-  font-size: 13px; }
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 25px; }
 
 .presentation {
   font-family: 'Open Sans', sans-serif;
   color: #444; }
   .presentation > .row {
     margin-bottom: 0; }
-  .presentation > .p-title {
+  .presentation > .slide > .slide-content {
+    padding: 75px 150px; }
+  .presentation > .slide-title {
     color: white;
     text-shadow: 5px 5px 12px rgba(25, 25, 25, 0.8);
-    background-image: url("../img/block-2-blur-3.png");
+    /*background-image: url('../img/block-2-blur-3.png');
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: cover cover; }
-    .presentation > .p-title > .c-1 {
-      padding: 135px 150px; }
-    .presentation > .p-title .title {
-      font-family: 'Ubuntu', sans-serif !important;
-      margin-bottom: 40px; }
-      .presentation > .p-title .title span {
+    background-size: cover cover;*/ }
+    .presentation > .slide-title .title {
+      margin-top: 90px; }
+      .presentation > .slide-title .title span {
         display: block; }
-    .presentation > .p-title .p-arrow-down {
-      font-size: 32px;
-      margin-bottom: 140px; }
-  .presentation > .p-introduction {
+    .presentation > .slide-title .p-arrow-down {
+      margin-top: 30px;
+      font-size: 32px; }
+  .presentation > .slide-introduction {
     background: #485563;
     /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #29323c, #485563);
     /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #29323c, #485563);
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    color: white;
-    padding-top: 30px;
-    padding-bottom: 30px; }
-    .presentation > .p-introduction > .c-1 {
-      padding-left: 150px;
-      padding-right: 150px; }
-    .presentation > .p-introduction .title {
+    color: white; }
+    .presentation > .slide-introduction .title {
+      margin-top: 17px;
       margin-bottom: 30px; }
-    .presentation > .p-introduction p {
-      font-weight: 300;
-      font-size: 13px;
-      line-height: 25px; }
-    .presentation > .p-introduction .ceo-name b {
+    .presentation > .slide-introduction .ceo-name b {
       display: block; }
 
 /*# sourceMappingURL=style.css.map */
