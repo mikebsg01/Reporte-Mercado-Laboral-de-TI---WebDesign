@@ -169,6 +169,150 @@ $(document).ready(() => {
     }
   ); /* <-- End 'chartGrowthInTheStateOfMexico' */
 
+  var chartGrowthInQueretaro = new Chart(
+    document.getElementById('chart-growth-in-queretaro').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            6.87,
+            93.13
+          ],
+          backgroundColor: [
+            'rgba(74, 182, 255, 0.4)',
+            'rgba(222, 224, 226, 0.1)'
+          ],
+          borderColor: [
+            'rgba(74, 182, 255, 1)',
+            'rgba(222, 224, 226, 0.4)'
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Querétaro',
+          '',
+        ]
+      },
+      options: {
+        cutoutPercentage: 80,
+        responsive: true,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 13
+          }
+        },
+        tooltips: {
+          enabled: false
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartGrowthInQueretaro' */
+
+  var chartGrowthInNuevoLeon = new Chart(
+    document.getElementById('chart-growth-in-nuevo-leon').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            10.29,
+            89.71
+          ],
+          backgroundColor: [
+            'rgba(74, 182, 255, 0.4)',
+            'rgba(222, 224, 226, 0.1)'
+          ],
+          borderColor: [
+            'rgba(74, 182, 255, 1)',
+            'rgba(222, 224, 226, 0.4)'
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Nuevo León',
+          '',
+        ]
+      },
+      options: {
+        cutoutPercentage: 80,
+        responsive: true,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 13
+          }
+        },
+        tooltips: {
+          enabled: false
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartGrowthInNuevoLeon' */
+
+  var chartGrowthInJalisco= new Chart(
+    document.getElementById('chart-growth-in-jalisco').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            10.29,
+            88.46
+          ],
+          backgroundColor: [
+            'rgba(74, 182, 255, 0.4)',
+            'rgba(222, 224, 226, 0.1)'
+          ],
+          borderColor: [
+            'rgba(74, 182, 255, 1)',
+            'rgba(222, 224, 226, 0.4)'
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Jalisco',
+          '',
+        ]
+      },
+      options: {
+        cutoutPercentage: 80,
+        responsive: true,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 13
+          }
+        },
+        tooltips: {
+          enabled: false
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartGrowthInJalisco' */
+
   var chartMostDemandedProfiles = new Chart(
     document.getElementById('chart-most-demanded-profiles').getContext('2d'), 
     { type: 'horizontalBar',

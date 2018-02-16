@@ -156,12 +156,19 @@ li ol > li:before {
 
       .chart-percentage {
         text-align: center;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 28px;
-        font-weight: 400;
         position: absolute;
-        margin-top: 78px;
-        margin-left: 30px;
+        margin-top: 5.2 * $spaceFactor;
+        margin-left: 1.2 * $spaceFactor;
+        width: 7.86 * $spaceFactor;
+
+        p {
+          text-align: center;
+          font-family: 'Ubuntu', sans-serif;
+          font-size: 28px;
+          font-weight: 400;
+          margin-top: 0;
+          margin-bottom: 0;
+        }
       }
     }
 
