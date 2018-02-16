@@ -46,7 +46,7 @@ $(document).ready(() => {
         ]
       },
       options: {
-        cutoutPercentage: 58,
+        cutoutPercentage: 60,
         responsive: true,
         legend: {
           position: 'top',
@@ -145,62 +145,124 @@ $(document).ready(() => {
 
   var chartMostDemandedProfiles = new Chart(
     document.getElementById('chart-most-demanded-profiles').getContext('2d'), 
-    { type: 'bar',
+    { type: 'horizontalBar',
       data: {
-        datasets: [{
-            label: 'Ciudad de México',
+        datasets: [
+          {
+            label: 'JavaScript',
             data: [
-              59.53
+              2.33
             ],
-            backgroundColor: 'rgba(255, 99, 132, 0.4)',
-            borderColor: 'rgba(255,99,132,1)',
+            backgroundColor: 'rgba(139, 195, 74, 0.4)',
+            borderColor: 'rgba(139, 195, 74, 1)',
             borderWidth: 1
           },
           {
-            label: 'Estado de México',
+            label: 'Analista de Sistemas',
             data: [
-              3.70
+              4.16
             ],
-            backgroundColor: 'rgba(54, 162, 235, 0.4)',
-            borderColor: 'rgba(54, 162, 235, 1)',
+            backgroundColor: 'rgba(95, 192, 252, 0.4)',
+            borderColor: 'rgba(95, 192, 252, 1)',
             borderWidth: 1
           },
           {
-            label: 'Querétaro',
+            label: 'Testing / QA',
             data: [
-              6.87
-            ],
-            backgroundColor: 'rgba(255, 206, 86, 0.4)',
-            borderColor: 'rgba(255, 206, 86, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Nuevo León',
-            data: [
-              10.29,
+              5.16,
             ],
             backgroundColor: 'rgba(75, 192, 192, 0.4)',
             borderColor: 'rgba(75, 192, 192, 1)',
             borderWidth: 1
           },
           {
-            label: 'Jalisco',
+            label: 'C# / NET',
             data: [
-              11.54
+              8.60
+            ],
+            backgroundColor: 'rgba(54, 162, 235, 0.4)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Java',
+            data: [
+              15.45
+            ],
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1
+          },
+          {
+            label: 'SAP',
+            data: [
+              6
+            ],
+            backgroundColor: 'rgba(255, 206, 86, 0.4)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Administarción de Proyectos',
+            data: [
+              4.25
             ],
             backgroundColor: 'rgba(153, 102, 255, 0.4)',
             borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Ventas TI',
+            data: [
+              4.02
+            ],
+            backgroundColor: 'rgba(255, 235, 59, 0.4)',
+            borderColor: 'rgba(255, 235, 59, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Android',
+            data: [
+              2.19
+            ],
+            backgroundColor: 'rgba(76, 175, 80, 0.4)',
+            borderColor: 'rgba(76, 175, 80, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'PHP',
+            data: [
+              2.06
+            ],
+            backgroundColor: 'rgba(136, 146, 191, 0.4)',
+            borderColor: 'rgba(136, 146, 191, 1)',
             borderWidth: 1
           }
         ]
       },
       options: {
         responsive: true,
+        scales: {
+          yAxes: [{
+            categoryPercentage: 1.0,
+            barPercentage: 0.7,
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            }
+          }]
+        },
         legend: {
-          position: 'top',
+          position: 'right',
           labels: {
             fontFamily: "'Ubuntu', sans-serif",
-            fontColor: "#f1f1f1",
+            fontColor: '#f1f1f1',
             fontSize: 12,
             padding: 18
           }
