@@ -4,8 +4,30 @@
 // Global Variables
 $spaceFactor: 15px; 
 $blueGray: #253544;
+$blue: #2268be;
 
 // General Styles
+body {
+  
+  &::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius:10px;
+    background-color:rgb(225, 225, 225);
+  }
+
+  &::-webkit-scrollbar{
+    width:8px;
+    height:8px;
+    background-color:#F5F5F5;
+  }
+
+  &::-webkit-scrollbar-thumb{
+    border-radius:10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color:#616161;
+  }
+}
+
 h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
 }
@@ -17,6 +39,11 @@ h1 {
 
 h2 {
   font-size: 32px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 34px;
 }
 
 li, p {
@@ -65,7 +92,7 @@ li ol > li:before {
     padding: (5 * $spaceFactor) (10 * $spaceFactor);
 
     .title {
-      margin-top: 3 * $spaceFactor;
+      margin-top: 1 * $spaceFactor;
       margin-bottom: 3 * $spaceFactor;
     }
   }
@@ -110,10 +137,28 @@ li ol > li:before {
 
   }
 
-  & > .slide-market-in-mexico {
+  & > .slide-growth-of-offers-in-mexico {
     background-color: lighten($blueGray, 10%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
+    #chart-points-scored {
+      margin-top: 2 * $spaceFactor;
+    }
+
+    h3.title {
+      margin-top: 5 * $spaceFactor !important;
+    }
+  }
+
+  & > .slide-most-demanded-profiles {
+    background-color: lighten($blueGray, 13%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    p {
+      font-size: 15px;
+      line-height: 34px;
+    }
   }
 }
