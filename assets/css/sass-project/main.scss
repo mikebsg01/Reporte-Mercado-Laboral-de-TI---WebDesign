@@ -146,6 +146,25 @@ li ol > li:before {
       margin-top:  -0.2 * $spaceFactor;
     }
 
+    .chart-container {
+      .chart-title {
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 14px;
+        margin-bottom: 0.5 * $spaceFactor;
+      }
+
+      .chart-percentage {
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 28px;
+        font-weight: 400;
+        position: absolute;
+        margin-top: 78px;
+        margin-left: 30px;
+      }
+    }
+
     h3.title {
       margin-top: 5 * $spaceFactor !important;
     }
