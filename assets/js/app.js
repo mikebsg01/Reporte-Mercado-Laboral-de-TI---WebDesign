@@ -444,4 +444,145 @@ $(document).ready(() => {
       }
     }
   ); /* <-- End 'chartMostDemandedProfiles' */
+  
+  var chartHighestGrowthProfiles = new Chart(
+    document.getElementById('chart-highest-growth-profiles').getContext('2d'), 
+    { type: 'horizontalBar',
+      data: {
+        datasets: [
+          {
+            label: 'Android',
+            data: [
+              -55.26
+            ],
+            backgroundColor: 'rgba(76, 175, 80, 0.4)',
+            borderColor: 'rgba(76, 175, 80, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'AngularJS',
+            data: [
+              -61.70
+            ],
+            backgroundColor: 'rgba(255, 99, 132, 0.4)',
+            borderColor: 'rgba(255,99,132,1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Bases de datos NoSQL',
+            data: [
+              -65
+            ],
+            backgroundColor: 'rgba(205, 220, 57, 0.4)',
+            borderColor: 'rgba(205, 220, 57, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Virtualización de Servidores',
+            data: [
+              -66.85
+            ],
+            backgroundColor: 'rgba(95, 192, 252, 0.4)',
+            borderColor: 'rgba(95, 192, 252, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Seguridad Informática',
+            data: [
+              -70.69
+            ],
+            backgroundColor: 'rgba(139, 195, 74, 0.4)',
+            borderColor: 'rgba(139, 195, 74, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'UX',
+            data: [
+              -65.85,
+            ],
+            backgroundColor: 'rgba(153, 102, 255, 0.4)',
+            borderColor: 'rgba(153, 102, 255, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'MS Dynamics',
+            data: [
+              -62.67
+            ],
+            backgroundColor: 'rgba(255, 206, 86, 0.4)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Big Data',
+            data: [
+              -59.65
+            ],
+            backgroundColor: 'rgba(75, 192, 192, 0.4)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Integración de Datos y ETL',
+            data: [
+              -51.47
+            ],
+            backgroundColor: 'rgba(255, 235, 59, 0.4)',
+            borderColor: 'rgba(255, 235, 59, 1)',
+            borderWidth: 1
+          },
+          {
+            label: 'Python',
+            data: [
+              -50
+            ],
+            backgroundColor: 'rgba(54, 162, 235, 0.4)',
+            borderColor: 'rgba(54, 162, 235, 1)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            categoryPercentage: 1.0,
+            barPercentage: 0.7,
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            }
+          }]
+        },
+        legend: {
+          position: 'right',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: '#f1f1f1',
+            fontSize: 12,
+            padding: 18
+          }
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              console.log(tooltipItem);
+              return data['datasets'][tooltipItem['datasetIndex']]['label'] +
+                    ': ' + (-1 * parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]));
+            }
+          }
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartMostDemandedProfiles' */
 });

@@ -195,4 +195,60 @@ li ol > li:before {
       margin-top: 4 * $spaceFactor;
     }
   }
+
+  & > .slide-highest-growth-profiles {
+    background-color: lighten($blueGray, 16%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    .first-paragraph {
+      margin-top: 5 * $spaceFactor;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 34px;
+    }
+
+    #chart-highest-growth-profiles {
+      margin-top: 4 * $spaceFactor;
+    }
+  }
+
+  & > .slide-job-offers-per-month {
+    background-color: lighten($blueGray, 19%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    p {
+      font-size: 16px;
+      line-height: 34px;
+    }
+
+    #chart-highest-growth-profiles {
+      margin-top: 4 * $spaceFactor;
+    }
+  }
+
+  & > .slide-find-talent-and-retain-it {
+    background-color: lighten($blue, 8%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+
+  & > .slide-devices-to-look-for-work {
+    background-color: lighten($blue, 10%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
 }
