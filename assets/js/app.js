@@ -585,4 +585,190 @@ $(document).ready(() => {
       }
     }
   ); /* <-- End 'chartMostDemandedProfiles' */
+
+  var chartMeansForJobSearch = new Chart(
+    document.getElementById('chart-means-for-job-search').getContext('2d'), 
+    { type: 'horizontalBar',
+      data: {
+        datasets: [
+          {
+            label: '90.3% - Portales de empleo',
+            data: [
+              90.3
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: 'rgba(255, 255, 255, 0.8)',
+            borderWidth: 1
+          },
+          {
+            label: '79.8% - LinkedIn',
+            data: [
+              79.8
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            borderColor: 'rgba(255, 255, 255, 0.6)',
+            borderWidth: 1
+          },
+          {
+            label: '24% - Otras redes sociales',
+            data: [
+              24
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: 'rgba(255, 255, 255, 0.8)',
+            borderWidth: 1
+          },
+          {
+            label: '22.1% - Ferias de empleo',
+            data: [
+              22.1
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            borderColor: 'rgba(255, 255, 255, 0.6)',
+            borderWidth: 1
+          },
+          {
+            label: '16.2% - Bolsa de trabajo',
+            data: [
+              16.2
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: 'rgba(255, 255, 255, 0.8)',
+            borderWidth: 1
+          },
+          {
+            label: '19.6 - Agencias de reclutamiento',
+            data: [
+              19.6
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            borderColor: 'rgba(255, 255, 255, 0.6)',
+            borderWidth: 1
+          },
+          {
+            label: '19.8% - Reclutadores',
+            data: [
+              19.8
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: 'rgba(255, 255, 255, 0.8)',
+            borderWidth: 1
+          },
+          {
+            label: '37.6% Buscadores en Internet',
+            data: [
+              37.6
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            borderColor: 'rgba(255, 255, 255, 0.6)',
+            borderWidth: 1
+          },
+          {
+            label: '43.6% - Recomendaciones',
+            data: [
+              43.6
+            ],
+            backgroundColor: 'rgba(255, 255, 255, 0.8)',
+            borderColor: 'rgba(255, 255, 255, 0.8)',
+            borderWidth: 1
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            categoryPercentage: 1.0,
+            barPercentage: 0.65,
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            }
+          }]
+        },
+        title: {
+          display: true,
+          text: '¿Qué medios utilizas para búsqueda de empleo?',
+          fontFamily: "'Ubuntu', sans-serif",
+          fontColor: "#f1f1f1",
+          fontSize: 15,
+          padding: 20
+        },
+        legend: {
+          position: 'right',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: '#f1f1f1',
+            fontSize: 12,
+            padding: 18
+          }
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartMeansForJobSearch' */
+
+  var chartDeviceToLookForWork = new Chart(
+    document.getElementById('chart-device-to-look-for-work').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            12.8,
+            26.4,
+            60.9
+          ],
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.1)',
+            'rgba(255, 255, 255, 0.3)',
+            'rgba(255, 255, 255, 0.5)',
+          ],
+          borderColor: [
+            'rgba(255, 255, 255, 0.3)',
+            'rgba(255, 255, 255, 0.5)',
+            'rgba(255, 255, 255, 0.7)',
+          ],
+          borderWidth: 2,
+        }],
+        labels: [
+          'PC',
+          'Smartphone/Tablet',
+          'Laptop'
+        ]
+      },
+      options: {
+        cutoutPercentage: 60,
+        responsive: true,
+        legend: {
+          position: 'right',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 15,
+            padding: 12
+          }
+        },
+        title: {
+          display: false,
+          fontFamily: "'Ubuntu', sans-serif",
+          fontColor: "#f1f1f1",
+          fontSize: 15,
+          padding: 12
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartDeviceToLookForWork' */
 });
