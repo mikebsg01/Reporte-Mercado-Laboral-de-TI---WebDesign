@@ -255,7 +255,7 @@ li ol > li:before {
   }
 
   & > .slide-find-talent-and-retain-it {
-    background-color: lighten($blue, 2%);
+    background-color: darken($blue, 4%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -274,7 +274,7 @@ li ol > li:before {
   }
 
   & > .slide-devices-to-look-for-work {
-    background-color: darken($blue, 4%);
+    background-color: $blue;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
