@@ -177,6 +177,30 @@ li ol > li:before {
     }
   }
 
+  & > .slide-growth-of-offers-in-mexico-1 {
+    background-color: lighten($blueGray, 10%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    .chart-container {
+      .chart-title {
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 1.5 * $spaceFactor;
+      }
+
+      #chart-points-scored-1 {
+        margin-top: 3.25 * $spaceFactor;
+      }
+    }
+
+    h3.title {
+      margin-top: 5 * $spaceFactor !important;
+    }
+  }
+
   & > .slide-most-demanded-profiles {
     background-color: lighten($blueGray, 13%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);

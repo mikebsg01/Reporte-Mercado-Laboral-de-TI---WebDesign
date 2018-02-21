@@ -73,6 +73,184 @@ $(document).ready(() => {
     }
   ); /* <-- End 'chartPointsScored' */
 
+  var chartPointsScored1 = new Chart(
+    document.getElementById('chart-points-scored-1').getContext('2d'), 
+    { type: 'bar',
+      data: {
+        datasets: [{
+          data: [
+            59.5,
+            11.5,
+            10.3,
+            6.9,
+            3.7,
+            1.9,
+            3.2
+          ],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(153, 102, 255, 0.5)',
+            'rgba(255, 159, 64, 0.5)',
+            'rgba(155, 125, 175, 0.5)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 159, 64, 1)',
+            'rgba(155, 125, 175, 1)'
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Ciudad de México',
+          'Jalisco',
+          'Nuevo León',
+          'Querétaro',
+          'Estado de México',
+          'Aguascalientes',
+          'Otros'
+        ]
+      },
+      options: {
+        cutoutPercentage: 60,
+        responsive: true,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 12
+          }
+        },
+        title: {
+          display: false,
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        },
+        scales: {
+          yAxes: [{
+            categoryPercentage: 1.0,
+            barPercentage: 0.7,
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.3)'
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.0)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.8)',
+              autoSkip: false,
+              maxRotation: 45,
+              minRotation: 45 
+            }
+          }]
+        },
+      }
+    }
+  ); /* <-- End 'chartPointsScored1' */
+
+  var chartStatesWithTheHighestGrowth = new Chart(
+    document.getElementById('chart-states-with-the-highest-growth').getContext('2d'), 
+    { type: 'bar',
+      data: {
+        datasets: [{
+          data: [
+            59.53,
+            11.54,
+            10.29,
+            6.87,
+            3.70
+          ],
+          backgroundColor: [
+            'rgba(255, 99, 132, 0.5)',
+            'rgba(54, 162, 235, 0.5)',
+            'rgba(255, 206, 86, 0.5)',
+            'rgba(75, 192, 192, 0.5)',
+            'rgba(153, 102, 255, 0.5)'
+          ],
+          borderColor: [
+            'rgba(255,99,132,1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(153, 102, 255, 1)'
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Ciudad de México',
+          'Jalisco',
+          'Nuevo León',
+          'Querétaro',
+          'Estado de México'
+        ]
+      },
+      options: {
+        cutoutPercentage: 60,
+        responsive: true,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 12
+          }
+        },
+        title: {
+          display: false,
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        },
+        scales: {
+          yAxes: [{
+            categoryPercentage: 1.0,
+            barPercentage: 0.7,
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.3)',
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.0)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.8)',
+              autoSkip: false,
+              maxRotation: 45,
+              minRotation: 45 
+            }
+          }]
+        },
+      }
+    }
+  ); /* <-- End 'chartPointsScored1' */
+
   var chartGrowthInMexicoCity = new Chart(
     document.getElementById('chart-growth-in-mexico-city').getContext('2d'), 
     { type: 'doughnut',
