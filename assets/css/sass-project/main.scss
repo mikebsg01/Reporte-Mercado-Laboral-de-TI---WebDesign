@@ -216,7 +216,9 @@ li ol > li:before {
     }
 
     #chart-most-demanded-profiles {
-      margin-top: 4 * $spaceFactor;
+      margin-top: 3.2 * $spaceFactor;
+      width: 595px !important;
+      height: 360px !important;
     }
   }
 
@@ -235,7 +237,10 @@ li ol > li:before {
     }
 
     #chart-highest-growth-profiles {
-      margin-top: 4 * $spaceFactor;
+      margin-left: .75 * $spaceFactor;
+      margin-top: 3.2 * $spaceFactor;
+      width: 590px !important;
+      height: 360px !important;
     }
   }
 

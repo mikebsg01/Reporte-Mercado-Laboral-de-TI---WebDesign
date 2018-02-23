@@ -65,6 +65,13 @@ $(document).ready(() => {
           animateScale: true,
           animateRotate: true
         },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + ' %';
+            }
+          }
+        },
         scales: {
           yAxes: [{
             categoryPercentage: 1.0,
@@ -150,6 +157,13 @@ $(document).ready(() => {
           animateScale: true,
           animateRotate: true
         },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + ' %';
+            }
+          }
+        },
         scales: {
           yAxes: [{
             categoryPercentage: 1.0,
@@ -232,125 +246,106 @@ $(document).ready(() => {
     document.getElementById('chart-most-demanded-profiles').getContext('2d'), 
     { type: 'horizontalBar',
       data: {
-        datasets: [
-          {
-            label: 'JavaScript',
-            data: [
-              2.33
-            ],
-            backgroundColor: 'rgba(139, 195, 74, 0.4)',
-            borderColor: 'rgba(139, 195, 74, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Analista de Sistemas',
-            data: [
-              4.16
-            ],
-            backgroundColor: 'rgba(95, 192, 252, 0.4)',
-            borderColor: 'rgba(95, 192, 252, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Testing / QA',
-            data: [
-              5.16,
-            ],
-            backgroundColor: 'rgba(75, 192, 192, 0.4)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'C# / NET',
-            data: [
-              8.60
-            ],
-            backgroundColor: 'rgba(54, 162, 235, 0.4)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Java',
-            data: [
-              15.45
-            ],
-            backgroundColor: 'rgba(255, 99, 132, 0.4)',
-            borderColor: 'rgba(255,99,132,1)',
-            borderWidth: 1
-          },
-          {
-            label: 'SAP',
-            data: [
-              6
-            ],
-            backgroundColor: 'rgba(255, 206, 86, 0.4)',
-            borderColor: 'rgba(255, 206, 86, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Administarción de Proyectos',
-            data: [
-              4.25
-            ],
-            backgroundColor: 'rgba(153, 102, 255, 0.4)',
-            borderColor: 'rgba(153, 102, 255, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Ventas TI',
-            data: [
-              4.02
-            ],
-            backgroundColor: 'rgba(255, 235, 59, 0.4)',
-            borderColor: 'rgba(255, 235, 59, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Android',
-            data: [
-              2.19
-            ],
-            backgroundColor: 'rgba(76, 175, 80, 0.4)',
-            borderColor: 'rgba(76, 175, 80, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'PHP',
-            data: [
-              2.06
-            ],
-            backgroundColor: 'rgba(136, 146, 191, 0.4)',
-            borderColor: 'rgba(136, 146, 191, 1)',
-            borderWidth: 1
-          }
-        ]
+        labels: [
+          'JavaScript',
+          'Analista de Sistemas', 
+          'Testing / QA',
+          'C# / NET',
+          'Java',
+          'SAP',
+          'Administarción de Proyectos',
+          'Ventas TI',
+          'Android',
+          'PHP'
+        ],
+        datasets: [{
+          data: [
+            2.33,
+            4.16,
+            5.16,
+            8.60,
+            15.45,
+            6,
+            4.25,
+            4.02,
+            2.19,
+            2.06
+          ],
+          backgroundColor: [
+            'rgba(139, 195, 74, 0.4)',
+            'rgba(95, 192, 252, 0.4)',
+            'rgba(75, 192, 192, 0.4)',
+            'rgba(54, 162, 235, 0.4)',
+            'rgba(255, 99, 132, 0.4)',
+            'rgba(255, 206, 86, 0.4)',
+            'rgba(153, 102, 255, 0.4)',
+            'rgba(255, 235, 59, 0.4)',
+            'rgba(76, 175, 80, 0.4)',
+            'rgba(136, 146, 191, 0.4)',
+          ],
+          borderColor: [
+            'rgba(139, 195, 74, 1)',
+            'rgba(95, 192, 252, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(54, 162, 235, 1)',
+            'rgba(255, 99, 132, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 235, 59, 1)',
+            'rgba(76, 175, 80, 1)',
+            'rgba(136, 146, 191, 1)'
+          ],
+          borderWidth: 1
+        }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         scales: {
           yAxes: [{
-            categoryPercentage: 1.0,
+            categoryPercentage: 1,
             barPercentage: 0.7,
             gridLines: {
-              color: 'rgba(175, 175, 175, 0.1)',
+              color: 'rgba(0, 0, 0, 0)',
               lineWidth: 1
+            },
+            ticks: {
+              fontSize: 14,
+              fontColor: 'rgba(255, 255, 255, 0.9)',
+              autoSkip: false,
+              maxRotation: 0,
+              minRotation: 0
             }
           }],
           xAxes: [{
             gridLines: {
               color: 'rgba(175, 175, 175, 0.1)',
               lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.65)',
+              autoSkip: false,
+              callback: function(value, index, values) {
+                if (index != (values.length - 1)) {
+                  return value;
+                }
+                return value + '   %';
+              },
+              min: 0,
+              max: 16,
+              stepSize: 4
             }
           }]
         },
-        legend: {
-          position: 'right',
-          labels: {
-            fontFamily: "'Ubuntu', sans-serif",
-            fontColor: '#f1f1f1',
-            fontSize: 12,
-            padding: 18
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%';
+            }
           }
+        },
+        legend: {
+          display: false
         },
         animation: {
           animateScale: true,
@@ -364,132 +359,105 @@ $(document).ready(() => {
     document.getElementById('chart-highest-growth-profiles').getContext('2d'), 
     { type: 'horizontalBar',
       data: {
-        datasets: [
-          {
-            label: 'Android',
-            data: [
-              -55.26
-            ],
-            backgroundColor: 'rgba(76, 175, 80, 0.4)',
-            borderColor: 'rgba(76, 175, 80, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'AngularJS',
-            data: [
-              -61.70
-            ],
-            backgroundColor: 'rgba(255, 99, 132, 0.4)',
-            borderColor: 'rgba(255,99,132,1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Bases de datos NoSQL',
-            data: [
-              -65
-            ],
-            backgroundColor: 'rgba(205, 220, 57, 0.4)',
-            borderColor: 'rgba(205, 220, 57, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Virtualización de Servidores',
-            data: [
-              -66.85
-            ],
-            backgroundColor: 'rgba(95, 192, 252, 0.4)',
-            borderColor: 'rgba(95, 192, 252, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Seguridad Informática',
-            data: [
-              -70.69
-            ],
-            backgroundColor: 'rgba(139, 195, 74, 0.4)',
-            borderColor: 'rgba(139, 195, 74, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'UX',
-            data: [
-              -65.85,
-            ],
-            backgroundColor: 'rgba(153, 102, 255, 0.4)',
-            borderColor: 'rgba(153, 102, 255, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'MS Dynamics',
-            data: [
-              -62.67
-            ],
-            backgroundColor: 'rgba(255, 206, 86, 0.4)',
-            borderColor: 'rgba(255, 206, 86, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Big Data',
-            data: [
-              -59.65
-            ],
-            backgroundColor: 'rgba(75, 192, 192, 0.4)',
-            borderColor: 'rgba(75, 192, 192, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Integración de Datos y ETL',
-            data: [
-              -51.47
-            ],
-            backgroundColor: 'rgba(255, 235, 59, 0.4)',
-            borderColor: 'rgba(255, 235, 59, 1)',
-            borderWidth: 1
-          },
-          {
-            label: 'Python',
-            data: [
-              -50
-            ],
-            backgroundColor: 'rgba(54, 162, 235, 0.4)',
-            borderColor: 'rgba(54, 162, 235, 1)',
-            borderWidth: 1
-          }
-        ]
+        labels: [
+          'Android',
+          'AngularJS',
+          'Bases de datos NoSQL',
+          'Virtualización de Servidores',
+          'Seguridad Informática',
+          'UX',
+          'MS Dynamics',
+          'Big Data',
+          'Integración de Datos y ETL',
+          'Python'
+        ],
+        datasets: [{
+          data: [
+            55.26,
+            61.70,
+            65,
+            66.85,
+            70.69,
+            65.85,
+            62.67,
+            59.65,
+            51.47,
+            50
+          ],
+          backgroundColor: [
+            'rgba(76, 175, 80, 0.4)',
+            'rgba(255, 99, 132, 0.4)',
+            'rgba(205, 220, 57, 0.4)',
+            'rgba(95, 192, 252, 0.4)',
+            'rgba(139, 195, 74, 0.4)',
+            'rgba(153, 102, 255, 0.4)',
+            'rgba(255, 206, 86, 0.4)',
+            'rgba(75, 192, 192, 0.4)',
+            'rgba(255, 235, 59, 0.4)',
+            'rgba(54, 162, 235, 0.4)',
+          ],
+          borderColor: [
+            'rgba(76, 175, 80, 1)',
+            'rgba(255, 99, 132,1)',
+            'rgba(205, 220, 57, 1)',
+            'rgba(95, 192, 252, 1)',
+            'rgba(139, 195, 74, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 235, 59, 1)',
+            'rgba(54, 162, 235, 1)',
+          ],
+          borderWidth: 1
+        }]
       },
       options: {
         responsive: true,
+        maintainAspectRatio: false,
         scales: {
           yAxes: [{
+            position: 'right',
             categoryPercentage: 1.0,
             barPercentage: 0.7,
             gridLines: {
-              color: 'rgba(175, 175, 175, 0.1)',
+              reverse: true,
+              color: 'rgba(175, 175, 175, 0)',
               lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 1)',
+              fontSize: 14,
+              autoSkip: false
             }
           }],
           xAxes: [{
             gridLines: {
               color: 'rgba(175, 175, 175, 0.1)',
               lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.65)',
+              autoSkip: false,
+              reverse: true,
+              min: 40,
+              max: 75,
+              stepSize: 7,
+              callback: function(value, index, values) {
+                if (index != 0) {
+                  return '' + value;
+                }
+                return '%   ' + value;
+              }
             }
           }]
         },
         legend: {
-          position: 'right',
-          labels: {
-            fontFamily: "'Ubuntu', sans-serif",
-            fontColor: '#f1f1f1',
-            fontSize: 12,
-            padding: 18
-          }
+          display: false
         },
         tooltips: {
           callbacks: {
             label: function(tooltipItem, data) {
-              console.log(tooltipItem);
-              return data['datasets'][tooltipItem['datasetIndex']]['label'] +
-                    ': ' + (-1 * parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]));
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%';
             }
           }
         },
