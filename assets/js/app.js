@@ -7,13 +7,11 @@ $(document).ready(() => {
       data: {
         datasets: [{
           data: [
-            59.5,
-            11.5,
-            10.3,
-            6.9,
-            3.7,
-            1.9,
-            3.2
+            58.56,
+            11.38,
+            10.15,
+            6.72,
+            3.65
           ],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
@@ -40,13 +38,10 @@ $(document).ready(() => {
           'Jalisco',
           'Nuevo León',
           'Querétaro',
-          'Estado de México',
-          'Aguascalientes',
-          'Otros'
+          'Estado de México'
         ]
       },
       options: {
-        cutoutPercentage: 60,
         responsive: true,
         legend: {
           display: false,
@@ -74,8 +69,6 @@ $(document).ready(() => {
         },
         scales: {
           yAxes: [{
-            categoryPercentage: 1.0,
-            barPercentage: 0.7,
             gridLines: {
               color: 'rgba(175, 175, 175, 0.1)',
               lineWidth: 1
@@ -85,6 +78,8 @@ $(document).ready(() => {
             }
           }],
           xAxes: [{
+            categoryPercentage: 1,
+            barPercentage: 0.7,
             gridLines: {
               color: 'rgba(175, 175, 175, 0.0)',
               lineWidth: 1
@@ -107,11 +102,11 @@ $(document).ready(() => {
       data: {
         datasets: [{
           data: [
-            59.53,
-            11.54,
-            10.29,
-            6.87,
-            3.70
+            38.38,
+            21.29,
+            54.40,
+            59.24,
+            54.35
           ],
           backgroundColor: [
             'rgba(255, 99, 132, 0.5)',
@@ -138,7 +133,6 @@ $(document).ready(() => {
         ]
       },
       options: {
-        cutoutPercentage: 60,
         responsive: true,
         legend: {
           display: false,
@@ -166,8 +160,6 @@ $(document).ready(() => {
         },
         scales: {
           yAxes: [{
-            categoryPercentage: 1.0,
-            barPercentage: 0.7,
             gridLines: {
               color: 'rgba(175, 175, 175, 0.1)',
               lineWidth: 1
@@ -177,6 +169,8 @@ $(document).ready(() => {
             }
           }],
           xAxes: [{
+            categoryPercentage: 1,
+            barPercentage: 0.7,
             gridLines: {
               color: 'rgba(175, 175, 175, 0.0)',
               lineWidth: 1
@@ -425,7 +419,7 @@ $(document).ready(() => {
               lineWidth: 1
             },
             ticks: {
-              fontColor: 'rgba(255, 255, 255, 1)',
+              fontColor: 'rgba(255, 255, 255, 0.95)',
               fontSize: 14,
               autoSkip: false
             }
