@@ -276,16 +276,33 @@ li ol > li:before {
     }
 
     .first-row {
-      margin-bottom: 3.2 * $spaceFactor;
+      margin-bottom:  0.6 * $spaceFactor;
     }
 
     .chart-group {
 
       .chart-container {
 
-        canvas {
+        .chart-title {
+          font-family: 'Ubuntu', sans-serif;
+          font-weight: bold;
+          font-size: 14px;
+          text-align: center;
+          margin-bottom: 1.2 * $spaceFactor;
+        }
+
+        .chart-canvas-container {
           width: 246px !important;
           height: 190px !important;
+
+          .chart-percentage {
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 87px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 26px;
+            font-weight: bold;
+          }
         }
       }
     }
