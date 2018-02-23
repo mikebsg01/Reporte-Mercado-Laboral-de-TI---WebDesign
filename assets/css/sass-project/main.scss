@@ -88,12 +88,16 @@ li ol > li:before {
     margin-bottom: 0;
   }
 
-  & > .slide > .slide-content {
-    padding: (5 * $spaceFactor) (10 * $spaceFactor);
+  & > .slide > .container {
+    width: 1058px + (4 * $spaceFactor);
 
-    .title {
-      margin-top: 1 * $spaceFactor;
-      margin-bottom: 3 * $spaceFactor;
+    & > .slide-content {
+      padding: (5 * $spaceFactor) (2 * $spaceFactor);
+
+      .title {
+        margin-top: 1 * $spaceFactor;
+        margin-bottom: 3 * $spaceFactor;
+      }
     }
   }
 
