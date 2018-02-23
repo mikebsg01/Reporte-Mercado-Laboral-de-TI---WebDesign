@@ -272,14 +272,21 @@ li ol > li:before {
 
     p {
       font-size: 16px;
-      line-height: 30px;
+      line-height: 24px;
     }
 
-    .chart-container {
-      padding-left: 2 * $spaceFactor;
+    .first-row {
+      margin-bottom: 3.2 * $spaceFactor;
+    }
 
-      #chart-means-for-job-search {
-        margin-top: 6.8 * $spaceFactor;
+    .chart-group {
+
+      .chart-container {
+
+        canvas {
+          width: 246px !important;
+          height: 190px !important;
+        }
       }
     }
   }

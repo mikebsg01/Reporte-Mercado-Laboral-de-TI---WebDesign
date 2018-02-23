@@ -187,55 +187,6 @@ $(document).ready(() => {
     }
   ); /* <-- End 'chartStatesWithTheHighestGrowth' */
 
-  /*var chartGrowthInQueretaro = new Chart(
-    document.getElementById('chart-growth-in-queretaro').getContext('2d'), 
-    { type: 'doughnut',
-      data: {
-        datasets: [{
-          data: [
-            6.87,
-            93.13
-          ],
-          backgroundColor: [
-            'rgba(74, 182, 255, 0.4)',
-            'rgba(222, 224, 226, 0.1)'
-          ],
-          borderColor: [
-            'rgba(74, 182, 255, 1)',
-            'rgba(222, 224, 226, 0.4)'
-          ],
-          borderWidth: 1,
-        }],
-        labels: [
-          'Querétaro',
-          '',
-        ]
-      },
-      options: {
-        cutoutPercentage: 80,
-        responsive: true,
-        legend: {
-          display: false,
-          position: 'top',
-          labels: {
-            fontFamily: "'Ubuntu', sans-serif",
-            fontColor: "#f1f1f1",
-            fontSize: 12,
-            padding: 13
-          }
-        },
-        tooltips: {
-          enabled: false
-        },
-        animation: {
-          animateScale: true,
-          animateRotate: true
-        }
-      }
-    }
-  );*/ 
-  /* <-- End 'chartGrowthInQueretaro' */
-
   var chartMostDemandedProfiles = new Chart(
     document.getElementById('chart-most-demanded-profiles').getContext('2d'), 
     { type: 'horizontalBar',
@@ -577,128 +528,46 @@ $(document).ready(() => {
     }
   ); /* <-- End 'hartJobOffersPerMonthIn2017' */
 
-  var chartMeansForJobSearch = new Chart(
-    document.getElementById('chart-means-for-job-search').getContext('2d'), 
-    { type: 'horizontalBar',
+  var chartJobPortals = new Chart(
+    document.getElementById('chart-job-portals').getContext('2d'), 
+    { type: 'doughnut',
       data: {
-        datasets: [
-          {
-            label: '90.3% - Portales de empleo',
-            data: [
-              90.3
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderColor: 'rgba(255, 255, 255, 0.8)',
-            borderWidth: 1
-          },
-          {
-            label: '79.8% - LinkedIn',
-            data: [
-              79.8
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            borderColor: 'rgba(255, 255, 255, 0.6)',
-            borderWidth: 1
-          },
-          {
-            label: '24% - Otras redes sociales',
-            data: [
-              24
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderColor: 'rgba(255, 255, 255, 0.8)',
-            borderWidth: 1
-          },
-          {
-            label: '22.1% - Ferias de empleo',
-            data: [
-              22.1
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            borderColor: 'rgba(255, 255, 255, 0.6)',
-            borderWidth: 1
-          },
-          {
-            label: '16.2% - Bolsa de trabajo',
-            data: [
-              16.2
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderColor: 'rgba(255, 255, 255, 0.8)',
-            borderWidth: 1
-          },
-          {
-            label: '19.6 - Agencias de reclutamiento',
-            data: [
-              19.6
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            borderColor: 'rgba(255, 255, 255, 0.6)',
-            borderWidth: 1
-          },
-          {
-            label: '19.8% - Reclutadores',
-            data: [
-              19.8
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderColor: 'rgba(255, 255, 255, 0.8)',
-            borderWidth: 1
-          },
-          {
-            label: '37.6% Buscadores en Internet',
-            data: [
-              37.6
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.2)',
-            borderColor: 'rgba(255, 255, 255, 0.6)',
-            borderWidth: 1
-          },
-          {
-            label: '43.6% - Recomendaciones',
-            data: [
-              43.6
-            ],
-            backgroundColor: 'rgba(255, 255, 255, 0.8)',
-            borderColor: 'rgba(255, 255, 255, 0.8)',
-            borderWidth: 1
-          }
+        datasets: [{
+          data: [
+            90.3,
+            9.7
+          ],
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.3)',
+          ],
+          borderColor: [
+            'rgba(255, 255, 255, 0.7)',
+            'rgba(255, 255, 255, 0.4)',
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Querétaro',
+          '',
         ]
       },
       options: {
+        cutoutPercentage: 70,
         responsive: true,
-        scales: {
-          yAxes: [{
-            categoryPercentage: 1.0,
-            barPercentage: 0.65,
-            gridLines: {
-              color: 'rgba(175, 175, 175, 0.1)',
-              lineWidth: 1
-            }
-          }],
-          xAxes: [{
-            gridLines: {
-              color: 'rgba(175, 175, 175, 0.1)',
-              lineWidth: 1
-            }
-          }]
-        },
-        title: {
-          display: true,
-          text: '¿Qué medios utilizas para búsqueda de empleo?',
-          fontFamily: "'Ubuntu', sans-serif",
-          fontColor: "#f1f1f1",
-          fontSize: 15,
-          padding: 20
-        },
+        maintainAspectRatio: false,
         legend: {
-          position: 'right',
+          display: false,
+          position: 'top',
           labels: {
             fontFamily: "'Ubuntu', sans-serif",
-            fontColor: '#f1f1f1',
+            fontColor: "#f1f1f1",
             fontSize: 12,
-            padding: 18
+            padding: 13
           }
+        },
+        tooltips: {
+          enabled: false
         },
         animation: {
           animateScale: true,
@@ -706,7 +575,154 @@ $(document).ready(() => {
         }
       }
     }
-  ); /* <-- End 'chartMeansForJobSearch' */
+  ); /* <-- End 'chartJobPortals' */
+
+  var chartLinkedin = new Chart(
+    document.getElementById('chart-linkedin').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            79.8,
+            20.2
+          ],
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.3)',
+          ],
+          borderColor: [
+            'rgba(255, 255, 255, 0.7)',
+            'rgba(255, 255, 255, 0.4)',
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Querétaro',
+          '',
+        ]
+      },
+      options: {
+        cutoutPercentage: 70,
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 13
+          }
+        },
+        tooltips: {
+          enabled: false
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartLinkedin' */
+
+  var chartRecomendations = new Chart(
+    document.getElementById('chart-recomendations').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            43.6,
+            56.4
+          ],
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.3)',
+          ],
+          borderColor: [
+            'rgba(255, 255, 255, 0.7)',
+            'rgba(255, 255, 255, 0.4)',
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Querétaro',
+          '',
+        ]
+      },
+      options: {
+        cutoutPercentage: 70,
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 13
+          }
+        },
+        tooltips: {
+          enabled: false
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartRecomendations' */
+  
+  var chartSearchEnginesOnInternet = new Chart(
+    document.getElementById('chart-search-engines-on-internet').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            37.6,
+            62.4
+          ],
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.3)',
+          ],
+          borderColor: [
+            'rgba(255, 255, 255, 0.7)',
+            'rgba(255, 255, 255, 0.4)',
+          ],
+          borderWidth: 1,
+        }],
+        labels: [
+          'Querétaro',
+          '',
+        ]
+      },
+      options: {
+        cutoutPercentage: 70,
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 12,
+            padding: 13
+          }
+        },
+        tooltips: {
+          enabled: false
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartSearchEnginesOnInternet' */
 
   var chartDeviceToLookForWork = new Chart(
     document.getElementById('chart-device-to-look-for-work').getContext('2d'), 

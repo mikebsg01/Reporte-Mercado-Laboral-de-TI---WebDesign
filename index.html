@@ -181,8 +181,8 @@
   <div class="slide slide-find-talent-and-retain-it row">
     <div class="container">
       <div class="slide-content col s12">
-        <div class="row">
-          <div class="col s6">
+        <div class="first-row row">
+          <div class="col s12">
             <h2 class="title">Encontrar el talento y retenerlo</h2>
             <p class="first-paragraph"><b>2.1 Qué medios utilizan los profesionistas TI para buscar trabajo?</b></p>
             <h3>Los portales de Empleo son la primer opción para buscar trabajo</h3>
@@ -195,8 +195,20 @@
               por talento enfocado en el sector. En segundo lugar se encuentra Linkedin,
               red social dedicada a las actividades profesionales y empresariales.</p>
           </div>
-          <div class="col s6 chart-container">
-            <canvas id="chart-means-for-job-search" width="200px" height="160px"></canvas>
+        </div>
+        <div class="chart-group row">
+          <div class="chart-container col s3">
+            <!--<p class="chart-title">Portales de empleo</p>-->
+            <canvas id="chart-job-portals"></canvas>
+          </div>
+          <div class="chart-container col s3">
+            <canvas id="chart-linkedin"></canvas>
+          </div>
+          <div class="chart-container col s3">
+            <canvas id="chart-recomendations"></canvas>
+          </div>
+          <div class="chart-container col s3">
+            <canvas id="chart-search-engines-on-internet"></canvas>
           </div>
         </div>
       </div>
