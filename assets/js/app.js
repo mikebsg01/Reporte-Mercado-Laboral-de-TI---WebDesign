@@ -14,13 +14,13 @@ $(document).ready(() => {
             3.65
           ],
           backgroundColor: [
-            'rgba(255, 99, 132, 0.5)',
-            'rgba(54, 162, 235, 0.5)',
-            'rgba(255, 206, 86, 0.5)',
-            'rgba(75, 192, 192, 0.5)',
-            'rgba(153, 102, 255, 0.5)',
-            'rgba(255, 159, 64, 0.5)',
-            'rgba(155, 125, 175, 0.5)'
+            'rgba(255, 99, 132, 0.4)',
+            'rgba(54, 162, 235, 0.4)',
+            'rgba(255, 206, 86, 0.4)',
+            'rgba(75, 192, 192, 0.4)',
+            'rgba(153, 102, 255, 0.4)',
+            'rgba(255, 159, 64, 0.4)',
+            'rgba(155, 125, 175, 0.4)'
           ],
           borderColor: [
             'rgba(255,99,132,1)',
@@ -462,6 +462,120 @@ $(document).ready(() => {
       }
     }
   ); /* <-- End 'chartMostDemandedProfiles' */
+
+  var chartJobOffersPerMonthIn2017 = new Chart(
+    document.getElementById('chart-job-offers-per-month-in-2017').getContext('2d'), 
+    { type: 'bar',
+      data: {
+        labels: [
+          'Enero',
+          'Febrero',
+          'Marzo',
+          'Abril',
+          'Mayo',
+          'Junio',
+          'Julio',
+          'Agosto',
+          'Septiembre',
+          'Octubre',
+          'Noviembre',
+          'Diciembre'
+        ],
+        datasets: [{
+          data: [
+            427,
+            362,
+            515,
+            320,
+            446,
+            449,
+            563,
+            436,
+            455,
+            475,
+            391,
+            357
+          ],
+          backgroundColor: [
+            'rgba(54, 162, 235, 0.4)',
+            'rgba(95, 192, 252, 0.4)',
+            'rgba(205, 220, 57, 0.4)',
+            'rgba(106, 206, 106, 0.4)',
+            'rgba(255, 235, 59, 0.4)',
+            'rgba(255, 99, 132, 0.4)',
+            'rgba(76, 175, 80, 0.4)',
+            'rgba(153, 102, 255, 0.4)',
+            'rgba(75, 192, 192, 0.4)',
+            'rgba(255, 206, 86, 0.4)',
+            'rgba(204, 166, 223, 0.4)',
+            'rgba(139, 195, 74, 0.4)',
+          ],
+          borderColor: [
+            'rgba(54, 162, 235, 1)',
+            'rgba(95, 192, 252, 1)',
+            'rgba(205, 220, 57, 1)',
+            'rgba(106, 206, 106, 1)',
+            'rgba(255, 235, 59, 1)',
+            'rgba(255, 99, 132,1)',
+            'rgba(76, 175, 80, 1)',
+            'rgba(153, 102, 255, 1)',
+            'rgba(75, 192, 192, 1)',
+            'rgba(255, 206, 86, 1)',
+            'rgba(204, 166, 223, 1)',
+            'rgba(139, 195, 74, 1)',
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          yAxes: [{
+            position: 'right',
+            categoryPercentage: 1.0,
+            barPercentage: 0.7,
+            gridLines: {
+              reverse: true,
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.65)',
+              fontSize: 14,
+              autoSkip: false,
+              min: 300,
+              max: 600,
+              stepSize: 60
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.95)',
+              autoSkip: false
+            }
+          }]
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%';
+            }
+          }
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'hartJobOffersPerMonthIn2017' */
 
   var chartMeansForJobSearch = new Chart(
     document.getElementById('chart-means-for-job-search').getContext('2d'), 
