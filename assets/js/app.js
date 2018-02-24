@@ -553,7 +553,7 @@ $(document).ready(() => {
         ]
       },
       options: {
-        cutoutPercentage: 70,
+        cutoutPercentage: 76,
         responsive: true,
         maintainAspectRatio: false,
         legend: {
@@ -602,7 +602,7 @@ $(document).ready(() => {
         ]
       },
       options: {
-        cutoutPercentage: 70,
+        cutoutPercentage: 76,
         responsive: true,
         maintainAspectRatio: false,
         legend: {
@@ -651,7 +651,7 @@ $(document).ready(() => {
         ]
       },
       options: {
-        cutoutPercentage: 70,
+        cutoutPercentage: 76,
         responsive: true,
         maintainAspectRatio: false,
         legend: {
@@ -700,7 +700,7 @@ $(document).ready(() => {
         ]
       },
       options: {
-        cutoutPercentage: 70,
+        cutoutPercentage: 76,
         responsive: true,
         maintainAspectRatio: false,
         legend: {
@@ -778,4 +778,65 @@ $(document).ready(() => {
       }
     }
   ); /* <-- End 'chartDeviceToLookForWork' */
+
+  var chartActiveAndPassiveJobSeekersokForWork = new Chart(
+    document.getElementById('chart-active-and-passive-job-seekers').getContext('2d'), 
+    { type: 'doughnut',
+      data: {
+        datasets: [{
+          data: [
+            37.5,
+            31.6,
+            28.7,
+            2.2
+          ],
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.65)',
+            'rgba(255, 255, 255, 0.5)',
+            'rgba(255, 255, 255, 0.35)',
+            'rgba(255, 255, 255, 0.2)',
+          ],
+          borderColor: [
+            'rgba(255, 255, 255, 0.85)',
+            'rgba(255, 255, 255, 0.7)',
+            'rgba(255, 255, 255, 0.55)',
+            'rgba(255, 255, 255, 0.4)',
+          ],
+          borderWidth: 2,
+        }],
+        labels: [
+          'Busqué un nuevo empleo',
+          'Obtuve un nuevo empleo',
+          'No busco, pero monitoreo ofertas de trabajo',
+          'No estoy interesado en buscar o cambiar de trabajo'
+        ]
+      },
+      options: {
+        cutoutPercentage: 60,
+        responsive: true,
+        maintainAspectRatio: false,
+        legend: {
+          display: false,
+          position: 'top',
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 14,
+            padding: 15
+          }
+        },
+        title: {
+          display: false,
+          fontFamily: "'Ubuntu', sans-serif",
+          fontColor: "#f1f1f1",
+          fontSize: 15,
+          padding: 12
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartActiveAndPassiveJobSeekersokForWork' */
 });

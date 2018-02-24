@@ -4,7 +4,7 @@
 // Global Variables
 $spaceFactor: 15px; 
 $blueGray: #253544;
-$blue: #3c80d3;
+$blue: #3c7fd1;
 
 // General Styles
 body {
@@ -266,17 +266,17 @@ li ol > li:before {
   }
 
   & > .slide-find-talent-and-retain-it {
-    background-color: darken($blue, 4%);
+    background-color: darken($blue, 2%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
     p {
       font-size: 16px;
-      line-height: 24px;
+      line-height: 26px;
     }
 
     .first-row {
-      margin-bottom: $spaceFactor;
+      margin-bottom: 1.3 * $spaceFactor;
     }
 
     .chart-group {
@@ -337,6 +337,90 @@ li ol > li:before {
 
       #chart-device-to-look-for-work {
         margin-top: 4 * $spaceFactor;
+      }
+    }
+  }
+
+  & > .slide-active-and-passive-job-seekers {
+    background-color: lighten($blue, 2%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .text-container {
+      padding-left: 2 * $spaceFactor;
+    }
+
+    .chart-container {
+      padding-left: 2 * $spaceFactor;
+
+      .chart-title {
+        padding-left: 0;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        position: relative;
+        margin-top: 2 * $spaceFactor;
+        margin-left: -1.5 * $spaceFactor;
+        margin-bottom: -2 * $spaceFactor;
+      }
+
+      .chart-legend {
+        margin-top: 1.33 * $spaceFactor;
+
+        .chart-label-container {
+
+          .chart-label-box,
+          .chart-label {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          .chart-label-box {
+            width: 40px;
+            height: 15px;
+
+            &.box-1 {
+              background-color: rgba(255, 255, 255, 0.65);
+              border: 1px solid rgba(255, 255, 255, 0.85);
+            }
+
+            &.box-2 {
+              background-color: rgba(255, 255, 255, 0.5);
+              border: 1px solid rgba(255, 255, 255, 0.7);
+            }
+
+            &.box-3 {
+              background-color: rgba(255, 255, 255, 0.35);
+              border: 1px solid rgba(255, 255, 255, 0.55);
+            }
+
+            &.box-4 {
+              background-color: rgba(255, 255, 255, 0.2);
+              border: 1px solid rgba(255, 255, 255, 0.4);
+            }
+          }
+
+          .chart-label {
+            padding-left: 5px;
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 18px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+          }
+        }
+      }
+
+      .chart-canvas-container {
+        margin-top: 2.66 * $spaceFactor;
+        width: 506px !important;
+        height: 303px !important;
       }
     }
   }
