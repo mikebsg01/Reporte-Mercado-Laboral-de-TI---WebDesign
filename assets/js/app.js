@@ -516,7 +516,7 @@ $(document).ready(() => {
         tooltips: {
           callbacks: {
             label: function(tooltipItem, data) {
-              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%';
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]);
             }
           }
         },
@@ -771,6 +771,14 @@ $(document).ready(() => {
           fontSize: 15,
           padding: 12
         },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return data['labels'][tooltipItem['index']] +
+                     ': ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%';
+            }
+          }
+        },
         animation: {
           animateScale: true,
           animateRotate: true
@@ -831,6 +839,14 @@ $(document).ready(() => {
           fontColor: "#f1f1f1",
           fontSize: 15,
           padding: 12
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return data['labels'][tooltipItem['index']] +
+                     ': ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%';
+            }
+          }
         },
         animation: {
           animateScale: true,
