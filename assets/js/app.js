@@ -728,26 +728,26 @@ $(document).ready(() => {
       data: {
         datasets: [{
           data: [
-            12.8,
+            60.9,
             26.4,
-            60.9
+            12.8
           ],
           backgroundColor: [
-            'rgba(255, 255, 255, 0.2)',
-            'rgba(255, 255, 255, 0.4)',
-            'rgba(255, 255, 255, 0.6)',
+            'rgba(255, 255, 255, 0.7)',
+            'rgba(255, 255, 255, 0.5)',
+            'rgba(255, 255, 255, 0.3)',
           ],
           borderColor: [
-            'rgba(255, 255, 255, 0.3)',
-            'rgba(255, 255, 255, 0.5)',
             'rgba(255, 255, 255, 0.7)',
+            'rgba(255, 255, 255, 0.5)',
+            'rgba(255, 255, 255, 0.3)',
           ],
           borderWidth: 2,
         }],
         labels: [
-          'PC',
+          'Laptop',
           'Smartphone/Tablet',
-          'Laptop'
+          'PC'
         ]
       },
       options: {
@@ -797,16 +797,16 @@ $(document).ready(() => {
             2.2
           ],
           backgroundColor: [
-            'rgba(255, 255, 255, 0.65)',
+            'rgba(255, 255, 255, 0.7)',
             'rgba(255, 255, 255, 0.5)',
-            'rgba(255, 255, 255, 0.35)',
-            'rgba(255, 255, 255, 0.2)',
+            'rgba(255, 255, 255, 0.3)',
+            'rgba(255, 255, 255, 0.1)',
           ],
           borderColor: [
-            'rgba(255, 255, 255, 0.85)',
             'rgba(255, 255, 255, 0.7)',
-            'rgba(255, 255, 255, 0.55)',
-            'rgba(255, 255, 255, 0.4)',
+            'rgba(255, 255, 255, 0.5)',
+            'rgba(255, 255, 255, 0.3)',
+            'rgba(255, 255, 255, 0.1)',
           ],
           borderWidth: 2,
         }],
@@ -853,4 +853,136 @@ $(document).ready(() => {
       }
     }
   ); /* <-- End 'chartActiveAndPassiveJobSeekersokForWork' */
+
+  var chartEmploymentFactors = new Chart(
+    document.getElementById('chart-employment-factors').getContext('2d'), 
+    { type: 'bar',
+      data: {
+        labels: [
+          'Sueldo',
+          ['Oportunidad de' , 'desarrollo', 'Profesional'],
+          ['Reto', 'profesional'],
+          'Prestaciones',
+          ['Balance entre', 'trabajo y vida', 'personal'],
+          ['Trabajo remoto o', 'desde casa'],
+          ['Ambiente', 'laboral'],
+          ['Desempeño del', 'negocio'],
+          ['Cultura y', 'valores', 'organizacionales'],
+          ['Preparación de', 'quien sería', 'mi efe'],
+        ],
+        datasets: [
+          {
+            label: 'Muy importante',
+            backgroundColor: 'rgba(255, 255, 255, 0.75)',
+            borderColor: 'rgba(255, 255, 255, 0.95)',
+            borderWidth: 1,
+            data: [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+            ]
+          }, 
+          {
+            label: 'Algo importante',
+            backgroundColor: 'rgba(235, 235, 235, 0.60)',
+            borderColor: 'rgba(235, 235, 235, 0.80)',
+            borderWidth: 1,
+            data: [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+            ]
+          },
+          {
+            label: 'Poco importante',
+            backgroundColor: 'rgba(215, 215, 215, 0.45)',
+            borderColor: 'rgba(215, 215, 215, 0.65)',
+            borderWidth: 1,
+            data: [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+            ]
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [{
+            position: 'right',
+            categoryPercentage: 1.0,
+            barPercentage: 0.7,
+            gridLines: {
+              reverse: true,
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.65)',
+              fontSize: 14,
+              autoSkip: false,
+              min: 0,
+              max: 10,
+              stepSize: 2
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.95)',
+              autoSkip: false,
+              minRotation: 0,
+              maxRotation: 0
+            }
+          }]
+        },
+        legend: {
+          display: true,
+          labels: {
+            fontFamily: "'Ubuntu', sans-serif",
+            fontColor: "#f1f1f1",
+            fontSize: 14,
+            padding: 15
+          }
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]);
+            }
+          }
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartEmploymentFactors' */
 });

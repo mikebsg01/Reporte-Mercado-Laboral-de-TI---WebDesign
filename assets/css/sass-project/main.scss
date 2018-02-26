@@ -429,4 +429,44 @@ li ol > li:before {
       }
     }
   }
+
+  & > .slide-main-reasons-to-accept-a-job {
+    background-color: lighten($blue, 4%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .chart-container {
+      margin-bottom: 4 * $spaceFactor;
+
+      .chart-title {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 3 * $spaceFactor;
+        margin-bottom: 3 * $spaceFactor;
+      }
+
+      .chart-canvas-container {
+        width: 1058px !important;
+        height: 352px !important;
+      }
+    }
+  }
+
+  & > .slide-main-reasons-for-renouncing {
+    background-color: lighten($blue, 6%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
 }
