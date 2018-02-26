@@ -361,11 +361,10 @@ $(document).ready(() => {
         maintainAspectRatio: false,
         scales: {
           yAxes: [{
-            position: 'right',
+            position: 'left',
             categoryPercentage: 1.0,
             barPercentage: 0.7,
             gridLines: {
-              reverse: true,
               color: 'rgba(175, 175, 175, 0)',
               lineWidth: 1
             },
@@ -383,7 +382,6 @@ $(document).ready(() => {
             ticks: {
               fontColor: 'rgba(255, 255, 255, 0.65)',
               autoSkip: false,
-              reverse: true,
               min: 40,
               max: 75,
               stepSize: 7,

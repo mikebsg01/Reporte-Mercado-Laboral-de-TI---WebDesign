@@ -227,7 +227,7 @@ li ol > li:before {
   }
 
   & > .slide-highest-growth-profiles {
-    background-color: lighten($blueGray, 16%);
+    background-color: lighten($blueGray, 13%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -249,7 +249,7 @@ li ol > li:before {
   }
 
   & > .slide-job-offers-per-month-2017 {
-    background-color: lighten($blueGray, 19%);
+    background-color: lighten($blueGray, 16%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -269,6 +269,11 @@ li ol > li:before {
     background-color: darken($blue, 2%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
+
+    h3 {
+      font-size: 26px;
+      line-height: 36px;
+    }
 
     p {
       font-size: 16px;
