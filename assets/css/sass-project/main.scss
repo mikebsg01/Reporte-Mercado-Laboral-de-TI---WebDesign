@@ -468,5 +468,22 @@ li ol > li:before {
       font-size: 16px;
       line-height: 30px;
     }
+
+    .chart-container {
+
+      .chart-title {
+        font-family: 'Ubuntu', sans-serif;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 28px;
+        margin-top: 3.6 * $spaceFactor;
+        margin-bottom: 3 * $spaceFactor;
+      }
+
+     .chart-canvas-container {
+        width: 1058px !important;
+        height: 426px !important;
+      }
+    }
   }
 }

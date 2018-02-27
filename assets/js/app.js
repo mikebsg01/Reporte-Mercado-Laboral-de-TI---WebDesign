@@ -386,10 +386,10 @@ $(document).ready(() => {
               max: 75,
               stepSize: 7,
               callback: function(value, index, values) {
-                if (index != 0) {
-                  return '' + value;
+                if (index != (values.length - 1)) {
+                  return value;
                 }
-                return '%   ' + value;
+                return value + '   %';
               }
             }
           }]
@@ -985,4 +985,112 @@ $(document).ready(() => {
       }
     }
   ); /* <-- End 'chartEmploymentFactors' */
+
+  var chartMainReasonsForRenouncing = new Chart(
+    document.getElementById('chart-main-reasons-for-renouncing').getContext('2d'), 
+    { type: 'horizontalBar',
+      data: {
+        labels: [
+          'Falta de una compensación adecuada',
+          'Cambios de gestión a nivel directivo en la empresa',
+          'Metas asignadas poco realistas',
+          'Falta de soporte a nivel gerencial',
+          'Te sentías poco valorado por la empresa',
+          'Insuficientes días de vacaciones o descanso',
+          'Por la falta de plan de carrera',
+          'Por la falta de ser desafiado',
+          'Falta de un buen ambiente de trabajo'
+        ],
+        datasets: [{
+          data: [
+            52.6,
+            25.3,
+            21.2,
+            27.8,
+            43.4,
+            12.9,
+            44.6,
+            21.9,
+            31
+          ],
+          backgroundColor: [
+            'rgba(255, 255, 255, 0.75)',
+            'rgba(215, 215, 215, 0.35)',
+            'rgba(255, 255, 255, 0.75)',
+            'rgba(215, 215, 215, 0.35)',
+            'rgba(255, 255, 255, 0.75)',
+            'rgba(215, 215, 215, 0.35)',
+            'rgba(255, 255, 255, 0.75)',
+            'rgba(215, 215, 215, 0.35)',
+            'rgba(255, 255, 255, 0.75)',
+          ],
+          borderColor: [
+            'rgba(255, 255, 255, 0.95)',
+            'rgba(215, 215, 215, 0.55)',
+            'rgba(255, 255, 255, 0.95)',
+            'rgba(215, 215, 215, 0.55)',
+            'rgba(255, 255, 255, 0.95)',
+            'rgba(215, 215, 215, 0.55)',
+            'rgba(255, 255, 255, 0.95)',
+            'rgba(215, 215, 215, 0.55)',
+            'rgba(255, 255, 255, 0.95)',
+          ],
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        scales: {
+          yAxes: [{
+            position: 'left',
+            categoryPercentage: 1.0,
+            barPercentage: 0.7,
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.95)',
+              fontSize: 14,
+              autoSkip: false
+            }
+          }],
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(175, 175, 175, 0.1)',
+              lineWidth: 1
+            },
+            ticks: {
+              fontColor: 'rgba(255, 255, 255, 0.65)',
+              autoSkip: false,
+              min: 0,
+              max: 60,
+              stepSize: 15,
+              callback: function(value, index, values) {
+                if (index != (values.length - 1)) {
+                  return value;
+                }
+                return value + '   %';
+              }
+            }
+          }]
+        },
+        legend: {
+          display: false
+        },
+        tooltips: {
+          callbacks: {
+            label: function(tooltipItem, data) {
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%';
+            }
+          }
+        },
+        animation: {
+          animateScale: true,
+          animateRotate: true
+        }
+      }
+    }
+  ); /* <-- End 'chartMainReasonsForRenouncing' */
 });
