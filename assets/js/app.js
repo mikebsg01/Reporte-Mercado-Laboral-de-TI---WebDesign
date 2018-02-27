@@ -868,7 +868,7 @@ $(document).ready(() => {
           ['Ambiente', 'laboral'],
           ['Desempeño del', 'negocio'],
           ['Cultura y', 'valores', 'organizacionales'],
-          ['Preparación de', 'quien sería', 'mi efe'],
+          ['Preparación de', 'quien sería', 'mi jefe'],
         ],
         datasets: [
           {

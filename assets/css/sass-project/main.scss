@@ -199,9 +199,10 @@ li ol > li:before {
         margin-top: 3.25 * $spaceFactor;
       }
     }
-
+    
     h3.title {
-      margin-top: 5 * $spaceFactor !important;
+      margin-top: 2 * $spaceFactor !important;
+      margin-bottom: 2 * $spaceFactor !important;
     }
   }
 
