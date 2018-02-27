@@ -314,7 +314,7 @@ li ol > li:before {
   }
 
   & > .slide-devices-to-look-for-work {
-    background-color: $blue;
+    background-color: darken($blue, 2%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -347,7 +347,7 @@ li ol > li:before {
   }
 
   & > .slide-active-and-passive-job-seekers {
-    background-color: lighten($blue, 2%);
+    background-color: darken($blue, 2%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -431,7 +431,7 @@ li ol > li:before {
   }
 
   & > .slide-main-reasons-to-accept-a-job {
-    background-color: lighten($blue, 4%);
+    background-color: lighten($blue, 2%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -460,7 +460,7 @@ li ol > li:before {
   }
 
   & > .slide-main-reasons-for-renouncing {
-    background-color: lighten($blue, 6%);
+    background-color: lighten($blue, 2%);
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
