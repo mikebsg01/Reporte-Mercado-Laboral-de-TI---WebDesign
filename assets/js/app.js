@@ -860,15 +860,12 @@ $(document).ready(() => {
       data: {
         labels: [
           'Sueldo',
-          ['Oportunidad de' , 'desarrollo', 'Profesional'],
-          ['Reto', 'profesional'],
+          ['Oportunidad de' , 'desarrollo', 'profesional'],
           'Prestaciones',
-          ['Balance entre', 'trabajo y vida', 'personal'],
-          ['Trabajo remoto o', 'desde casa'],
           ['Ambiente', 'laboral'],
-          ['Desempeño del', 'negocio'],
-          ['Cultura y', 'valores', 'organizacionales'],
-          ['Preparación de', 'quien sería', 'mi jefe'],
+          ['Tamaño de', 'la empresa'],
+          ['Nivel de estrés del', 'rol de trabajo'],
+          ['Balance entre', 'trabajo y vida', 'personal'],
         ],
         datasets: [
           {
@@ -877,16 +874,13 @@ $(document).ready(() => {
             borderColor: 'rgba(255, 255, 255, 0.95)',
             borderWidth: 1,
             data: [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
+              76.97,
+              88.88,
+              65.02,
+              66.86,
+              16.51,
+              24.66,
+              66.17
             ]
           }, 
           {
@@ -895,16 +889,13 @@ $(document).ready(() => {
             borderColor: 'rgba(235, 235, 235, 0.80)',
             borderWidth: 1,
             data: [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
+              23.03,
+              11.12,
+              32.68,
+              30.96,
+              51.38,
+              56.88,
+              30.85
             ]
           },
           {
@@ -913,16 +904,13 @@ $(document).ready(() => {
             borderColor: 'rgba(215, 215, 215, 0.65)',
             borderWidth: 1,
             data: [
-              1,
-              2,
-              3,
-              4,
-              5,
-              6,
-              7,
-              8,
-              9,
-              10,
+              0,
+              0,
+              2.98,
+              2.87,
+              32.80,
+              19.15,
+              3.67
             ]
           }
         ]
@@ -945,8 +933,8 @@ $(document).ready(() => {
               fontSize: 14,
               autoSkip: false,
               min: 0,
-              max: 10,
-              stepSize: 2
+              max: 100,
+              stepSize: 20
             }
           }],
           xAxes: [{
@@ -974,7 +962,8 @@ $(document).ready(() => {
         tooltips: {
           callbacks: {
             label: function(tooltipItem, data) {
-              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]);
+              return ' ' + parseFloat(data['datasets'][tooltipItem['datasetIndex']]['data'][tooltipItem['index']]) + '%' +
+                     ' - ' + data['datasets'][tooltipItem['datasetIndex']]['label'];
             }
           }
         },
