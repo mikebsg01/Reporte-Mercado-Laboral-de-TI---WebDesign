@@ -212,7 +212,13 @@ li ol > li:before {
     color: white;
 
     .first-paragraph {
-      margin-top: 4 * $spaceFactor;
+      margin-top: 2 * $spaceFactor;
+    }
+
+    h3.title {
+      margin-top: 1.33 * $spaceFactor !important;
+      margin-bottom: 1.33 * $spaceFactor !important;
+      line-height: 36px;
     }
 
     p {
@@ -221,7 +227,7 @@ li ol > li:before {
     }
 
     #chart-most-demanded-profiles {
-      margin-top: 3.2 * $spaceFactor;
+      margin-top: 5.33 * $spaceFactor;
       width: 595px !important;
       height: 360px !important;
     }
@@ -232,8 +238,10 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
-    .first-paragraph {
-      margin-top: 5 * $spaceFactor;
+    h3.title {
+      margin-top: 1.33 * $spaceFactor !important;
+      margin-bottom: 1.33 * $spaceFactor !important;
+      line-height: 36px;
     }
 
     p {
@@ -243,7 +251,7 @@ li ol > li:before {
 
     #chart-highest-growth-profiles {
       margin-left: .75 * $spaceFactor;
-      margin-top: 3.2 * $spaceFactor;
+      margin-top: 4.33 * $spaceFactor;
       width: 560px !important;
       height: 360px !important;
     }
@@ -254,15 +262,22 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
+    h3.title {
+      margin-top: 1.33 * $spaceFactor !important;
+      margin-bottom: 1.33 * $spaceFactor !important;
+      line-height: 36px;
+    }
+
     p {
       font-size: 16px;
       line-height: 34px;
     }
 
     #chart-job-offers-per-month-in-2017 {
-      margin-top: $spaceFactor;
+      margin-top: 4 * $spaceFactor;
+      margin-bottom: $spaceFactor;
       width: 878px !important;
-      height: 439px !important;
+      height: 384px !important;
     }
   }
 
