@@ -530,4 +530,51 @@ li ol > li:before {
       }
     }
   }
+
+  & > .slide-about-empleosti {
+    background-color: lighten($gray, 4%);
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    h3.title {
+      margin-top: 4.33 * $spaceFactor !important;
+      margin-bottom: 1.33 * $spaceFactor !important;
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .row-text {
+      margin-bottom: 5  * $spaceFactor;
+    }
+
+    .row-link {
+      margin-bottom: 4 * $spaceFactor;
+
+      .link-site {
+        background-color: #faaa4b;
+      }
+    }
+
+    .row-email {
+      margin-bottom: 3 * $spaceFactor;
+
+      .link-email {
+        color: #00d1f3;
+        
+        & > span {
+          display: inline-block;
+          vertical-align: middle;
+
+          &.email {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
 }
