@@ -510,7 +510,7 @@ li ol > li:before {
     color: white;
 
     h3.title {
-      margin-top: 2.33 * $spaceFactor !important;
+      margin-top: 4.33 * $spaceFactor !important;
       margin-bottom: 1.33 * $spaceFactor !important;
       font-size: 26px;
       line-height: 36px;
@@ -522,10 +522,11 @@ li ol > li:before {
     }
 
     .chart-container {
-      padding-top: 3 * $spaceFactor;
+      padding-top: 4 * $spaceFactor;
 
-      .chart-place-of-residence {
-        width: 100%;
+      #chart-place-of-residence {
+        width: 697px !important;
+        height: 433px !important;
       }
     }
   }

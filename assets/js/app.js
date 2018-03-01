@@ -1082,4 +1082,54 @@ $(document).ready(() => {
       }
     }
   ); /* <-- End 'chartMainReasonsForRenouncing' */
+
+  /* Start 'ChartPlaceOfResidence' */
+  google.charts.load('current', {
+    'packages':['geochart'],
+    // Note: you will need to get a mapsApiKey for your project.
+    // See: https://developers.google.com/chart/interactive/docs/basic_load_libs#load-settings
+    'mapsApiKey': 'AIzaSyCIODlY3-J4Ks3L1AsheGI3vhrmEBA-sas'
+  });
+
+  google.charts.setOnLoadCallback(drawChartPlaceOfResidence);
+
+  function drawChartPlaceOfResidence() {
+    var data = google.visualization.arrayToDataTable([
+      ['City', 'Porcentaje'],
+      ['Distrito Federal', 33.6],
+      ['Estado de México', 12.06],
+      ['Jalisco', 9.2],
+      ['Querétaro', 7],
+      ['Nuevo León', 6.6],
+      ['Puebla', 3],
+      ['Guanajuato', 2.5],
+      ['Chihuahua', 1.8],
+      ['Yucatán', 1.8],
+      ['Coahuila', 1.6]
+    ]);
+
+    var options = {
+      region: 'MX',
+      displayMode: 'regions',
+      resolution: 'provinces',
+      colorAxis: {
+        minValue: 1,
+        maxValue: 35,
+        colors: ['#AFAFAF', '#B5B5B5']
+      },
+      backgroundColor: '#333333',
+      datalessRegionColor: '#777777',
+      defaultColor: '#f5f5f5',
+      magnifyingGlass: {
+        enable: true,
+        zoomFactor: 10
+      }
+    };
+
+    var ChartPlaceOfResidence = new google.visualization.GeoChart(
+      document.getElementById('chart-place-of-residence')
+    );
+
+    ChartPlaceOfResidence.draw(data, options);
+  }
 });
