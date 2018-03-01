@@ -4,6 +4,7 @@
 // Global Variables
 $spaceFactor: 15px; 
 $blueGray: #253544;
+$gray: #333333;
 $blue: #3c7fd1;
 
 // General Styles
@@ -499,6 +500,32 @@ li ol > li:before {
      .chart-canvas-container {
         width: 1058px !important;
         height: 426px !important;
+      }
+    }
+  }
+
+  & > .slide-sample-size {
+    background-color: $gray;
+    //ackground: linear-gradient(to right, #34495e, #1e2a36);
+    color: white;
+
+    h3.title {
+      margin-top: 2.33 * $spaceFactor !important;
+      margin-bottom: 1.33 * $spaceFactor !important;
+      font-size: 26px;
+      line-height: 36px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 30px;
+    }
+
+    .chart-container {
+      padding-top: 3 * $spaceFactor;
+
+      .chart-place-of-residence {
+        width: 100%;
       }
     }
   }
