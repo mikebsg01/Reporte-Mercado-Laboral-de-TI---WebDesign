@@ -91,9 +91,8 @@ li ol > li:before {
 // Page Navbar Styles
 
 .page-navbar-1 {
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: relative;
+  margin-bottom: -4.4 * $spaceFactor;
   display: block;
   width: 100%;
   min-height: 60px;
