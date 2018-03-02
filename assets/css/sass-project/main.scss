@@ -7,6 +7,13 @@ $blueGray: #253544;
 $gray: #333333;
 $blue: #3c7fd1;
 
+$etiBlue1: #033a43;
+$etiBlue2: #066e80;
+$etiBlue3: #0ca0bb;
+$etiBlue4: #10b7d4;
+$etiBlue5: #0fc2e2;
+$etiBlue6: #12d1f3;
+
 // General Styles
 body {
   
@@ -78,6 +85,77 @@ li ol > li {
 
 li ol > li:before {
   content: counters(item, ".") " ";
+}
+
+
+// Page Navbar Styles
+
+.page-navbar-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  min-height: 60px;
+  z-index: 9999 !important;
+
+  & > .container {
+    width: 1058px + (2 * $spaceFactor);
+
+    .logo-1 {
+      margin-left: .66 * $spaceFactor;
+      margin-top: 1.33 * $spaceFactor;
+      width: 180px;
+    }
+  }
+}
+
+.page-navbar-2-container {
+  width: 100%;
+  height: 42px;
+  margin-bottom: 2 * $spaceFactor;
+}
+
+.page-navbar-2 {
+  position: relative;
+  margin-bottom: 20px;
+  min-height: 30px;
+  width: 100%;
+  display: block;
+  z-index: 9999 !important;
+  
+  & > .container {
+    width: 100%;
+    display: block;
+
+    .logo-1 {
+      width: 190px;
+      display: block;
+      margin-left: auto;
+      transition: all .2s;
+      -webkit-transition: all .2s;
+      -moz-transition: all .2s;
+      -ms-transition: all .2s;
+      -o-transition: all .2s;
+    }
+  }
+
+  &.fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin: 0;
+
+    & > .container {
+      width: 1058px + (2 * $spaceFactor);
+
+      .logo-1 {
+        margin-right: .66 * $spaceFactor;
+        margin-top: 1.33 * $spaceFactor;
+        width: 190px;
+      }
+    }
+  }
 }
 
 // Presentation Styles

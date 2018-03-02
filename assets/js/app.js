@@ -1,6 +1,30 @@
 $(document).ready(() => {
   $('.parallax').parallax();
 
+  /*
+  $('.first-slide').on('scrollSpy:exit', function() {
+    $('.page-navbar-2').addClass('fixed-top');
+  });
+  
+  $('.first-slide').on('scrollSpy:enter', function() {
+    $('.page-navbar-2').removeClass('fixed-top');
+  });
+
+  $('.first-slide').scrollSpy();
+  */
+
+  $(window).scroll(() => {
+    var scrollPosition = $(this).scrollTop(),
+        $div = $('.page-navbar-2-container'),
+        divPosition = $div.offset().top;
+    
+    if (scrollPosition >= divPosition) {
+      $('.page-navbar-2').addClass('fixed-top');
+    } else {
+      $('.page-navbar-2').removeClass('fixed-top');
+    }
+  });
+
   var chartPointsScored1 = new Chart(
     document.getElementById('chart-points-scored-1').getContext('2d'), 
     { type: 'bar',
