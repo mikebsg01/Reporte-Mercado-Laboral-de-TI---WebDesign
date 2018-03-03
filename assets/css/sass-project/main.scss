@@ -138,7 +138,14 @@ li ol > li:before {
     margin: 0;
 
     & > .container {
-      width: 1058px + (2 * $spaceFactor);
+
+      @media (min-width: 1200px) {
+        width: 1058px + (2 * $spaceFactor);
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        width: 865px + (4 * $spaceFactor);
+      }
 
       .logo-2 {
         margin-right: .66 * $spaceFactor;
@@ -159,7 +166,13 @@ li ol > li:before {
   }
 
   & > .slide > .container {
-    width: 1058px + (4 * $spaceFactor);
+    @media (min-width: 1200px) {
+      width: 1058px + (4 * $spaceFactor);
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      width: 865px + (4 * $spaceFactor);
+    }
 
     & > .slide-content {
       padding: (5 * $spaceFactor) (2 * $spaceFactor);
@@ -299,8 +312,16 @@ li ol > li:before {
 
     #chart-most-demanded-profiles {
       margin-top: 5.33 * $spaceFactor;
-      width: 595px !important;
-      height: 360px !important;
+
+      @media (min-width: 1200px) {
+        width: 595px !important;
+        height: 360px !important;
+      }
+
+      @media (min-width: 993px) and (max-width: 1199px) {
+        width: 498px !important;
+        height: 407px !important;
+      }
     }
   }
 
@@ -323,8 +344,16 @@ li ol > li:before {
     #chart-highest-growth-profiles {
       margin-left: .75 * $spaceFactor;
       margin-top: 4.33 * $spaceFactor;
-      width: 560px !important;
-      height: 360px !important;
+
+      @media (min-width: 1200px) {
+        width: 560px !important;
+        height: 360px !important;
+      }
+
+      @media (min-width: 993px) and (max-width: 1199px) {
+        width: 498px !important;
+        height: 377px !important;
+      }
     }
   }
 
@@ -347,8 +376,16 @@ li ol > li:before {
     #chart-job-offers-per-month-in-2017 {
       margin-top: 4 * $spaceFactor;
       margin-bottom: $spaceFactor;
-      width: 878px !important;
-      height: 384px !important;
+      
+      @media (min-width: 1200px) {
+        width: 878px !important;
+        height: 384px !important;
+      }
+
+      @media (min-width: 993px) and (max-width: 1199px) {
+        width: 719px !important;
+        height: 358px !important;
+      }
     }
   }
 
@@ -384,16 +421,32 @@ li ol > li:before {
         }
 
         .chart-canvas-container {
-          width: 246px !important;
-          height: 190px !important;
+          
+          @media (min-width: 1200px) {
+            width: 246px !important;
+            height: 190px !important;
+          }
+
+          @media (min-width: 993px) and (max-width: 1199px) {
+            width: 200px !important;
+            height: 150px !important;
+          }
 
           .chart-percentage {
             position: absolute;
-            margin-top: 80px;
-            margin-left: 87px;
             font-family: 'Ubuntu', sans-serif;
             font-size: 26px;
             font-weight: bold;
+
+            @media (min-width: 1200px) {
+              margin-top: 80px;
+              margin-left: 87px;
+            }
+
+            @media (min-width: 993px) and (max-width: 1199px) {
+              margin-top: 62px;
+              margin-left: 65px;
+            }
           }
         }
       }
@@ -500,19 +553,34 @@ li ol > li:before {
           .chart-label {
             padding-left: 5px;
             font-family: 'Ubuntu', sans-serif;
-            font-size: 14px;
             font-weight: 400;
             line-height: 18px;
             margin-top: 3px;
             margin-bottom: 3px;
+
+            @media (min-width: 1200px) {
+              font-size: 14px;
+            }
+
+            @media (min-width: 993px) and (max-width: 1199px) {
+              font-size: 12px;
+            }
           }
         }
       }
 
       .chart-canvas-container {
         margin-top: 2.66 * $spaceFactor;
-        width: 506px !important;
-        height: 303px !important;
+
+        @media (min-width: 1200px) {
+          width: 506px !important;
+          height: 303px !important;
+        }
+
+        @media (min-width: 993px) and (max-width: 1199px) {
+          width: 339px !important;
+          height: 169px !important;
+        }
       }
     }
   }
@@ -540,8 +608,16 @@ li ol > li:before {
       }
 
       .chart-canvas-container {
-        width: 1058px !important;
-        height: 352px !important;
+
+        @media (min-width: 1200px) {
+          width: 1058px !important;
+          height: 352px !important;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+          width: 865px !important;
+          height: 432px !important;
+        }
       }
     }
   }
@@ -568,8 +644,16 @@ li ol > li:before {
       }
 
      .chart-canvas-container {
-        width: 1058px !important;
-        height: 426px !important;
+
+        @media (min-width: 1200px) {
+          width: 1058px !important;
+          height: 426px !important;
+        }
+
+        @media (min-width: 993px) and (max-width: 1199px) {
+          width: 865px !important;
+          height: 432px !important;
+        }
       }
     }
   }
@@ -595,8 +679,15 @@ li ol > li:before {
       padding-top: 4 * $spaceFactor;
 
       #chart-place-of-residence {
-        width: 697px !important;
-        height: 433px !important;
+        @media (min-width: 1200px) {
+          width: 697px !important;
+          height: 433px !important;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+          width: 569px !important;
+          height: 355px !important;
+        }
       }
     }
   }

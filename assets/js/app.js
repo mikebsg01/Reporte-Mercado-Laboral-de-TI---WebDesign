@@ -1156,4 +1156,16 @@ $(document).ready(() => {
 
     ChartPlaceOfResidence.draw(data, options);
   }
+
+  $(window).resize(function() {
+    if(this.resizeTO) clearTimeout(this.resizeTO);
+    this.resizeTO = setTimeout(function() {
+        $(this).trigger('resizeEnd');
+    }, 500);
+  });
+
+  $(window).on('resizeEnd', function() {
+    console.log("resizend");
+    google.charts.setOnLoadCallback(drawChartPlaceOfResidence);
+  });
 });
