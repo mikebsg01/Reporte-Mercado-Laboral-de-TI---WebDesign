@@ -45,16 +45,41 @@ h2, h3, h4, h5, h6 {
 
 h1 {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 64px;
+
+  /* mqh */
+  @media (min-width: 1200px) {
+    font-size: 64px;
+  }
+  
+  @media (min-width: 768px) and (max-width: 1199px) {
+    font-size: 56px;
+  }
 }
 
 h2 {
-  font-size: 32px;
+
+  /* mqh */
+  @media (min-width: 1200px) {
+    font-size: 32px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    font-size: 28px;
+  }
 }
 
 h3 {
-  font-size: 24px;
-  line-height: 34px;
+
+  /* mqh */
+  @media (min-width: 1200px) {
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
 }
 
 li, p {
@@ -91,7 +116,15 @@ li ol > li:before {
 }
 
 .parallax-container {
-  height: 600px !important;
+
+  /* mqh */
+  @media (min-width: 1200px) {
+    height: 600px !important;
+  }
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    height: 560px !important;
+  }
 }
 
 // Page Navbar Styles
@@ -99,8 +132,17 @@ li ol > li:before {
 .logo-1-container {
   
   .logo-1 {
-    width: 200px;
-    margin-top: $spaceFactor;
+    
+    /* mqh */
+    @media (min-width: 1200px) {
+      width: 200px;
+      margin-top: $spaceFactor;
+    }
+
+    @media (min-width: 768px) and (max-width: 1199px) {
+      width: 190px;
+      margin-top: 0.8 * $spaceFactor;
+    }
   }
 }
 
@@ -123,7 +165,6 @@ li ol > li:before {
     display: block;
 
     .logo-2 {
-      width: 190px;
       display: block;
       margin-left: auto;
       transition: all .2s;
@@ -131,6 +172,14 @@ li ol > li:before {
       -moz-transition: all .2s;
       -ms-transition: all .2s;
       -o-transition: all .2s;
+
+      @media (min-width: 1200px) {
+        width: 190px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        width: 180px;
+      }
     }
   }
 
@@ -169,6 +218,8 @@ li ol > li:before {
   }
 
   & > .slide > .container {
+
+    /* mqh */
     @media (min-width: 1200px) {
       width: 1058px + (4 * $spaceFactor);
     }
@@ -181,8 +232,17 @@ li ol > li:before {
       padding: (5 * $spaceFactor) (2 * $spaceFactor);
 
       .title {
-        margin-top: 1 * $spaceFactor;
-        margin-bottom: 3 * $spaceFactor;
+        
+        /* mqh */
+        @media (min-width: 1200px) {
+          margin-top: 1 * $spaceFactor;
+          margin-bottom: 3 * $spaceFactor;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+          margin-top: 0.8 * $spaceFactor;
+          margin-bottom: 2.33 * $spaceFactor;
+        }
       }
     }
   }
@@ -206,8 +266,17 @@ li ol > li:before {
     }
 
     .p-arrow-down {
-      margin-top: $spaceFactor;
-      font-size: 32px;
+
+      /* mqh */
+      @media (min-width: 1200px) {
+        margin-top: $spaceFactor;
+        font-size: 32px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 0.8 * $spaceFactor;
+        font-size: 28px;
+      }
     }
   }
 
@@ -226,46 +295,6 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
-  }
-
-  & > .slide-growth-of-offers-in-mexico {
-    background-color: lighten($blueGray, 10%);
-    //ackground: linear-gradient(to right, #34495e, #1e2a36);
-    color: white;
-
-    #chart-points-scored {
-      margin-top:  -0.2 * $spaceFactor;
-    }
-
-    .chart-container {
-      .chart-title {
-        text-align: center;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 14px;
-        margin-bottom: 0.5 * $spaceFactor;
-      }
-
-      .chart-percentage {
-        text-align: center;
-        position: absolute;
-        margin-top: 5.2 * $spaceFactor;
-        margin-left: 1.2 * $spaceFactor;
-        width: 7.86 * $spaceFactor;
-
-        p {
-          text-align: center;
-          font-family: 'Ubuntu', sans-serif;
-          font-size: 28px;
-          font-weight: 400;
-          margin-top: 0;
-          margin-bottom: 0;
-        }
-      }
-    }
-
-    h3.title {
-      margin-top: 5 * $spaceFactor !important;
-    }
   }
 
   & > .slide-growth-of-offers-in-mexico-1 {
@@ -288,8 +317,17 @@ li ol > li:before {
     }
     
     h3.title {
-      margin-top: 2 * $spaceFactor !important;
-      margin-bottom: 2 * $spaceFactor !important;
+
+      /* mqh */
+      @media (min-width: 1200px) {
+        margin-top: 2 * $spaceFactor !important;
+        margin-bottom: 2 * $spaceFactor !important;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        margin-top: 1.33 * $spaceFactor !important;
+        margin-bottom: 1.33 * $spaceFactor !important;
+      }
     }
   }
 
@@ -323,7 +361,7 @@ li ol > li:before {
 
       @media (min-width: 993px) and (max-width: 1199px) {
         width: 498px !important;
-        height: 407px !important;
+        height: 417px !important;
       }
     }
   }
@@ -736,7 +774,6 @@ li ol > li:before {
       padding-top: 7 * $spaceFactor;
       padding-bottom: 7 * $spaceFactor;
     }
-
 
     h3.title {
       margin-top: .33 * $spaceFactor !important;
