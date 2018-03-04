@@ -317,8 +317,8 @@ li ol > li:before {
       margin-top: 5.33 * $spaceFactor;
 
       @media (min-width: 1200px) {
-        width: 595px !important;
-        height: 360px !important;
+        width: 608px !important;
+        height: 374px !important;
       }
 
       @media (min-width: 993px) and (max-width: 1199px) {
@@ -732,8 +732,14 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
+    & > .container > .slide-content {
+      padding-top: 7 * $spaceFactor;
+      padding-bottom: 7 * $spaceFactor;
+    }
+
+
     h3.title {
-      margin-top: 4.33 * $spaceFactor !important;
+      margin-top: .33 * $spaceFactor !important;
       margin-bottom: 1.33 * $spaceFactor !important;
       font-size: 26px;
       line-height: 36px;
@@ -742,10 +748,13 @@ li ol > li:before {
     p {
       font-size: 16px;
       line-height: 30px;
+
+      a {
+        text-decoration: underline;
+      }
     }
 
     .chart-container {
-      padding-top: 4 * $spaceFactor;
 
       #chart-place-of-residence {
         @media (min-width: 1200px) {
@@ -778,7 +787,7 @@ li ol > li:before {
     }
 
     p {
-      font-size: 16px;
+      font-size: 15px;
       line-height: 30px;
     }
 

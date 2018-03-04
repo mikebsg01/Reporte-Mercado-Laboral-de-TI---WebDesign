@@ -98,7 +98,10 @@ $(document).ready(() => {
               lineWidth: 1
             },
             ticks: {
-              fontColor: 'rgba(255, 255, 255, 0.3)'
+              fontColor: 'rgba(255, 255, 255, 0.3)',
+              min: 0,
+              max: 60,
+              stepSize: 10
             }
           }],
           xAxes: [{
@@ -190,6 +193,9 @@ $(document).ready(() => {
             },
             ticks: {
               fontColor: 'rgba(255, 255, 255, 0.3)',
+              min: 0,
+              max: 60,
+              stepSize: 10
             }
           }],
           xAxes: [{
