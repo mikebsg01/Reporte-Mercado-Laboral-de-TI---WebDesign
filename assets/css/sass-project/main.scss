@@ -14,6 +14,9 @@ $etiBlue4: #10b7d4;
 $etiBlue5: #0fc2e2;
 $etiBlue6: #12d1f3;
 
+$etiOrigBlue: #00d1f3;
+$etiOrigOrange: #faaa4b;
+
 // General Styles
 body {
   
@@ -763,8 +766,12 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
+    & > .container > .slide-content {
+      padding-top: 2 * $spaceFactor;
+      padding-bottom: 2 * $spaceFactor;
+    }
+
     h3.title {
-      margin-top: 4.33 * $spaceFactor !important;
       margin-bottom: 1.33 * $spaceFactor !important;
       font-size: 26px;
       line-height: 36px;
@@ -776,22 +783,22 @@ li ol > li:before {
     }
 
     .row-text {
-      margin-bottom: 5  * $spaceFactor;
+      margin-bottom: 0  * $spaceFactor;
     }
 
     .row-link {
-      margin-bottom: 4 * $spaceFactor;
+      margin-bottom: 1 * $spaceFactor;
 
       .link-site {
-        background-color: #faaa4b;
+        font-size: 16px;
+        text-decoration: underline;
       }
     }
 
     .row-email {
-      margin-bottom: 3 * $spaceFactor;
 
       .link-email {
-        color: #00d1f3;
+        color: white;
         
         & > span {
           display: inline-block;
