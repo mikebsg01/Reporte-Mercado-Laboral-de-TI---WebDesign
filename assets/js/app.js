@@ -777,7 +777,9 @@ $(document).ready(() => {
       options: {
         cutoutPercentage: 60,
         responsive: true,
+        maintainAspectRatio: false,
         legend: {
+          display: false,
           position: 'right',
           labels: {
             fontFamily: "'Ubuntu', sans-serif",

@@ -468,20 +468,86 @@ li ol > li:before {
     }
 
     .chart-container {
-      padding-left: 1.5 * $spaceFactor;
+      padding-right: 2 * $spaceFactor;
 
       .chart-title {
         font-family: 'Ubuntu', sans-serif;
         font-size: 16px;
         font-weight: bold;
         position: relative;
-        margin-top: 3.8 * $spaceFactor;
+        margin-top: 4.5 * $spaceFactor;
         margin-left: -1.5 * $spaceFactor;
-        margin-bottom: -2 * $spaceFactor;
+        margin-bottom: -1 * $spaceFactor;
       }
 
-      #chart-device-to-look-for-work {
-        margin-top: 4 * $spaceFactor;
+      .chart-legend {
+        margin-top: 1.33 * $spaceFactor;
+        text-align: right;
+
+        .chart-label-container {
+
+          .chart-label-box,
+          .chart-label {
+            display: inline-block;
+            vertical-align: middle;
+          }
+
+          .chart-label-box {
+            width: 40px;
+            height: 15px;
+
+            &.box-1 {
+              background-color: rgba(255, 255, 255, 0.65);
+              border: 1px solid rgba(255, 255, 255, 0.85);
+            }
+
+            &.box-2 {
+              background-color: rgba(255, 255, 255, 0.5);
+              border: 1px solid rgba(255, 255, 255, 0.7);
+            }
+
+            &.box-3 {
+              background-color: rgba(255, 255, 255, 0.35);
+              border: 1px solid rgba(255, 255, 255, 0.55);
+            }
+
+            &.box-4 {
+              background-color: rgba(255, 255, 255, 0.2);
+              border: 1px solid rgba(255, 255, 255, 0.4);
+            }
+          }
+
+          .chart-label {
+            padding-right: 5px;
+            font-family: 'Ubuntu', sans-serif;
+            font-weight: 400;
+            line-height: 18px;
+            margin-top: 3px;
+            margin-bottom: 3px;
+
+            @media (min-width: 1200px) {
+              font-size: 14px;
+            }
+
+            @media (min-width: 993px) and (max-width: 1199px) {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      .chart-canvas-container {
+        margin-top: 2.66 * $spaceFactor;
+
+        @media (min-width: 1200px) {
+          width: 506px !important;
+          height: 303px !important;
+        }
+
+        @media (min-width: 993px) and (max-width: 1199px) {
+          width: 339px !important;
+          height: 169px !important;
+        }
       }
     }
   }
@@ -509,7 +575,7 @@ li ol > li:before {
         font-size: 16px;
         font-weight: bold;
         position: relative;
-        margin-top: 2 * $spaceFactor;
+        margin-top: 4.5 * $spaceFactor;
         margin-left: -1.5 * $spaceFactor;
         margin-bottom: -2 * $spaceFactor;
       }
