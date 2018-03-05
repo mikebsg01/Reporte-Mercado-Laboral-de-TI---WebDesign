@@ -302,6 +302,13 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
+    /* mqh */
+    @media (min-width: 768px) and (max-width: 1199px) {
+      p {
+        font-size: 16px;
+      }
+    }
+
     .chart-container {
       .chart-title {
         text-align: center;
@@ -341,9 +348,18 @@ li ol > li:before {
     }
 
     h3.title {
-      margin-top: 1.33 * $spaceFactor !important;
-      margin-bottom: 1.33 * $spaceFactor !important;
-      line-height: 36px;
+
+      @media (min-width: 1200px) {
+        line-height: 36px;
+        margin-top: 1.33 * $spaceFactor !important;
+        margin-bottom: 1.33 * $spaceFactor !important;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        line-height: 34px;
+        margin-top: 0.8 * $spaceFactor !important;
+        margin-bottom: 0.8 * $spaceFactor !important;
+      }
     }
 
     p {
@@ -372,9 +388,18 @@ li ol > li:before {
     color: white;
 
     h3.title {
-      margin-top: 1.33 * $spaceFactor !important;
-      margin-bottom: 1.33 * $spaceFactor !important;
-      line-height: 36px;
+
+      @media (min-width: 1200px) {
+        line-height: 36px;
+        margin-top: 1.33 * $spaceFactor !important;
+        margin-bottom: 1.33 * $spaceFactor !important;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        line-height: 34px;
+        margin-top: 0.8 * $spaceFactor !important;
+        margin-bottom: 0.8 * $spaceFactor !important;
+      }
     }
 
     p {
@@ -410,22 +435,32 @@ li ol > li:before {
     }
 
     p {
-      font-size: 16px;
-      line-height: 34px;
+
+      @media (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 34px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1199px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
     }
 
     #chart-job-offers-per-month-in-2017 {
-      margin-top: 4 * $spaceFactor;
-      margin-bottom: $spaceFactor;
       
       @media (min-width: 1200px) {
         width: 878px !important;
         height: 384px !important;
+        margin-top: 4 * $spaceFactor;
+        margin-bottom: $spaceFactor;
       }
 
       @media (min-width: 993px) and (max-width: 1199px) {
         width: 719px !important;
         height: 358px !important;
+        margin-top: 3 * $spaceFactor;
+        margin-bottom: .33 * $spaceFactor;
       }
     }
   }
@@ -441,8 +476,16 @@ li ol > li:before {
     }
 
     p {
-      font-size: 16px;
-      line-height: 26px;
+
+      @media (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 34px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1199px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
     }
 
     .first-row {
@@ -522,8 +565,16 @@ li ol > li:before {
       }
 
       .chart-legend {
-        margin-top: 1.33 * $spaceFactor;
         text-align: right;
+
+        /* mqh */
+        @media (min-width: 1200px) {
+          margin-top: 1.33 * $spaceFactor;
+        }
+
+        @media (min-width: 993px) and (max-width: 1199px) {
+          margin-top: 2 * $spaceFactor;
+        }
 
         .chart-label-container {
 
@@ -566,6 +617,7 @@ li ol > li:before {
             margin-top: 3px;
             margin-bottom: 3px;
 
+            /* mqh */
             @media (min-width: 1200px) {
               font-size: 14px;
             }
@@ -578,14 +630,15 @@ li ol > li:before {
       }
 
       .chart-canvas-container {
-        margin-top: 2.66 * $spaceFactor;
 
         @media (min-width: 1200px) {
+          margin-top: 2.66 * $spaceFactor;
           width: 506px !important;
           height: 303px !important;
         }
 
         @media (min-width: 993px) and (max-width: 1199px) {
+          margin-top: 3 * $spaceFactor;
           width: 339px !important;
           height: 169px !important;
         }
@@ -604,7 +657,7 @@ li ol > li:before {
     }
 
     .text-container {
-      padding-left: 2 * $spaceFactor;
+      padding-right: 2 * $spaceFactor;
     }
 
     .chart-container {
@@ -622,7 +675,15 @@ li ol > li:before {
       }
 
       .chart-legend {
-        margin-top: 1.33 * $spaceFactor;
+
+        /* mqh */
+        @media (min-width: 1200px) {
+          margin-top: 1.33 * $spaceFactor;
+        }
+
+        @media (min-width: 993px) and (max-width: 1199px) {
+          margin-top: 3 * $spaceFactor;
+        }
 
         .chart-label-container {
 
@@ -665,6 +726,7 @@ li ol > li:before {
             margin-top: 3px;
             margin-bottom: 3px;
 
+            /* mqh */
             @media (min-width: 1200px) {
               font-size: 14px;
             }
@@ -677,14 +739,16 @@ li ol > li:before {
       }
 
       .chart-canvas-container {
-        margin-top: 2.66 * $spaceFactor;
 
+        /* mqh */
         @media (min-width: 1200px) {
+          margin-top: 2.66 * $spaceFactor;
           width: 506px !important;
           height: 303px !important;
         }
 
         @media (min-width: 993px) and (max-width: 1199px) {
+          margin-top: 5 * $spaceFactor;
           width: 339px !important;
           height: 169px !important;
         }
@@ -703,19 +767,37 @@ li ol > li:before {
     }
 
     .chart-container {
-      margin-bottom: 4 * $spaceFactor;
+
+      /* mqh */
+      @media (min-width: 1200px) {
+        margin-bottom: 4 * $spaceFactor;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 3 * $spaceFactor;
+      }
 
       .chart-title {
         font-family: 'Ubuntu', sans-serif;
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
-        margin-top: 3 * $spaceFactor;
-        margin-bottom: 3 * $spaceFactor;
+
+        /* mqh */
+        @media (min-width: 1200px) {
+          margin-top: 3 * $spaceFactor;
+          margin-bottom: 3 * $spaceFactor;
+        }
+        
+        @media (min-width: 768px) and (max-width: 1199px) {
+          margin-top: 2 * $spaceFactor;
+          margin-bottom: 2.4 * $spaceFactor;
+        }
       }
 
       .chart-canvas-container {
 
+        /* mqh */
         @media (min-width: 1200px) {
           width: 1058px !important;
           height: 352px !important;
@@ -746,12 +828,22 @@ li ol > li:before {
         font-weight: 400;
         font-size: 18px;
         line-height: 28px;
-        margin-top: 3.6 * $spaceFactor;
-        margin-bottom: 3 * $spaceFactor;
+
+        /* mqh */
+        @media (min-width: 1200px) {
+          margin-top: 3.6 * $spaceFactor;
+          margin-bottom: 3 * $spaceFactor;
+        }
+
+        @media (min-width: 768px) and (max-width: 1199px) {
+          margin-top: 2.66 * $spaceFactor;
+          margin-bottom: 2.33 * $spaceFactor;
+        }
       }
 
      .chart-canvas-container {
 
+        /* mqh */
         @media (min-width: 1200px) {
           width: 1058px !important;
           height: 426px !important;
@@ -776,15 +868,35 @@ li ol > li:before {
     }
 
     h3.title {
-      margin-top: .33 * $spaceFactor !important;
-      margin-bottom: 1.33 * $spaceFactor !important;
       font-size: 26px;
       line-height: 36px;
+
+      /* mqh */
+      @media (min-width: 1200px) {
+        margin-top: .33 * $spaceFactor !important;
+        margin-bottom: 1.33 * $spaceFactor !important;
+      }
+
+      @media (min-width: 993px) and (max-width: 1199px) {
+        margin-top: .2 * $spaceFactor !important;
+        margin-bottom: .4 * $spaceFactor !important;
+      }
     }
 
     p {
-      font-size: 16px;
-      line-height: 30px;
+
+      /* mqh */
+      @media (min-width: 1200px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1199px) {
+        font-size: 15px;
+        line-height: 26px;
+        margin-top: .8 * $spaceFactor !important;
+        margin-bottom: .8 * $spaceFactor !important;
+      }
 
       a {
         text-decoration: underline;
@@ -794,6 +906,8 @@ li ol > li:before {
     .chart-container {
 
       #chart-place-of-residence {
+
+        /* mqh */
         @media (min-width: 1200px) {
           width: 697px !important;
           height: 433px !important;
@@ -818,14 +932,33 @@ li ol > li:before {
     }
 
     h3.title {
-      margin-bottom: 1.33 * $spaceFactor !important;
-      font-size: 26px;
-      line-height: 36px;
+
+      /* mqh */
+      @media (min-width: 1200px) {
+        margin-bottom: 1.33 * $spaceFactor !important;
+        font-size: 26px;
+        line-height: 36px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        margin-bottom: 0.66 * $spaceFactor !important;
+        font-size: 24px;
+        line-height: 24px;
+      }
     }
 
     p {
-      font-size: 15px;
-      line-height: 30px;
+
+      /* mqh */
+      @media (min-width: 1200px) {
+        font-size: 15px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 768px) and (max-width: 1199px) {
+        font-size: 14px;
+        line-height: 25px;
+      }
     }
 
     .row-text {
