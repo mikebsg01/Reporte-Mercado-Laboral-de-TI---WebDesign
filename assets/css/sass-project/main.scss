@@ -173,6 +173,7 @@ li ol > li:before {
       -ms-transition: all .2s;
       -o-transition: all .2s;
 
+      /* mqh */
       @media (min-width: 1200px) {
         width: 190px;
       }
@@ -191,6 +192,7 @@ li ol > li:before {
 
     & > .container {
 
+      /* mqh */
       @media (min-width: 1200px) {
         width: 1058px + (2 * $spaceFactor);
       }
@@ -349,6 +351,7 @@ li ol > li:before {
 
     h3.title {
 
+      /* mqh */
       @media (min-width: 1200px) {
         line-height: 36px;
         margin-top: 1.33 * $spaceFactor !important;
@@ -370,6 +373,7 @@ li ol > li:before {
     #chart-most-demanded-profiles {
       margin-top: 5.33 * $spaceFactor;
 
+      /* mqh */
       @media (min-width: 1200px) {
         width: 608px !important;
         height: 374px !important;
@@ -389,6 +393,7 @@ li ol > li:before {
 
     h3.title {
 
+      /* mqh */
       @media (min-width: 1200px) {
         line-height: 36px;
         margin-top: 1.33 * $spaceFactor !important;
@@ -411,6 +416,7 @@ li ol > li:before {
       margin-left: .75 * $spaceFactor;
       margin-top: 4.33 * $spaceFactor;
 
+      /* mqh */
       @media (min-width: 1200px) {
         width: 560px !important;
         height: 360px !important;
@@ -436,6 +442,7 @@ li ol > li:before {
 
     p {
 
+      /* mqh */
       @media (min-width: 1200px) {
         font-size: 16px;
         line-height: 34px;
@@ -449,6 +456,7 @@ li ol > li:before {
 
     #chart-job-offers-per-month-in-2017 {
       
+      /* mqh */
       @media (min-width: 1200px) {
         width: 878px !important;
         height: 384px !important;
@@ -477,6 +485,7 @@ li ol > li:before {
 
     p {
 
+      /* mqh */
       @media (min-width: 1200px) {
         font-size: 16px;
         line-height: 34px;
@@ -506,6 +515,7 @@ li ol > li:before {
 
         .chart-canvas-container {
           
+          /* mqh */
           @media (min-width: 1200px) {
             width: 246px !important;
             height: 190px !important;
@@ -522,6 +532,7 @@ li ol > li:before {
             font-size: 26px;
             font-weight: bold;
 
+            /* mqh */
             @media (min-width: 1200px) {
               margin-top: 80px;
               margin-left: 87px;
@@ -631,6 +642,7 @@ li ol > li:before {
 
       .chart-canvas-container {
 
+        /* mqh */
         @media (min-width: 1200px) {
           margin-top: 2.66 * $spaceFactor;
           width: 506px !important;
