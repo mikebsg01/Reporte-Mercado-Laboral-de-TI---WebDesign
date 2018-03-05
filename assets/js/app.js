@@ -1205,6 +1205,8 @@ $(document).ready(() => {
     return elemTopPos <= scrollDownPos && elemDownPos >= scrollTopPos;
   };
 
+  var chartObjects = {};
+
   var makeCharts = () => {
     var scrollTopPosition = $(this).scrollTop(),
         firstDivPosition = $('.page-navbar-2-container').offset().top;
@@ -1222,9 +1224,13 @@ $(document).ready(() => {
         }
 
         chartElements[chartName].isOn = true;
-        charts[chartName]();
+        chartObjects[chartName] = charts[chartName]();
       } else {
         chartElements[chartName].isOn = false;
+
+        if (chartObjects.hasOwnProperty(chartName)) {
+          chartObjects[chartName].clear();
+        }
       }
     }
   };
