@@ -1,11 +1,16 @@
 $(document).ready(() => {
-  var windowWidth = $(window).width(),
-      typeOfDevice = null;
+  window.typeOfDevice = null;
   
-  if (windowWidth >= 1200) {
-    typeOfDevice = 1;
-  } else if (windowWidth > 992 && windowWidth < 1200) {
-    typeOfDevice = 2;
+  var checkTypeOfDevice = () => {
+    let windowWidth = $(window).width();
+
+    if (windowWidth >= 1200) {
+      window.typeOfDevice = 1;
+    } else if (windowWidth > 992 && windowWidth < 1200) {
+      window.typeOfDevice = 2;
+    } else if (windowWidth > 600 && windowWidth < 993) {
+      window.typeOfDevice = 3;
+    }
   }
 
   $('.parallax').parallax();
@@ -66,6 +71,7 @@ $(document).ready(() => {
           },
           options: {
             responsive: true,
+            maintainAspectRatio: false,
             legend: {
               display: false,
               position: 'top',
@@ -113,9 +119,16 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.8)',
+                  fontSize: (window.typeOfDevice == 1 ? 12 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 10 : 10)),
                   autoSkip: false,
-                  maxRotation: 45,
-                  minRotation: 45 
+                  maxRotation: (window.typeOfDevice == 1 ? 45 :
+                                  (window.typeOfDevice == 2 ? 45 :
+                                    window.typeOfDevice == 3 ? 60 : 60)),
+                  minRotation: (window.typeOfDevice == 1 ? 45 :
+                                  (window.typeOfDevice == 2 ? 45 :
+                                    window.typeOfDevice == 3 ? 60 : 60)),
                 }
               }]
             },
@@ -162,6 +175,7 @@ $(document).ready(() => {
           },
           options: {
             responsive: true,
+            maintainAspectRatio: false,
             legend: {
               display: false,
               position: 'top',
@@ -209,9 +223,16 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.8)',
+                  fontSize: (window.typeOfDevice == 1 ? 12 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 10 : 10)),
                   autoSkip: false,
-                  maxRotation: 45,
-                  minRotation: 45 
+                  maxRotation: (window.typeOfDevice == 1 ? 45 :
+                                  (window.typeOfDevice == 2 ? 45 :
+                                    window.typeOfDevice == 3 ? 60 : 60)),
+                  minRotation: (window.typeOfDevice == 1 ? 45 :
+                                  (window.typeOfDevice == 2 ? 45 :
+                                    window.typeOfDevice == 3 ? 60 : 60)),
                 }
               }]
             },
@@ -1207,7 +1228,7 @@ $(document).ready(() => {
 
   var chartObjects = {};
 
-  var makeCharts = () => {
+  var makeCharts = (forced) => {
     var scrollTopPosition = $(this).scrollTop(),
         firstDivPosition = $('.page-navbar-2-container').offset().top;
     
@@ -1218,8 +1239,8 @@ $(document).ready(() => {
     }
 
     for (let chartName in chartElements) {
-      if (isScrolledIntoElement(chartElements[chartName].divName)) {
-        if (chartElements[chartName].isOn) {
+      if (forced || isScrolledIntoElement(chartElements[chartName].divName)) {
+        if (forced !== true && chartElements[chartName].isOn) {
           continue;
         }
 
@@ -1229,14 +1250,19 @@ $(document).ready(() => {
         chartElements[chartName].isOn = false;
 
         if (chartObjects.hasOwnProperty(chartName)) {
-          chartObjects[chartName].clear();
+          chartObjects[chartName].destroy();
         }
       }
     }
   };
 
-  makeCharts();
-  $(window).scroll(makeCharts);
+  checkTypeOfDevice();
+  makeCharts(true);
+
+  $(window).scroll(() => {
+    checkTypeOfDevice();
+    makeCharts();
+  });
 
   /* Start 'ChartPlaceOfResidence' */
   google.charts.load('current', {
@@ -1299,6 +1325,7 @@ $(document).ready(() => {
   });
 
   $(window).on('resizeEnd', () => {
+    checkTypeOfDevice();
     google.charts.setOnLoadCallback(drawChartPlaceOfResidence);
   });
 });

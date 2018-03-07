@@ -47,38 +47,51 @@ h1 {
   font-family: 'Ubuntu', sans-serif;
 
   /* mqh */
-  @media (min-width: 1200px) {
+  @media (min-width: 1201px) {
     font-size: 64px;
   }
   
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: 993px) and (max-width: 1200px) {
     font-size: 56px;
+  }
+
+  @media (min-width: 601px) and (max-width: 992px) {
+    font-size: 48px;
   }
 }
 
 h2 {
 
   /* mqh */
-  @media (min-width: 1200px) {
+  @media (min-width: 1201px) {
     font-size: 32px;
   }
 
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: 993px) and (max-width: 1200px) {
     font-size: 28px;
+  }
+
+  @media (min-width: 601px) and (max-width: 992px) {
+    font-size: 24px;
   }
 }
 
 h3 {
 
   /* mqh */
-  @media (min-width: 1200px) {
+  @media (min-width: 1201px) {
     font-size: 24px;
     line-height: 34px;
   }
 
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: 993px) and (max-width: 1200px) {
     font-size: 22px;
     line-height: 32px;
+  }
+
+  @media (min-width: 601px) and (max-width: 992px) {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
@@ -86,6 +99,12 @@ li, p {
   font-weight: 300;
   font-size: 14px;
   line-height: 28px;
+
+  /* mqh */
+  @media (min-width: 601px) and (max-width: 992px) {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 
 ol {
@@ -105,6 +124,11 @@ ol > li:before {
   content: counters(item, ".") ". ";
   display: table-cell;
   padding-right: 0.6em;    
+
+  /* mqh */
+  @media (min-width: 601px) and (max-width: 992px) {
+    line-height: 0.2em;
+  }
 }
 
 li ol > li {
@@ -115,15 +139,25 @@ li ol > li:before {
   content: counters(item, ".") " ";
 }
 
+.row {
+  @media (min-width: 601px) and (max-width: 992px) {
+    margin-bottom: 5px;
+  }
+}
+
 .parallax-container {
 
   /* mqh */
-  @media (min-width: 1200px) {
+  @media (min-width: 1201px) {
     height: 600px !important;
   }
 
-  @media (min-width: 768px) and (max-width: 1199px) {
+  @media (min-width: 993px) and (max-width: 1200px) {
     height: 560px !important;
+  }
+
+  @media (min-width: 601px) and (max-width: 992px) {
+    height: 450px !important;
   }
 }
 
@@ -134,13 +168,18 @@ li ol > li:before {
   .logo-1 {
     
     /* mqh */
-    @media (min-width: 1200px) {
+    @media (min-width: 1201px) {
       width: 200px;
       margin-top: $spaceFactor;
     }
 
-    @media (min-width: 768px) and (max-width: 1199px) {
+    @media (min-width: 993px) and (max-width: 1200px) {
       width: 190px;
+      margin-top: 0.8 * $spaceFactor;
+    }
+
+    @media (min-width: 601px) and (max-width: 992px) {
+      width: 160px;
       margin-top: 0.8 * $spaceFactor;
     }
   }
@@ -174,12 +213,16 @@ li ol > li:before {
       -o-transition: all .2s;
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         width: 190px;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         width: 180px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        width: 140px;
       }
     }
   }
@@ -193,18 +236,21 @@ li ol > li:before {
     & > .container {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         width: 1058px + (2 * $spaceFactor);
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         width: 865px + (4 * $spaceFactor);
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        width: 529px + (2 * $spaceFactor);
       }
 
       .logo-2 {
         margin-right: .66 * $spaceFactor;
         margin-top: 1.33 * $spaceFactor;
-        width: 190px;
       }
     }
   }
@@ -212,6 +258,7 @@ li ol > li:before {
 
 // Presentation Styles
 .presentation {
+  overflow: hidden !important;
   font-family: 'Open Sans', sans-serif;
   color: #444;
 
@@ -222,28 +269,45 @@ li ol > li:before {
   & > .slide > .container {
 
     /* mqh */
-    @media (min-width: 1200px) {
+    @media (min-width: 1201px) {
       width: 1058px + (4 * $spaceFactor);
     }
 
-    @media (min-width: 768px) and (max-width: 1199px) {
+    @media (min-width: 993px) and (max-width: 1200px) {
       width: 865px + (4 * $spaceFactor);
     }
 
+    @media (min-width: 601px) and (max-width: 992px) {
+      width: 529px + (2 * $spaceFactor);
+    }
+
     & > .slide-content {
-      padding: (5 * $spaceFactor) (2 * $spaceFactor);
+
+      /* mqh */
+      @media (min-width: 993px) {
+        padding: (5 * $spaceFactor) (2 * $spaceFactor);
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        padding: (2 * $spaceFactor) (1 * $spaceFactor);
+      }
 
       .title {
         
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           margin-top: 1 * $spaceFactor;
           margin-bottom: 3 * $spaceFactor;
         }
 
-        @media (min-width: 768px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 0.8 * $spaceFactor;
           margin-bottom: 2.33 * $spaceFactor;
+        }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: 0.4 * $spaceFactor;
+          margin-bottom: 1 * $spaceFactor;
         }
       }
     }
@@ -270,14 +334,19 @@ li ol > li:before {
     .p-arrow-down {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         margin-top: $spaceFactor;
         font-size: 32px;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         margin-top: 0.8 * $spaceFactor;
         font-size: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        margin-top: 0.4 * $spaceFactor;
+        font-size: 24px;
       }
     }
   }
@@ -304,38 +373,73 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
-    /* mqh */
-    @media (min-width: 768px) and (max-width: 1199px) {
-      p {
-        font-size: 16px;
-      }
-    }
-
     .chart-container {
       .chart-title {
         text-align: center;
         font-family: 'Ubuntu', sans-serif;
         font-weight: bold;
-        font-size: 14px;
-        margin-bottom: 1.5 * $spaceFactor;
+
+        /* mqh */
+        @media (min-width: 1201px) {
+          padding-left: 5.33 * $spaceFactor;
+          padding-right: 2.66 * $spaceFactor;
+          height: 56px;
+          font-size: 14px;
+          margin-bottom: 1.5 * $spaceFactor;
+        }
+
+        @media (min-width: 993px) and (max-width: 1200px) {
+          padding-left: 4.66 * $spaceFactor;
+          padding-right: 1.66 * $spaceFactor;
+          height: 56px;
+          font-size: 14px;
+          margin-bottom: 1.5 * $spaceFactor;
+        }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+          padding-left: 2.66 * $spaceFactor;
+          padding-right: .66 * $spaceFactor;
+          height: 66px;
+          font-size: 12px;
+          margin-top: 0.33 * $spaceFactor;
+          margin-bottom: 1.4 * $spaceFactor;
+        }
       }
 
-      #chart-points-scored-1 {
-        margin-top: 3.25 * $spaceFactor;
+      .chart-canvas-container {
+        /* mqh */
+        @media (min-width: 1201px) {
+          &, & canvas {
+            width: 518px !important;
+            height: 435px !important;
+          }
+        }
+
+        @media (min-width: 993px) and (max-width: 1200px) {
+          &, & canvas {
+            width: 422px !important;
+            height: 420px !important;
+          }
+        }
       }
     }
     
     h3.title {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         margin-top: 2 * $spaceFactor !important;
         margin-bottom: 2 * $spaceFactor !important;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         margin-top: 1.33 * $spaceFactor !important;
         margin-bottom: 1.33 * $spaceFactor !important;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        margin-top: 0.66 * $spaceFactor !important;
+        margin-bottom: 0.66 * $spaceFactor !important;
       }
     }
   }
@@ -352,16 +456,22 @@ li ol > li:before {
     h3.title {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         line-height: 36px;
         margin-top: 1.33 * $spaceFactor !important;
         margin-bottom: 1.33 * $spaceFactor !important;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         line-height: 34px;
         margin-top: 0.8 * $spaceFactor !important;
         margin-bottom: 0.8 * $spaceFactor !important;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        line-height: 32px;
+        margin-top: 0.4 * $spaceFactor !important;
+        margin-bottom: 0.4 * $spaceFactor !important;
       }
     }
 
@@ -370,18 +480,25 @@ li ol > li:before {
       line-height: 34px;
     }
 
-    #chart-most-demanded-profiles {
-      margin-top: 5.33 * $spaceFactor;
+    .chart-container {
 
-      /* mqh */
-      @media (min-width: 1200px) {
-        width: 608px !important;
-        height: 374px !important;
-      }
+      .chart-canvas-container {
+        margin-top: 5.33 * $spaceFactor;
 
-      @media (min-width: 993px) and (max-width: 1199px) {
-        width: 498px !important;
-        height: 417px !important;
+        /* mqh */
+        @media (min-width: 1201px) {
+          &, & canvas {
+            width: 608px !important;
+            height: 374px !important;
+          }
+        }
+
+        @media (min-width: 993px) and (max-width: 1200px) {
+          &, & canvas {
+            width: 498px !important;
+            height: 417px !important;
+          }
+        }
       }
     }
   }
@@ -394,13 +511,13 @@ li ol > li:before {
     h3.title {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         line-height: 36px;
         margin-top: 1.33 * $spaceFactor !important;
         margin-bottom: 1.33 * $spaceFactor !important;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         line-height: 34px;
         margin-top: 0.8 * $spaceFactor !important;
         margin-bottom: 0.8 * $spaceFactor !important;
@@ -412,19 +529,26 @@ li ol > li:before {
       line-height: 34px;
     }
 
-    #chart-highest-growth-profiles {
-      margin-left: .75 * $spaceFactor;
-      margin-top: 4.33 * $spaceFactor;
+    .chart-container {
 
-      /* mqh */
-      @media (min-width: 1200px) {
-        width: 560px !important;
-        height: 360px !important;
-      }
-
-      @media (min-width: 993px) and (max-width: 1199px) {
-        width: 498px !important;
-        height: 377px !important;
+      .chart-canvas-container {
+        margin-left: .75 * $spaceFactor;
+        margin-top: 4.33 * $spaceFactor;
+  
+        /* mqh */
+        @media (min-width: 1201px) {
+          &, & canvas {
+            width: 560px !important;
+            height: 360px !important;
+          }
+        }
+  
+        @media (min-width: 993px) and (max-width: 1200px) {
+          &, & canvas {
+            width: 498px !important;
+            height: 377px !important;
+          }
+        }
       }
     }
   }
@@ -443,32 +567,40 @@ li ol > li:before {
     p {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         font-size: 16px;
         line-height: 34px;
       }
 
-      @media (min-width: 993px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 16px;
         line-height: 30px;
       }
     }
 
-    #chart-job-offers-per-month-in-2017 {
+    .chart-container {
       
-      /* mqh */
-      @media (min-width: 1200px) {
-        width: 878px !important;
-        height: 384px !important;
-        margin-top: 4 * $spaceFactor;
-        margin-bottom: $spaceFactor;
-      }
+      .chart-canvas-container {
+        /* mqh */
+        @media (min-width: 1201px) {
+          margin-top: 4 * $spaceFactor;
+          margin-bottom: $spaceFactor;
 
-      @media (min-width: 993px) and (max-width: 1199px) {
-        width: 719px !important;
-        height: 358px !important;
-        margin-top: 3 * $spaceFactor;
-        margin-bottom: .33 * $spaceFactor;
+          &, & canvas {
+            width: 878px !important;
+            height: 384px !important;
+          }
+        }
+
+        @media (min-width: 993px) and (max-width: 1200px) {
+          margin-top: 3 * $spaceFactor;
+          margin-bottom: .33 * $spaceFactor;
+
+          &, & canvas {
+            width: 719px !important;
+            height: 358px !important;
+          }
+        }
       }
     }
   }
@@ -486,12 +618,12 @@ li ol > li:before {
     p {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         font-size: 16px;
         line-height: 34px;
       }
 
-      @media (min-width: 993px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 16px;
         line-height: 30px;
       }
@@ -516,14 +648,19 @@ li ol > li:before {
         .chart-canvas-container {
           
           /* mqh */
-          @media (min-width: 1200px) {
-            width: 246px !important;
-            height: 190px !important;
+          @media (min-width: 1201px) {
+            
+            &, & canvas {
+              width: 246px !important;
+              height: 190px !important;
+            }
           }
 
-          @media (min-width: 993px) and (max-width: 1199px) {
-            width: 200px !important;
-            height: 150px !important;
+          @media (min-width: 993px) and (max-width: 1200px) {
+            &, & canvas {
+              width: 200px !important;
+              height: 150px !important;
+            }
           }
 
           .chart-percentage {
@@ -533,12 +670,12 @@ li ol > li:before {
             font-weight: bold;
 
             /* mqh */
-            @media (min-width: 1200px) {
+            @media (min-width: 1201px) {
               margin-top: 80px;
               margin-left: 87px;
             }
 
-            @media (min-width: 993px) and (max-width: 1199px) {
+            @media (min-width: 993px) and (max-width: 1200px) {
               margin-top: 62px;
               margin-left: 65px;
             }
@@ -564,8 +701,10 @@ li ol > li:before {
 
     .chart-container {
       padding-right: 2 * $spaceFactor;
+      text-align: center;
 
       .chart-title {
+        text-align: left;
         font-family: 'Ubuntu', sans-serif;
         font-size: 16px;
         font-weight: bold;
@@ -579,11 +718,11 @@ li ol > li:before {
         text-align: right;
 
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           margin-top: 1.33 * $spaceFactor;
         }
 
-        @media (min-width: 993px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 2 * $spaceFactor;
         }
 
@@ -629,11 +768,11 @@ li ol > li:before {
             margin-bottom: 3px;
 
             /* mqh */
-            @media (min-width: 1200px) {
+            @media (min-width: 1201px) {
               font-size: 14px;
             }
 
-            @media (min-width: 993px) and (max-width: 1199px) {
+            @media (min-width: 993px) and (max-width: 1200px) {
               font-size: 12px;
             }
           }
@@ -641,18 +780,25 @@ li ol > li:before {
       }
 
       .chart-canvas-container {
+        display: inline-block !important;
 
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           margin-top: 2.66 * $spaceFactor;
-          width: 506px !important;
-          height: 303px !important;
+          
+          &, & canvas {
+            width: 408px !important;
+            height: 303px !important;
+          }
         }
 
-        @media (min-width: 993px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 3 * $spaceFactor;
-          width: 339px !important;
-          height: 169px !important;
+
+          &, & canvas {
+            width: 339px !important;
+            height: 169px !important;
+          }
         }
       }
     }
@@ -674,8 +820,10 @@ li ol > li:before {
 
     .chart-container {
       padding-left: 2 * $spaceFactor;
+      text-align: center;
 
       .chart-title {
+        text-align: left;
         padding-left: 0;
         font-family: 'Ubuntu', sans-serif;
         font-size: 16px;
@@ -687,13 +835,14 @@ li ol > li:before {
       }
 
       .chart-legend {
+        text-align: left;
 
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           margin-top: 1.33 * $spaceFactor;
         }
 
-        @media (min-width: 993px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 3 * $spaceFactor;
         }
 
@@ -739,11 +888,11 @@ li ol > li:before {
             margin-bottom: 3px;
 
             /* mqh */
-            @media (min-width: 1200px) {
+            @media (min-width: 1201px) {
               font-size: 14px;
             }
 
-            @media (min-width: 993px) and (max-width: 1199px) {
+            @media (min-width: 993px) and (max-width: 1200px) {
               font-size: 12px;
             }
           }
@@ -751,18 +900,25 @@ li ol > li:before {
       }
 
       .chart-canvas-container {
+        display: inline-block !important;
 
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           margin-top: 2.66 * $spaceFactor;
-          width: 506px !important;
-          height: 303px !important;
+
+          &, & canvas {
+            width: 408px !important;
+            height: 303px !important;
+          }
         }
 
-        @media (min-width: 993px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 5 * $spaceFactor;
-          width: 339px !important;
-          height: 169px !important;
+          
+          &, & canvas {
+            width: 339px !important;
+            height: 169px !important;
+          }
         }
       }
     }
@@ -781,11 +937,11 @@ li ol > li:before {
     .chart-container {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         margin-bottom: 4 * $spaceFactor;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         margin-bottom: 3 * $spaceFactor;
       }
 
@@ -796,12 +952,12 @@ li ol > li:before {
         line-height: 28px;
 
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           margin-top: 3 * $spaceFactor;
           margin-bottom: 3 * $spaceFactor;
         }
         
-        @media (min-width: 768px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 2 * $spaceFactor;
           margin-bottom: 2.4 * $spaceFactor;
         }
@@ -810,14 +966,20 @@ li ol > li:before {
       .chart-canvas-container {
 
         /* mqh */
-        @media (min-width: 1200px) {
-          width: 1058px !important;
-          height: 352px !important;
+        @media (min-width: 1201px) {
+          
+          &, & canvas {
+            width: 1058px !important;
+            height: 352px !important;
+          }
         }
 
-        @media (min-width: 768px) and (max-width: 1199px) {
-          width: 865px !important;
-          height: 432px !important;
+        @media (min-width: 993px) and (max-width: 1200px) {
+          
+          &, & canvas {
+            width: 865px !important;
+            height: 432px !important;
+          }
         }
       }
     }
@@ -842,12 +1004,12 @@ li ol > li:before {
         line-height: 28px;
 
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           margin-top: 3.6 * $spaceFactor;
           margin-bottom: 3 * $spaceFactor;
         }
 
-        @media (min-width: 768px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 2.66 * $spaceFactor;
           margin-bottom: 2.33 * $spaceFactor;
         }
@@ -856,14 +1018,19 @@ li ol > li:before {
      .chart-canvas-container {
 
         /* mqh */
-        @media (min-width: 1200px) {
-          width: 1058px !important;
-          height: 426px !important;
+        @media (min-width: 1201px) {
+          
+          &, & canvas {
+            width: 1058px !important;
+            height: 426px !important;
+          }
         }
 
-        @media (min-width: 993px) and (max-width: 1199px) {
-          width: 865px !important;
-          height: 432px !important;
+        @media (min-width: 993px) and (max-width: 1200px) {
+          &, & canvas {
+            width: 865px !important;
+            height: 432px !important;
+          }
         }
       }
     }
@@ -884,12 +1051,12 @@ li ol > li:before {
       line-height: 36px;
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         margin-top: .33 * $spaceFactor !important;
         margin-bottom: 1.33 * $spaceFactor !important;
       }
 
-      @media (min-width: 993px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         margin-top: .2 * $spaceFactor !important;
         margin-bottom: .4 * $spaceFactor !important;
       }
@@ -898,12 +1065,12 @@ li ol > li:before {
     p {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         font-size: 16px;
         line-height: 30px;
       }
 
-      @media (min-width: 993px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
         line-height: 26px;
         margin-top: .8 * $spaceFactor !important;
@@ -920,12 +1087,12 @@ li ol > li:before {
       #chart-place-of-residence {
 
         /* mqh */
-        @media (min-width: 1200px) {
+        @media (min-width: 1201px) {
           width: 697px !important;
           height: 433px !important;
         }
 
-        @media (min-width: 768px) and (max-width: 1199px) {
+        @media (min-width: 993px) and (max-width: 1200px) {
           width: 569px !important;
           height: 355px !important;
         }
@@ -946,13 +1113,13 @@ li ol > li:before {
     h3.title {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         margin-bottom: 1.33 * $spaceFactor !important;
         font-size: 26px;
         line-height: 36px;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         margin-bottom: 0.66 * $spaceFactor !important;
         font-size: 24px;
         line-height: 24px;
@@ -962,12 +1129,12 @@ li ol > li:before {
     p {
 
       /* mqh */
-      @media (min-width: 1200px) {
+      @media (min-width: 1201px) {
         font-size: 15px;
         line-height: 30px;
       }
 
-      @media (min-width: 768px) and (max-width: 1199px) {
+      @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 14px;
         line-height: 25px;
       }
