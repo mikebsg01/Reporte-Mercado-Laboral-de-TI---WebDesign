@@ -520,6 +520,14 @@ li ol > li:before {
             height: 417px !important;
           }
         }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+          & {
+            margin-top: 1.33 * $spaceFactor;
+            width: 529px !important;
+            height: 360px !important;
+          }
+        }
       }
     }
   }

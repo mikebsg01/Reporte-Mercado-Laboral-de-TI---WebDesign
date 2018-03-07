@@ -119,7 +119,7 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.8)',
-                  fontSize: (window.typeOfDevice == 1 ? 12 :
+                  fontSize: (window.typeOfDevice == 1 ? 13 :
                               (window.typeOfDevice == 2 ? 12 :
                                 window.typeOfDevice == 3 ? 10 : 10)),
                   autoSkip: false,
@@ -223,7 +223,7 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.8)',
-                  fontSize: (window.typeOfDevice == 1 ? 12 :
+                  fontSize: (window.typeOfDevice == 1 ? 13 :
                               (window.typeOfDevice == 2 ? 12 :
                                 window.typeOfDevice == 3 ? 10 : 10)),
                   autoSkip: false,
@@ -309,7 +309,9 @@ $(document).ready(() => {
                   lineWidth: 1
                 },
                 ticks: {
-                  fontSize: 14,
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   fontColor: 'rgba(255, 255, 255, 0.9)',
                   autoSkip: false,
                   maxRotation: 0,
@@ -323,6 +325,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.65)',
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false,
                   callback: function(value, index, values) {
                     if (index != (values.length - 1)) {
@@ -426,7 +431,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.95)',
-                  fontSize: 14,
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false
                 }
               }],
@@ -437,6 +444,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.65)',
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false,
                   min: 40,
                   max: 75,
@@ -548,7 +558,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.65)',
-                  fontSize: 14,
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false,
                   min: 300,
                   max: 600,
@@ -562,6 +574,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.95)',
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 12 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false
                 }
               }]
@@ -1117,7 +1132,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.95)',
-                  fontSize: 14,
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 14 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false
                 }
               }],
