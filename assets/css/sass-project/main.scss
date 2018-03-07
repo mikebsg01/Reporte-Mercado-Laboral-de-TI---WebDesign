@@ -706,8 +706,26 @@ li ol > li:before {
     color: white;
 
     h3 {
-      font-size: 26px;
-      line-height: 36px;
+      
+       /* mqh */
+       @media (min-width: 1201px) {
+        font-size: 26px;
+        line-height: 36px;
+        margin-top: 1.33 * $spaceFactor !important;
+        margin-bottom: 1.33 * $spaceFactor !important;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        line-height: 34px;
+        margin-top: 0.8 * $spaceFactor !important;
+        margin-bottom: 0.8 * $spaceFactor !important;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        line-height: 32px;
+        margin-top: 0.4 * $spaceFactor !important;
+        margin-bottom: 0.4 * $spaceFactor !important;
+      }
     }
 
     p {
@@ -743,6 +761,13 @@ li ol > li:before {
           font-size: 14px;
           text-align: center;
           margin-bottom: 1.2 * $spaceFactor;
+
+          
+          @media (min-width: 601px) and (max-width: 992px) {
+            height: 48px;
+            font-size: 12px;
+            line-height: 24px;
+          }
         }
 
         .chart-canvas-container {
@@ -764,8 +789,9 @@ li ol > li:before {
           }
 
           @media (min-width: 601px) and (max-width: 992px) {
-            & {
-              width: 100%;
+            &, & canvas {
+              width: 116px !important;
+              height: 150px !important;
             }
           }
 
@@ -784,6 +810,12 @@ li ol > li:before {
             @media (min-width: 993px) and (max-width: 1200px) {
               margin-top: 62px;
               margin-left: 65px;
+            }
+
+            @media (min-width: 601px) and (max-width: 992px) {
+              font-size: 22px;
+              margin-top: 55px;
+              margin-left: 28px;
             }
           }
         }
