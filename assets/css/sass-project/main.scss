@@ -496,7 +496,7 @@ li ol > li:before {
 
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 32px;
+        line-height: 30px;
       }
     }
 
@@ -506,26 +506,30 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
+          margin-top: 5.33 * $spaceFactor;
+          margin-left: .75 * $spaceFactor;
+          
           &, & canvas {
-            margin-top: 5.33 * $spaceFactor;
             width: 608px !important;
             height: 374px !important;
           }
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
+          margin-top: 4.33 * $spaceFactor;
+          
           &, & canvas {
-            margin-top: 4.66 * $spaceFactor;
             width: 498px !important;
             height: 417px !important;
           }
         }
 
         @media (min-width: 601px) and (max-width: 992px) {
-          & {
-            margin-top: 1.33 * $spaceFactor;
+          margin-top: 1.33 * $spaceFactor;
+
+          &, & canvas {
             width: 529px !important;
-            height: 360px !important;
+            height: 264px !important;
           }
         }
       }
@@ -573,18 +577,19 @@ li ol > li:before {
 
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 32px;
+        line-height: 30px;
       }
     }
 
     .chart-container {
 
       .chart-canvas-container {
-        margin-left: .75 * $spaceFactor;
-        margin-top: 4.33 * $spaceFactor;
   
         /* mqh */
         @media (min-width: 1201px) {
+          margin-top: 4.66 * $spaceFactor;
+          margin-left: .75 * $spaceFactor;
+
           &, & canvas {
             width: 560px !important;
             height: 360px !important;
@@ -592,9 +597,21 @@ li ol > li:before {
         }
   
         @media (min-width: 993px) and (max-width: 1200px) {
+          margin-top: 4.33 * $spaceFactor;
+          margin-left: .75 * $spaceFactor;
+
           &, & canvas {
             width: 498px !important;
             height: 377px !important;
+          }
+        }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: 1.33 * $spaceFactor;
+
+          &, & canvas {
+            width: 529px !important;
+            height: 264px !important;
           }
         }
       }
