@@ -638,7 +638,12 @@ li ol > li:before {
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 32px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
         line-height: 30px;
       }
     }
@@ -665,6 +670,11 @@ li ol > li:before {
             width: 719px !important;
             height: 358px !important;
           }
+        }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: 1.2 * $spaceFactor;
+          margin-bottom: .2 * $spaceFactor;
         }
       }
     }

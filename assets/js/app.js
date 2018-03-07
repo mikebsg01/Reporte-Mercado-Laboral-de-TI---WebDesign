@@ -577,7 +577,13 @@ $(document).ready(() => {
                   fontSize: (window.typeOfDevice == 1 ? 14 :
                               (window.typeOfDevice == 2 ? 12 :
                                 window.typeOfDevice == 3 ? 12 : 12)),
-                  autoSkip: false
+                  autoSkip: false,
+                  maxRotation: (window.typeOfDevice == 1 ? 45 :
+                                  (window.typeOfDevice == 2 ? 45 :
+                                    window.typeOfDevice == 3 ? 45 : 60)),
+                  minRotation: (window.typeOfDevice == 1 ? 45 :
+                                  (window.typeOfDevice == 2 ? 30 :
+                                    window.typeOfDevice == 3 ? 30 : 60)),
                 }
               }]
             },
