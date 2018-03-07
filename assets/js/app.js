@@ -1218,7 +1218,7 @@ $(document).ready(() => {
   };
 
   var isScrolledIntoElement = (elem) => {
-    var scrollTopPos = $(window).scrollTop(),
+    let scrollTopPos = $(window).scrollTop(),
         scrollDownPos = scrollTopPos + $(window).height(),
         elemTopPos = $(elem).offset().top,
         elemDownPos = elemTopPos + $(elem).height();
@@ -1229,7 +1229,7 @@ $(document).ready(() => {
   var chartObjects = {};
 
   var makeCharts = (forced) => {
-    var scrollTopPosition = $(this).scrollTop(),
+    let scrollTopPosition = $(this).scrollTop(),
         firstDivPosition = $('.page-navbar-2-container').offset().top;
     
     if (scrollTopPosition >= firstDivPosition) {
@@ -1260,7 +1260,6 @@ $(document).ready(() => {
   makeCharts(true);
 
   $(window).scroll(() => {
-    checkTypeOfDevice();
     makeCharts();
   });
 
