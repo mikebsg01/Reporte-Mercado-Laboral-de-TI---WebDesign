@@ -125,10 +125,10 @@ $(document).ready(() => {
                   autoSkip: false,
                   maxRotation: (window.typeOfDevice == 1 ? 45 :
                                   (window.typeOfDevice == 2 ? 45 :
-                                    window.typeOfDevice == 3 ? 60 : 60)),
+                                    window.typeOfDevice == 3 ? 45 : 60)),
                   minRotation: (window.typeOfDevice == 1 ? 45 :
                                   (window.typeOfDevice == 2 ? 45 :
-                                    window.typeOfDevice == 3 ? 60 : 60)),
+                                    window.typeOfDevice == 3 ? 45 : 60)),
                 }
               }]
             },
@@ -229,10 +229,10 @@ $(document).ready(() => {
                   autoSkip: false,
                   maxRotation: (window.typeOfDevice == 1 ? 45 :
                                   (window.typeOfDevice == 2 ? 45 :
-                                    window.typeOfDevice == 3 ? 60 : 60)),
+                                    window.typeOfDevice == 3 ? 45 : 60)),
                   minRotation: (window.typeOfDevice == 1 ? 45 :
                                   (window.typeOfDevice == 2 ? 45 :
-                                    window.typeOfDevice == 3 ? 60 : 60)),
+                                    window.typeOfDevice == 3 ? 45 : 60)),
                 }
               }]
             },
