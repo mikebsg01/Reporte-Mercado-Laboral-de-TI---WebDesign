@@ -543,6 +543,12 @@ li ol > li:before {
         margin-top: 0.8 * $spaceFactor !important;
         margin-bottom: 0.8 * $spaceFactor !important;
       }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        line-height: 32px;
+        margin-top: 0.4 * $spaceFactor !important;
+        margin-bottom: 0.4 * $spaceFactor !important;
+      }
     }
 
     p {
