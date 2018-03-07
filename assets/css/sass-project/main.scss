@@ -250,7 +250,18 @@ li ol > li:before {
 
       .logo-2 {
         margin-right: .66 * $spaceFactor;
-        margin-top: 1.33 * $spaceFactor;
+
+        @media (min-width: 1201px) {
+          margin-top: 1.33 * $spaceFactor;
+        }
+  
+        @media (min-width: 993px) and (max-width: 1200px) {
+          margin-top: 1.2 * $spaceFactor;
+        }
+  
+        @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: .8 * $spaceFactor;
+        }
       }
     }
   }
@@ -284,12 +295,16 @@ li ol > li:before {
     & > .slide-content {
 
       /* mqh */
-      @media (min-width: 993px) {
+      @media (min-width: 1201px) {
         padding: (5 * $spaceFactor) (2 * $spaceFactor);
       }
 
+      @media (min-width: 993px) and (max-width: 1200px) {
+        padding: (4 * $spaceFactor) (2 * $spaceFactor);
+      }
+
       @media (min-width: 601px) and (max-width: 992px) {
-        padding: (2 * $spaceFactor) (1 * $spaceFactor);
+        padding: (3 * $spaceFactor) (1 * $spaceFactor);
       }
 
       .title {
@@ -675,6 +690,11 @@ li ol > li:before {
         @media (min-width: 601px) and (max-width: 992px) {
           margin-top: 1.2 * $spaceFactor;
           margin-bottom: .2 * $spaceFactor;
+
+          &, & canvas {
+            width: 529px !important;
+            height: 264px !important;
+          }
         }
       }
     }
@@ -699,7 +719,12 @@ li ol > li:before {
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 16px;
+        font-size: 15px;
+        line-height: 32px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
         line-height: 30px;
       }
     }
@@ -735,6 +760,12 @@ li ol > li:before {
             &, & canvas {
               width: 200px !important;
               height: 150px !important;
+            }
+          }
+
+          @media (min-width: 601px) and (max-width: 992px) {
+            & {
+              width: 100%;
             }
           }
 
