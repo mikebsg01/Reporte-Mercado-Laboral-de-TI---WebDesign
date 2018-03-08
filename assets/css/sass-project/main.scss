@@ -830,8 +830,21 @@ li ol > li:before {
     color: white;
 
     p {
-      font-size: 16px;
-      line-height: 30px;
+      /* mqh */
+      @media (min-width: 1201px) {
+        font-size: 16px;
+        line-height: 34px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 32px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 30px;
+      }
     }
 
     .text-container {
@@ -863,6 +876,8 @@ li ol > li:before {
           margin-left: 0;
           margin-bottom: 1.66 * $spaceFactor;
           text-align: center;
+          font-size: 15px;
+          line-height: 28px;
         }
       }
 
