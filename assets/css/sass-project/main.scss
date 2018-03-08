@@ -1193,9 +1193,21 @@ li ol > li:before {
         }
         
         @media (min-width: 993px) and (max-width: 1200px) {
+          font-size: 16px;
+          line-height: 26px;
           margin-top: 2 * $spaceFactor;
           margin-bottom: 2.4 * $spaceFactor;
         }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+          font-size: 15px;
+          line-height: 25px;
+        }
+      }
+
+      .chart-canvas-overflow-auto {
+        width: 100%;
+        overflow: auto;
       }
 
       .chart-canvas-container {
@@ -1214,6 +1226,14 @@ li ol > li:before {
           &, & canvas {
             width: 865px !important;
             height: 432px !important;
+          }
+        }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+
+          &, & canvas {
+            width: 860px !important;
+            height: 320px !important;
           }
         }
       }

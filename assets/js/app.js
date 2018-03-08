@@ -1127,7 +1127,6 @@ $(document).ready(() => {
           },
           options: {
             responsive: true,
-            maintainAspectRatio: false,
             scales: {
               yAxes: [{
                 position: 'left',
