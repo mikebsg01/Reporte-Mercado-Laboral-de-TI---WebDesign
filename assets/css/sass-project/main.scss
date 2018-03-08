@@ -1206,8 +1206,12 @@ li ol > li:before {
       }
 
       .chart-canvas-overflow-auto {
-        width: 100%;
-        overflow: auto;
+        @media (min-width: 601px) and (max-width: 992px) {
+          width: 100%;
+          overflow: auto;
+          padding-top: $spaceFactor;
+          padding-bottom: $spaceFactor;
+        }
       }
 
       .chart-canvas-container {
