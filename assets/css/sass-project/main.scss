@@ -1028,6 +1028,16 @@ li ol > li:before {
         margin-top: 4.5 * $spaceFactor;
         margin-left: -1.5 * $spaceFactor;
         margin-bottom: -2 * $spaceFactor;
+
+        /* mqh */
+        @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: .66 * $spaceFactor;
+          margin-left: 0;
+          margin-bottom: 1.66 * $spaceFactor;
+          text-align: center;
+          font-size: 15px;
+          line-height: 28px;
+        }
       }
 
       .chart-legend {
@@ -1040,6 +1050,10 @@ li ol > li:before {
 
         @media (min-width: 993px) and (max-width: 1200px) {
           margin-top: 3 * $spaceFactor;
+        }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: 0.8 * $spaceFactor;
         }
 
         .chart-label-container {
@@ -1091,6 +1105,10 @@ li ol > li:before {
             @media (min-width: 993px) and (max-width: 1200px) {
               font-size: 12px;
             }
+
+            @media (min-width: 601px) and (max-width: 992px) {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -1114,6 +1132,14 @@ li ol > li:before {
           &, & canvas {
             width: 339px !important;
             height: 169px !important;
+          }
+        }
+
+        @media (min-width: 601px) and (max-width: 992px) {
+
+          &, & canvas {
+            width: 200px !important;
+            height: 200px !important;
           }
         }
       }
