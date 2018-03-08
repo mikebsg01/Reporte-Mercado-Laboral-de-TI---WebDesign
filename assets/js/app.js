@@ -1,5 +1,6 @@
 $(document).ready(() => {
   window.typeOfDevice = null;
+  window.isSpecialDiv1Moved = false;
   
   var checkTypeOfDevice = () => {
     let windowWidth = $(window).width();
@@ -1279,8 +1280,23 @@ $(document).ready(() => {
     }
   };
 
+  var accommodateSpecialDiv1 = () => {
+    if (! window.isSpecialDiv1Moved && (typeOfDevice === 3 || typeOfDevice === 4)) {
+      $('.slide-devices-to-look-for-work .here-2').append(
+        $('.slide-devices-to-look-for-work .here-1 .chart-container')
+      );
+      window.isSpecialDiv1Moved = true;
+    } else if (window.isSpecialDiv1Moved) {
+      $('.slide-devices-to-look-for-work .here-1').append(
+        $('.slide-devices-to-look-for-work .here-2 .chart-container')
+      );
+      window.isSpecialDiv1Moved = false;
+    }
+  };
+
   checkTypeOfDevice();
   makeCharts(true);
+  accommodateSpecialDiv1();
 
   $(window).scroll(() => {
     makeCharts();
@@ -1349,5 +1365,6 @@ $(document).ready(() => {
   $(window).on('resizeEnd', () => {
     checkTypeOfDevice();
     google.charts.setOnLoadCallback(drawChartPlaceOfResidence);
+    accommodateSpecialDiv1();
   });
 });
