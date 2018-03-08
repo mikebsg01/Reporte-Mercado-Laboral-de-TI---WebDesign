@@ -1026,7 +1026,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.65)',
-                  fontSize: 14,
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 14 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false,
                   min: 0,
                   max: 100,
@@ -1040,6 +1042,9 @@ $(document).ready(() => {
                 },
                 ticks: {
                   fontColor: 'rgba(255, 255, 255, 0.95)',
+                  fontSize: (window.typeOfDevice == 1 ? 14 :
+                              (window.typeOfDevice == 2 ? 14 :
+                                window.typeOfDevice == 3 ? 12 : 12)),
                   autoSkip: false,
                   minRotation: 0,
                   maxRotation: 0
@@ -1051,7 +1056,9 @@ $(document).ready(() => {
               labels: {
                 fontFamily: "'Ubuntu', sans-serif",
                 fontColor: "#f1f1f1",
-                fontSize: 14,
+                fontSize: (window.typeOfDevice == 1 ? 14 :
+                            (window.typeOfDevice == 2 ? 14 :
+                              window.typeOfDevice == 3 ? 12 : 12)),
                 padding: 15
               }
             },
