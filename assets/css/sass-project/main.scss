@@ -256,7 +256,7 @@ li ol > li:before {
         }
   
         @media (min-width: 993px) and (max-width: 1200px) {
-          margin-top: 1.2 * $spaceFactor;
+          margin-top: 1 * $spaceFactor;
         }
   
         @media (min-width: 601px) and (max-width: 992px) {
@@ -733,17 +733,17 @@ li ol > li:before {
       /* mqh */
       @media (min-width: 1201px) {
         font-size: 16px;
-        line-height: 34px;
+        line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
-        line-height: 32px;
+        line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 30px;
+        line-height: 28px;
       }
     }
 
@@ -833,17 +833,17 @@ li ol > li:before {
       /* mqh */
       @media (min-width: 1201px) {
         font-size: 16px;
-        line-height: 34px;
+        line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
-        line-height: 32px;
+        line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 30px;
+        line-height: 28px;
       }
     }
 
@@ -893,6 +893,10 @@ li ol > li:before {
           margin-top: 2 * $spaceFactor;
         }
 
+        @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: .33 * $spaceFactor;
+        }
+
         .chart-label-container {
 
           .chart-label-box,
@@ -940,6 +944,10 @@ li ol > li:before {
             }
 
             @media (min-width: 993px) and (max-width: 1200px) {
+              font-size: 13px;
+            }
+
+            @media (min-width: 601px) and (max-width: 992px) {
               font-size: 12px;
             }
           }
@@ -985,8 +993,21 @@ li ol > li:before {
     color: white;
 
     p {
-      font-size: 16px;
-      line-height: 30px;
+      /* mqh */
+      @media (min-width: 1201px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 28px;
+      }
     }
 
     .text-container {
@@ -1105,8 +1126,21 @@ li ol > li:before {
     color: white;
 
     p {
-      font-size: 16px;
-      line-height: 30px;
+      /* mqh */
+      @media (min-width: 1201px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 28px;
+      }
     }
 
     .chart-container {
@@ -1166,8 +1200,21 @@ li ol > li:before {
     color: white;
 
     p {
-      font-size: 16px;
-      line-height: 30px;
+      /* mqh */
+      @media (min-width: 1201px) {
+        font-size: 16px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 28px;
+      }
     }
 
     .chart-container {
