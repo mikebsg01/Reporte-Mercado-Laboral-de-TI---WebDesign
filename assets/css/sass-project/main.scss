@@ -767,6 +767,7 @@ li ol > li:before {
             height: 48px;
             font-size: 12px;
             line-height: 24px;
+            margin-bottom: 0;
           }
         }
 
@@ -791,7 +792,7 @@ li ol > li:before {
           @media (min-width: 601px) and (max-width: 992px) {
             &, & canvas {
               width: 116px !important;
-              height: 150px !important;
+              height: 144px !important;
             }
           }
 
@@ -808,7 +809,7 @@ li ol > li:before {
             }
 
             @media (min-width: 993px) and (max-width: 1200px) {
-              margin-top: 62px;
+              margin-top: 58px;
               margin-left: 65px;
             }
 
