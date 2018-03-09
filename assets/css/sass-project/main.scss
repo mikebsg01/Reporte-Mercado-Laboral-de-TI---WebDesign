@@ -395,6 +395,19 @@ li ol > li:before {
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
+    li {
+      @media (min-width: 1201px) {
+        line-height: 32px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        line-height: 30px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        line-height: 28px;
+      }
+    }
   }
 
   & > .slide-growth-of-offers-in-mexico-1 {
@@ -743,21 +756,22 @@ li ol > li:before {
     }
 
     p {
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 14px;
-        line-height: 28px;
+        font-size: 13px;
+        line-height: 26px;
       }
     }
 
@@ -844,19 +858,21 @@ li ol > li:before {
     color: white;
 
     p {
+      font-weight: 400;
+
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
-        line-height: 30px;
+        font-size: 15px;
+        line-height: 32px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 15px;
-        line-height: 28px;
+        font-size: 14px;
+        line-height: 30px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 28px;
       }
     }
@@ -900,7 +916,7 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 1.33 * $spaceFactor;
+          margin-top: 1 * $spaceFactor;
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
@@ -1007,19 +1023,21 @@ li ol > li:before {
     color: white;
 
     p {
+      font-weight: 400;
+
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
-        line-height: 30px;
+        font-size: 15px;
+        line-height: 32px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 15px;
-        line-height: 28px;
+        font-size: 14px;
+        line-height: 30px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 28px;
       }
     }
@@ -1059,7 +1077,7 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 1.33 * $spaceFactor;
+          margin-top: 1.8 * $spaceFactor;
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
@@ -1166,20 +1184,22 @@ li ol > li:before {
     color: white;
 
     p {
+      font-weight: 400;
+
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 15px;
+        font-size: 14px;
         line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 14px;
-        line-height: 28px;
+        font-size: 13px;
+        line-height: 26px;
       }
     }
 
@@ -1264,19 +1284,21 @@ li ol > li:before {
     color: white;
 
     p {
+      font-weight: 400;
+
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
-        line-height: 30px;
+        font-size: 15px;
+        line-height: 32px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 15px;
-        line-height: 28px;
+        font-size: 14px;
+        line-height: 30px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 14px;
+        font-size: 13px;
         line-height: 28px;
       }
     }
