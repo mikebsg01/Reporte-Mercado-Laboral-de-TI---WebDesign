@@ -760,18 +760,18 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
+        font-size: 16px;
+        line-height: 32px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
         line-height: 30px;
       }
 
-      @media (min-width: 993px) and (max-width: 1200px) {
+      @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
         line-height: 28px;
-      }
-
-      @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 13px;
-        line-height: 26px;
       }
     }
 
@@ -862,17 +862,17 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 15px;
-        line-height: 32px;
-      }
-
-      @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 30px;
       }
 
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 28px;
       }
     }
@@ -916,7 +916,7 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 1 * $spaceFactor;
+          margin-top: 1.33 * $spaceFactor;
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
@@ -1027,17 +1027,17 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 15px;
-        line-height: 32px;
-      }
-
-      @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 30px;
       }
 
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 28px;
       }
     }
@@ -1077,7 +1077,7 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 1.8 * $spaceFactor;
+          margin-top: 1.33 * $spaceFactor;
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
@@ -1188,18 +1188,18 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 15px;
+        font-size: 16px;
         line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 14px;
+        font-size: 15px;
         line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 13px;
-        line-height: 26px;
+        font-size: 14px;
+        line-height: 28px;
       }
     }
 
@@ -1288,17 +1288,17 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 15px;
-        line-height: 32px;
-      }
-
-      @media (min-width: 993px) and (max-width: 1200px) {
-        font-size: 14px;
+        font-size: 16px;
         line-height: 30px;
       }
 
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 13px;
+        font-size: 14px;
         line-height: 28px;
       }
     }
