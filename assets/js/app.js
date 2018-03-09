@@ -247,27 +247,27 @@ $(document).ready(() => {
         { type: 'horizontalBar',
           data: {
             labels: [
-              'JavaScript',
-              'Analista de Sistemas', 
-              'Testing / QA',
-              'C# / NET',
               'Java',
-              'SAP',
-              'Administarción de Proyectos',
-              'Ventas TI',
+              'C# / NET',
+              'SAP', 
+              'Testing / QA', 
+              'Administarción de Proyectos', 
+              'Analista de Sistemas', 
+              'Ventas TI', 
+              'JavaScript', 
               'Android',
-              'PHP'
+              'PHP' 
             ],
             datasets: [{
               data: [
-                2.33,
-                4.16,
-                5.16,
-                8.60,
                 15.45,
+                8.60,
                 6,
+                5.16,
                 4.25,
+                4.16,
                 4.02,
+                2.33,
                 2.19,
                 2.06
               ],
@@ -367,27 +367,27 @@ $(document).ready(() => {
         { type: 'horizontalBar',
           data: {
             labels: [
-              'Android',
-              'AngularJS',
-              'Bases de datos NoSQL',
-              'Virtualización de Servidores',
               'Seguridad Informática',
+              'Virtualización de Servidores',
               'UX',
+              'Bases de datos NoSQL',
               'MS Dynamics',
+              'AngularJS',
               'Big Data',
+              'Android', 
               'Integración de Datos y ETL',
               'Python'
             ],
             datasets: [{
               data: [
-                55.26,
-                61.70,
-                65,
-                66.85,
                 70.69,
+                66.85,
                 65.85,
+                65,
                 62.67,
+                61.70,
                 59.65,
+                55.26,
                 51.47,
                 50
               ],
@@ -1086,26 +1086,26 @@ $(document).ready(() => {
           data: {
             labels: [
               'Falta de una compensación adecuada',
-              'Cambios de gestión a nivel directivo en la empresa',
-              'Metas asignadas poco realistas',
-              'Falta de soporte a nivel gerencial',
-              'Te sentías poco valorado por la empresa',
-              'Insuficientes días de vacaciones o descanso',
               'Por la falta de plan de carrera',
+              'Te sentías poco valorado por la empresa',
+              'Falta de un buen ambiente de trabajo',
+              'Falta de soporte a nivel gerencial',
+              'Cambios de gestión a nivel directivo en la empresa',
               'Por la falta de ser desafiado',
-              'Falta de un buen ambiente de trabajo'
+              'Metas asignadas poco realistas',
+              'Insuficientes días de vacaciones o descanso',
             ],
             datasets: [{
               data: [
                 52.6,
-                25.3,
-                21.2,
-                27.8,
-                43.4,
-                12.9,
                 44.6,
+                43.4,
+                31,
+                27.8,
+                25.3,
                 21.9,
-                31
+                21.2,
+                12.9,
               ],
               backgroundColor: [
                 'rgba(255, 255, 255, 0.75)',
