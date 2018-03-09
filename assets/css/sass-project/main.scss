@@ -17,6 +17,20 @@ $etiBlue6: #12d1f3;
 $etiOrigBlue: #00d1f3;
 $etiOrigOrange: #faaa4b;
 
+$etiNewColor1: #253544;
+$etiNewColor2: #253544;
+$etiNewColor3:  #066e80;
+$etiNewColor4: #066e80;
+$etiNewColor5: #066e80;
+$etiNewColor6: #066e80;
+$etiNewColor7: #10b7d4;
+$etiNewColor8: #10b7d4;
+$etiNewColor9: #10b7d4;
+$etiNewColor10: #10b7d4;
+$etiNewColor11: #10b7d4;
+$etiNewColor12: #033a43;
+$etiNewColor13: #2d2d2d;
+
 // General Styles
 body {
   
@@ -367,7 +381,7 @@ li ol > li:before {
   }
 
   & > .slide-introduction {
-    background-color: $blueGray;
+    background-color: $etiNewColor1;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -377,14 +391,14 @@ li ol > li:before {
   }
 
   & > .slide-table-of-contents {
-    background-color: lighten($blueGray, 5%);
+    background-color: $etiNewColor2;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
   }
 
   & > .slide-growth-of-offers-in-mexico-1 {
-    background-color: lighten($blueGray, 10%);
+    background-color: $etiNewColor3;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -467,7 +481,7 @@ li ol > li:before {
   }
 
   & > .slide-most-demanded-profiles {
-    background-color: lighten($blueGray, 13%);
+    background-color: $etiNewColor4;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -552,7 +566,7 @@ li ol > li:before {
   }
 
   & > .slide-highest-growth-profiles {
-    background-color: lighten($blueGray, 13%);
+    background-color: $etiNewColor5;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -634,7 +648,7 @@ li ol > li:before {
   }
 
   & > .slide-job-offers-per-month-2017 {
-    background-color: lighten($blueGray, 16%);
+    background-color: $etiNewColor6;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -701,7 +715,7 @@ li ol > li:before {
   }
 
   & > .slide-find-talent-and-retain-it {
-    background-color: darken($blue, 2%);
+    background-color: $etiNewColor7;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -825,7 +839,7 @@ li ol > li:before {
   }
 
   & > .slide-devices-to-look-for-work {
-    background-color: darken($blue, 2%);
+    background-color: $etiNewColor8;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -988,7 +1002,7 @@ li ol > li:before {
   }
 
   & > .slide-active-and-passive-job-seekers {
-    background-color: darken($blue, 2%);
+    background-color: $etiNewColor9;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -1147,7 +1161,7 @@ li ol > li:before {
   }
 
   & > .slide-main-reasons-to-accept-a-job {
-    background-color: lighten($blue, 2%);
+    background-color: $etiNewColor10;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -1245,7 +1259,7 @@ li ol > li:before {
   }
 
   & > .slide-main-reasons-for-renouncing {
-    background-color: lighten($blue, 2%);
+    background-color: $etiNewColor11;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -1309,7 +1323,7 @@ li ol > li:before {
   }
 
   & > .slide-sample-size {
-    background-color: $gray;
+    background-color: $etiNewColor12;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 
@@ -1373,7 +1387,7 @@ li ol > li:before {
   }
 
   & > .slide-about-empleosti {
-    background-color: lighten($gray, 4%);
+    background-color: $etiNewColor13;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
 

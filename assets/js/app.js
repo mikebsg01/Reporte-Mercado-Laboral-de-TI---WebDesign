@@ -1343,7 +1343,7 @@ $(document).ready(() => {
         maxValue: 35,
         colors: ['#AFAFAF', '#B5B5B5']
       },
-      backgroundColor: '#333333',
+      backgroundColor: '#033a43',
       datalessRegionColor: '#777777',
       defaultColor: '#f5f5f5',
       magnifyingGlass: {
