@@ -55,6 +55,7 @@ body {
 
 h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
+  font-weight: 500;
 }
 
 h1 {
@@ -390,7 +391,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -416,6 +417,8 @@ li ol > li:before {
     color: white;
 
     li {
+      font-weight: 400;
+
       @media (min-width: 1201px) {
         line-height: 32px;
       }
@@ -430,7 +433,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -444,8 +447,8 @@ li ol > li:before {
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
-        font-size: 14px;
-        line-height: 28px;
+        font-size: 13px;
+        line-height: 26px;
       }
     }
   }
@@ -531,6 +534,26 @@ li ol > li:before {
         margin-bottom: 0.66 * $spaceFactor !important;
       }
     }
+
+    p {
+      font-weight: 400;
+
+      /* mqh */
+      @media (min-width: 1201px) {
+        font-size: 15px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 13px;
+        line-height: 26px;
+      }
+    }
   }
 
   & > .slide-most-demanded-profiles {
@@ -565,7 +588,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -648,7 +671,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -716,7 +739,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -801,7 +824,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -903,7 +926,7 @@ li ol > li:before {
     color: white;
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -946,6 +969,10 @@ li ol > li:before {
         margin-bottom: -1 * $spaceFactor;
 
         /* mqh */
+        @media (min-width: 993px) and (max-width: 1200px) {
+          margin-bottom: -0.2 * $spaceFactor;
+        }
+
         @media (min-width: 601px) and (max-width: 992px) {
           margin-top: .66 * $spaceFactor;
           margin-left: 0;
@@ -965,7 +992,7 @@ li ol > li:before {
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
-          margin-top: 2 * $spaceFactor;
+          margin-top: 3 * $spaceFactor;
         }
 
         @media (min-width: 601px) and (max-width: 992px) {
@@ -1068,7 +1095,7 @@ li ol > li:before {
     color: white;
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -1229,7 +1256,7 @@ li ol > li:before {
     color: white;
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -1329,7 +1356,7 @@ li ol > li:before {
     color: white;
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -1443,7 +1470,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -1518,7 +1545,7 @@ li ol > li:before {
     }
 
     p {
-      font-weight: 300;
+      font-weight: 400;
 
       /* mqh */
       @media (min-width: 1201px) {
