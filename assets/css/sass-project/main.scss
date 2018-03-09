@@ -111,8 +111,8 @@ h3 {
 
 li, p {
   font-weight: 300;
-  font-size: 14px;
-  line-height: 28px;
+  font-size: 15px;
+  line-height: 30px;
 
   /* mqh */
   @media (min-width: 601px) and (max-width: 992px) {
@@ -388,6 +388,26 @@ li ol > li:before {
     .ceo-name b {
       display: block;
     }
+
+    p {
+      font-weight: 300;
+
+      /* mqh */
+      @media (min-width: 1201px) {
+        font-size: 15px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 28px;
+      }
+    }
   }
 
   & > .slide-table-of-contents {
@@ -405,6 +425,26 @@ li ol > li:before {
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
+        line-height: 28px;
+      }
+    }
+
+    p {
+      font-weight: 300;
+
+      /* mqh */
+      @media (min-width: 1201px) {
+        font-size: 15px;
+        line-height: 30px;
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
         line-height: 28px;
       }
     }
@@ -525,20 +565,22 @@ li ol > li:before {
     }
 
     p {
+      font-weight: 300;
+
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
-        line-height: 34px;
+        font-size: 15px;
+        line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
-        line-height: 33px;
+        line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 30px;
+        line-height: 28px;
       }
     }
 
@@ -548,7 +590,7 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 5.33 * $spaceFactor;
+          margin-top: 4.8 * $spaceFactor;
           margin-left: .75 * $spaceFactor;
           
           &, & canvas {
@@ -561,8 +603,8 @@ li ol > li:before {
           margin-top: 4.33 * $spaceFactor;
           
           &, & canvas {
-            width: 498px !important;
-            height: 417px !important;
+            width: 495px !important;
+            height: 360px !important;
           }
         }
 
@@ -606,20 +648,22 @@ li ol > li:before {
     }
 
     p {
+      font-weight: 300;
+
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
-        line-height: 34px;
+        font-size: 15px;
+        line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
-        line-height: 33px;
+        line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 30px;
+        line-height: 28px;
       }
     }
 
@@ -629,7 +673,7 @@ li ol > li:before {
   
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 4.66 * $spaceFactor;
+          margin-top: 4 * $spaceFactor;
           margin-left: .75 * $spaceFactor;
 
           &, & canvas {
@@ -643,8 +687,8 @@ li ol > li:before {
           margin-left: .75 * $spaceFactor;
 
           &, & canvas {
-            width: 498px !important;
-            height: 377px !important;
+            width: 496px !important;
+            height: 350px !important;
           }
         }
 
@@ -672,21 +716,22 @@ li ol > li:before {
     }
 
     p {
+      font-weight: 300;
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
-        line-height: 34px;
+        font-size: 15px;
+        line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
-        line-height: 32px;
+        line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 30px;
+        line-height: 28px;
       }
     }
 
@@ -760,13 +805,13 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
-        line-height: 32px;
+        font-size: 15px;
+        line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
-        line-height: 30px;
+        line-height: 28px;
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
@@ -862,7 +907,7 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
       }
 
@@ -992,8 +1037,8 @@ li ol > li:before {
           margin-top: 2.66 * $spaceFactor;
           
           &, & canvas {
-            width: 408px !important;
-            height: 303px !important;
+            width: 498px !important;
+            height: 270px !important;
           }
         }
 
@@ -1027,7 +1072,7 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
       }
 
@@ -1153,8 +1198,8 @@ li ol > li:before {
           margin-top: 2.66 * $spaceFactor;
 
           &, & canvas {
-            width: 408px !important;
-            height: 303px !important;
+            width: 498px !important;
+            height: 270px !important;
           }
         }
 
@@ -1188,7 +1233,7 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
       }
 
@@ -1288,7 +1333,7 @@ li ol > li:before {
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
       }
 
@@ -1371,18 +1416,22 @@ li ol > li:before {
     }
 
     p {
+      font-weight: 300;
 
       /* mqh */
       @media (min-width: 1201px) {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 30px;
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
         font-size: 15px;
-        line-height: 26px;
-        margin-top: .8 * $spaceFactor !important;
-        margin-bottom: .8 * $spaceFactor !important;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 14px;
+        line-height: 28px;
       }
 
       a {
@@ -1435,6 +1484,7 @@ li ol > li:before {
     }
 
     p {
+      font-weight: 300;
 
       /* mqh */
       @media (min-width: 1201px) {
@@ -1443,8 +1493,13 @@ li ol > li:before {
       }
 
       @media (min-width: 993px) and (max-width: 1200px) {
+        font-size: 15px;
+        line-height: 28px;
+      }
+
+      @media (min-width: 601px) and (max-width: 992px) {
         font-size: 14px;
-        line-height: 25px;
+        line-height: 28px;
       }
     }
 
