@@ -32,8 +32,8 @@ $etiNewColor12: #033a43;
 $etiNewColor13: #2d2d2d;
 
 // General Styles
-body {
-  
+
+@mixin custom-scrollbar-mixin {
   &::-webkit-scrollbar-track{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius:10px;
@@ -41,15 +41,23 @@ body {
   }
 
   &::-webkit-scrollbar{
+    border-radius: 10px;
     width:8px;
     height:8px;
     background-color:#F5F5F5;
   }
 
   &::-webkit-scrollbar-thumb{
-    border-radius:10px;
+    border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color:#616161;
+  }
+}
+
+body {
+  
+  @media (min-width: 993px) {
+    @include custom-scrollbar-mixin;
   }
 }
 
@@ -76,6 +84,11 @@ h1 {
     font-size: 44px;
     line-height: 56px;
   }
+
+  @media (max-width: 600px) {
+    font-size: 42px;
+    line-height: 54px;
+  }
 }
 
 h2 {
@@ -91,6 +104,10 @@ h2 {
 
   @media (min-width: 601px) and (max-width: 992px) {
     font-size: 24px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 22px;
   }
 }
 
@@ -111,6 +128,11 @@ h3 {
     font-size: 20px;
     line-height: 30px;
   }
+
+  @media (max-width: 600px) {
+    font-size: 22px;
+    line-height: 32px;
+  }
 }
 
 li, p {
@@ -122,6 +144,11 @@ li, p {
   @media (min-width: 601px) and (max-width: 992px) {
     font-size: 13px;
     line-height: 26px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 13px;
+    line-height: 24px;
   }
 }
 
@@ -144,7 +171,7 @@ ol > li:before {
   padding-right: 0.6em;    
 
   /* mqh */
-  @media (min-width: 601px) and (max-width: 992px) {
+  @media (max-width: 992px) {
     line-height: 0.2em;
   }
 }
@@ -161,6 +188,10 @@ li ol > li:before {
   @media (min-width: 601px) and (max-width: 992px) {
     margin-bottom: 5px;
   }
+
+  @media (max-width: 600px) {
+    margin-bottom: 2px;
+  }
 }
 
 .parallax-container {
@@ -176,6 +207,10 @@ li ol > li:before {
 
   @media (min-width: 601px) and (max-width: 992px) {
     height: 450px !important;
+  }
+
+  @media (max-width: 600px) {
+    height: 500px !important;
   }
 }
 
@@ -203,7 +238,8 @@ li ol > li:before {
 
     @media (max-width: 600px) {
       width: 160px;
-      margin-top: 0.2 * $spaceFactor;
+      margin-top: 1.33 * $spaceFactor;
+      margin-left: 0.66 * $spaceFactor;
     }
   }
 }
@@ -212,6 +248,10 @@ li ol > li:before {
   width: 100%;
   height: 42px;
   margin-bottom: 2 * $spaceFactor;
+
+  @media (max-width: 600px) {
+    margin-bottom: $spaceFactor;
+  }
 }
 
 .page-navbar-2 {
@@ -247,6 +287,10 @@ li ol > li:before {
       @media (min-width: 601px) and (max-width: 992px) {
         width: 140px;
       }
+
+      @media (max-width: 600px) {
+        width: 140px;
+      }
     }
   }
 
@@ -271,6 +315,10 @@ li ol > li:before {
         width: 529px + (2 * $spaceFactor);
       }
 
+      @media (max-width: 600px) {
+        width: 300px + (1.333333 * $spaceFactor);
+      }
+
       .logo-2 {
         margin-right: .66 * $spaceFactor;
 
@@ -285,6 +333,10 @@ li ol > li:before {
         @media (min-width: 601px) and (max-width: 992px) {
           margin-top: .8 * $spaceFactor;
         }
+
+        @media (max-width: 600px) {
+          margin-top: .4 * $spaceFactor;
+        }
       }
     }
   }
@@ -292,9 +344,23 @@ li ol > li:before {
 
 // Presentation Styles
 .presentation {
+  /*position: absolute;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  */
   overflow: hidden !important;
   font-family: 'Open Sans', sans-serif;
   color: #444;
+
+  /*
+  @media (min-width: 993px) {
+    @include custom-scrollbar-mixin;
+  }
+  */
 
   & > .row {
     margin-bottom: 0;
@@ -315,6 +381,10 @@ li ol > li:before {
       width: 529px + (2 * $spaceFactor);
     }
 
+    @media (max-width: 600px) {
+      width: 300px + (1.333333 * $spaceFactor);
+    }
+
     & > .slide-content {
 
       /* mqh */
@@ -328,6 +398,10 @@ li ol > li:before {
 
       @media (min-width: 601px) and (max-width: 992px) {
         padding: (3 * $spaceFactor) (1 * $spaceFactor);
+      }
+
+      @media (max-width: 600px) {
+        padding: (2 * $spaceFactor) (1.333333 * $spaceFactor);
       }
 
       .title {
@@ -347,11 +421,19 @@ li ol > li:before {
           margin-top: 0.4 * $spaceFactor;
           margin-bottom: 1 * $spaceFactor;
         }
+
+        @media (max-width: 600px) {
+          margin-top: 1.33 * $spaceFactor;
+          margin-bottom: 1.33 * $spaceFactor;
+        }
       }
     }
   }
 
   & > .slide-title {
+    /*
+    height: calc(100%);
+    */
     color: white;
     text-shadow: 5px 5px 12px rgba(25, 25, 25, 0.8);
     /*background-image: url('../img/block-2-blur-3.png');
@@ -377,6 +459,11 @@ li ol > li:before {
         margin-bottom: 1.33 * $spaceFactor !important;
       }
 
+      @media (max-width: 600px) {
+        margin-top: 1 * $spaceFactor !important;
+        margin-bottom: 1.33 * $spaceFactor !important;
+      }
+
       span {
         display: block;
       }
@@ -398,6 +485,11 @@ li ol > li:before {
       @media (min-width: 601px) and (max-width: 992px) {
         margin-top: 0.4 * $spaceFactor;
         font-size: 24px;
+      }
+
+      @media (max-width: 600px) {
+        margin-top: 0.33 * $spaceFactor;
+        font-size: 28px;
       }
     }
   }
@@ -429,6 +521,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -436,6 +533,22 @@ li ol > li:before {
     background-color: $etiNewColor2;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
+
+    @media (min-width: 1201px) {
+      border-top: 20px solid #1E1E1E;
+    }
+
+    @media (min-width: 993px) and (max-width: 1200px) {
+      border-top: 18px solid #1E1E1E;
+    }
+
+    @media (min-width: 601px) and (max-width: 992px) {
+      border-top: 16px solid #1E1E1E;
+    }
+
+    @media (max-width: 600px) {
+      border-top: 14px solid #1E1E1E;
+    }
 
     li {
       font-weight: 400;
@@ -468,6 +581,11 @@ li ol > li:before {
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
+        font-size: 13px;
+        line-height: 26px;
+      }
+
+      @media (max-width: 600px) {
         font-size: 13px;
         line-height: 26px;
       }
@@ -510,6 +628,15 @@ li ol > li:before {
           margin-top: 0.33 * $spaceFactor;
           margin-bottom: 1.4 * $spaceFactor;
         }
+
+        @media (max-width: 600px) {
+          padding-left: 2.66 * $spaceFactor;
+          padding-right: .66 * $spaceFactor;
+          min-height: 55px;
+          font-size: 12px;
+          margin-top: 0.66 * $spaceFactor;
+          margin-bottom: 1.2 * $spaceFactor;
+        }
       }
 
       .chart-canvas-container {
@@ -534,6 +661,13 @@ li ol > li:before {
             height: 261px !important;
           }
         }
+
+        @media (max-width: 600px) {
+          &, & canvas {
+            width: 280px !important; 
+            height: 300px !important;
+          }
+        }
       }
     }
     
@@ -551,6 +685,11 @@ li ol > li:before {
       }
 
       @media (min-width: 601px) and (max-width: 992px) {
+        margin-top: 0.66 * $spaceFactor !important;
+        margin-bottom: 0.66 * $spaceFactor !important;
+      }
+
+      @media (max-width: 600px) {
         margin-top: 0.66 * $spaceFactor !important;
         margin-bottom: 0.66 * $spaceFactor !important;
       }
@@ -573,6 +712,11 @@ li ol > li:before {
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 13px;
         line-height: 26px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
       }
     }
   }
@@ -606,6 +750,12 @@ li ol > li:before {
         margin-top: 0.4 * $spaceFactor !important;
         margin-bottom: 0.4 * $spaceFactor !important;
       }
+
+      @media (max-width: 600px) {
+        line-height: 32px;
+        margin-top: 0.4 * $spaceFactor !important;
+        margin-bottom: 0.4 * $spaceFactor !important;
+      }
     }
 
     p {
@@ -626,6 +776,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }
     }
 
     .chart-container {
@@ -644,7 +799,7 @@ li ol > li:before {
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
-          margin-top: 4.8 * $spaceFactor;
+          margin-top: 5.33 * $spaceFactor;
           
           &, & canvas {
             width: 495px !important;
@@ -658,6 +813,15 @@ li ol > li:before {
           &, & canvas {
             width: 529px !important;
             height: 264px !important;
+          }
+        }
+
+        @media (max-width: 600px) {
+          margin-top: 0.8 * $spaceFactor;
+
+          &, & canvas {
+            width: 280px !important;
+            height: 294px !important;
           }
         }
       }
@@ -689,6 +853,12 @@ li ol > li:before {
         margin-top: 0.4 * $spaceFactor !important;
         margin-bottom: 0.4 * $spaceFactor !important;
       }
+
+      @media (max-width: 600px) {
+        line-height: 32px;
+        margin-top: 0.4 * $spaceFactor !important;
+        margin-bottom: 0.4 * $spaceFactor !important;
+      }
     }
 
     p {
@@ -708,6 +878,11 @@ li ol > li:before {
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 13px;
         line-height: 26px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
       }
     }
 
@@ -744,6 +919,15 @@ li ol > li:before {
             height: 264px !important;
           }
         }
+
+        @media (max-width: 600px) {
+          margin-top: 0.8 * $spaceFactor;
+
+          &, & canvas {
+            width: 280px !important;
+            height: 294px !important;
+          }
+        }
       }
     }
   }
@@ -776,6 +960,11 @@ li ol > li:before {
       @media (min-width: 601px) and (max-width: 992px) {
         font-size: 13px;
         line-height: 26px;
+      }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
       }
     }
 
@@ -812,6 +1001,16 @@ li ol > li:before {
             height: 264px !important;
           }
         }
+
+        @media (max-width: 600px) {
+          margin-top: 0.8 * $spaceFactor;
+          margin-bottom: .2 * $spaceFactor;
+
+          &, & canvas {
+            width: 280px !important;
+            height: 294px !important;
+          }
+        }
       }
     }
   }
@@ -842,6 +1041,12 @@ li ol > li:before {
         margin-top: 0.4 * $spaceFactor !important;
         margin-bottom: 0.4 * $spaceFactor !important;
       }
+
+      @media (max-width: 600px) {
+        line-height: 32px;
+        margin-top: 0.4 * $spaceFactor !important;
+        margin-bottom: 0.4 * $spaceFactor !important;
+      }
     }
 
     p {
@@ -862,10 +1067,19 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }
     }
 
     .first-row {
       margin-bottom: 1.3 * $spaceFactor;
+
+      @media (max-width: 600px) {
+        margin-bottom: 0.8 * $spaceFactor;
+      }
     }
 
     .chart-group {
@@ -885,6 +1099,13 @@ li ol > li:before {
             font-size: 12px;
             line-height: 24px;
             margin-bottom: 0;
+          }
+
+          @media (max-width: 600px) {
+            min-height: 24px;
+            font-size: 12px;
+            line-height: 24px;
+            margin-bottom: 0.66 * $spaceFactor;
           }
         }
 
@@ -913,6 +1134,13 @@ li ol > li:before {
             }
           }
 
+          @media (max-width: 600px) {
+            &, & canvas {
+              width: 280px !important;
+              height: 140px !important;
+            }
+          }
+
           .chart-percentage {
             position: absolute;
             font-family: 'Ubuntu', sans-serif;
@@ -935,6 +1163,12 @@ li ol > li:before {
               margin-top: 55px;
               margin-left: 28px;
             }
+
+            @media (max-width: 600px) { 
+              font-size: 22px;    
+              margin-top: 56px;
+              margin-left: 111px;
+            }
           }
         }
       }
@@ -945,6 +1179,12 @@ li ol > li:before {
     background-color: $etiNewColor8;
     //ackground: linear-gradient(to right, #34495e, #1e2a36);
     color: white;
+
+    .first-paragraph {
+      @media (max-width: 600px) {
+        margin-top: 2.33 * $spaceFactor;
+      }
+    }
 
     p {
       font-weight: 400;
@@ -964,6 +1204,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }
     }
 
     .text-container {
@@ -973,11 +1218,19 @@ li ol > li:before {
       @media (min-width: 601px) and (max-width: 992px) {
         padding-left: 0;
       }
+      @media (max-width: 600px) {
+        padding-left: 0.66 * $spaceFactor;
+      }
     }
 
     .chart-container {
       padding-right: 2 * $spaceFactor;
       text-align: center;
+
+      /* mqh */
+      @media (max-width: 600px) {
+        padding-right: 0.66 * $spaceFactor;
+      }
 
       .chart-title {
         text-align: left;
@@ -1002,6 +1255,15 @@ li ol > li:before {
           font-size: 15px;
           line-height: 28px;
         }
+
+        @media (max-width: 600px) {
+          margin-top: .66 * $spaceFactor;
+          margin-left: 0;
+          margin-bottom: 1.4 * $spaceFactor;
+          text-align: center;
+          font-size: 14px;
+          line-height: 24px;
+        }
       }
 
       .chart-legend {
@@ -1018,6 +1280,10 @@ li ol > li:before {
 
         @media (min-width: 601px) and (max-width: 992px) {
           margin-top: .33 * $spaceFactor;
+        }
+
+        @media (max-width: 600px) { 
+          margin-top: 0.66 * $spaceFactor;
         }
 
         .chart-label-container {
@@ -1073,6 +1339,10 @@ li ol > li:before {
             @media (min-width: 601px) and (max-width: 992px) {
               font-size: 12px;
             }
+
+            @media (max-width: 600px) {
+              font-size: 12px;
+            }
           }
         }
       }
@@ -1106,6 +1376,14 @@ li ol > li:before {
             height: 200px !important;
           }
         }
+
+        @media (max-width: 600px) {
+          
+          &, & canvas {
+            width: 261px !important;
+            height: 150px !important;
+          }
+        }
       }
     }
   }
@@ -1133,6 +1411,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }
     }
 
     .text-container {
@@ -1142,6 +1425,11 @@ li ol > li:before {
     .chart-container {
       padding-left: 2 * $spaceFactor;
       text-align: center;
+
+      /* mqh */
+      @media (max-width: 600px) {
+        padding-left: 0.66 * $spaceFactor;
+      }
 
       .chart-title {
         text-align: left;
@@ -1163,6 +1451,15 @@ li ol > li:before {
           font-size: 15px;
           line-height: 28px;
         }
+
+        @media (max-width: 600px) {
+          margin-top: .66 * $spaceFactor;
+          margin-left: 0;
+          margin-bottom: 1.4 * $spaceFactor;
+          text-align: center;
+          font-size: 14px;
+          line-height: 24px;
+        }
       }
 
       .chart-legend {
@@ -1181,7 +1478,15 @@ li ol > li:before {
           margin-top: 0.8 * $spaceFactor;
         }
 
+        @media (max-width: 600px) { 
+          margin-top: 1.66 * $spaceFactor;
+        }
+
         .chart-label-container {
+          /* mqh */
+          @media (max-width: 600px) {
+            min-height: 36px;
+          }
 
           .chart-label-box,
           .chart-label {
@@ -1192,6 +1497,11 @@ li ol > li:before {
           .chart-label-box {
             width: 40px;
             height: 15px;
+
+            /* mqh */
+            @media (max-width: 600px) {
+              margin-right: 5px;
+            }
 
             &.box-1 {
               background-color: rgba(255, 255, 255, 0.65);
@@ -1234,6 +1544,11 @@ li ol > li:before {
             @media (min-width: 601px) and (max-width: 992px) {
               font-size: 12px;
             }
+
+            @media (max-width: 600px) {
+              line-height: 24px;
+              font-size: 12px;
+            }
           }
         }
       }
@@ -1267,6 +1582,14 @@ li ol > li:before {
             height: 200px !important;
           }
         }
+
+        @media (max-width: 600px) {
+
+          &, & canvas {
+            width: 281px !important;
+            height: 150px !important;
+          }
+        }
       }
     }
   }
@@ -1294,6 +1617,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }
     }
 
     .chart-container {
@@ -1305,6 +1633,10 @@ li ol > li:before {
 
       @media (min-width: 993px) and (max-width: 1200px) {
         margin-bottom: 3 * $spaceFactor;
+      }
+
+      @media (max-width: 600px) {
+        margin-bottom: 2 * $spaceFactor;
       }
 
       .chart-title {
@@ -1330,10 +1662,16 @@ li ol > li:before {
           font-size: 15px;
           line-height: 25px;
         }
+
+        @media (max-width: 600px) {
+          font-size: 14px;
+          line-height: 24px;
+        }
       }
 
       .chart-canvas-overflow-auto {
-        @media (min-width: 601px) and (max-width: 992px) {
+        @media (max-width: 992px) {
+          @include custom-scrollbar-mixin;
           width: 100%;
           overflow: auto;
           padding-top: $spaceFactor;
@@ -1367,6 +1705,14 @@ li ol > li:before {
             height: 320px !important;
           }
         }
+
+        @media (max-width: 600px) {
+
+          &, & canvas {
+            width: 760px !important;
+            height: 220px !important;
+          }
+        }
       }
     }
   }
@@ -1394,6 +1740,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }    
     }
 
     .chart-container {
@@ -1421,6 +1772,13 @@ li ol > li:before {
           margin-bottom: 1.33 * $spaceFactor;
           font-size: 14px;
         }
+
+        @media (max-width: 600px) {
+          margin-top: 1.2 * $spaceFactor;
+          margin-bottom: 1.33 * $spaceFactor;
+          font-size: 14px;
+          line-height: 24px;
+        }
       }
 
      .chart-canvas-container {
@@ -1447,6 +1805,13 @@ li ol > li:before {
             height: 264px !important;
           }
         }
+        
+        @media (max-width: 600px) {
+          &, & canvas {
+            width: 280px !important;
+            height: 280px !important;
+          }
+        }
       }
     }
   }
@@ -1464,8 +1829,10 @@ li ol > li:before {
         padding-bottom: 7 * $spaceFactor;
       }
 
-      @media (min-width: 601px) and (max-width: 992px) {
+      @media (max-width: 600px) {
 
+        padding-top: 2 * $spaceFactor;
+        padding-bottom: 2 * $spaceFactor;
       }
     }
 
@@ -1488,6 +1855,11 @@ li ol > li:before {
         margin-top: .2 * $spaceFactor !important;
         margin-bottom: .4 * $spaceFactor !important;
       }
+
+      @media (max-width: 600px) {
+        margin-top: 1 * $spaceFactor !important;
+        margin-bottom: .4 * $spaceFactor !important;
+      }
     }
 
     p {
@@ -1508,6 +1880,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }  
 
       a {
         text-decoration: underline;
@@ -1534,6 +1911,14 @@ li ol > li:before {
           margin: auto;
           width: 486px !important;
           height: 303px !important;
+        }
+
+        @media (max-width: 600px) {
+          display: block;
+          margin: auto;
+          margin-top: .66 * $spaceFactor;
+          width: 280px !important;
+          height: 175px !important;
         }
       }
     }
@@ -1563,6 +1948,12 @@ li ol > li:before {
         font-size: 24px;
         line-height: 24px;
       }
+
+      @media (max-width: 600px) { 
+        margin-bottom: 0.66 * $spaceFactor !important;
+        font-size: 22px;
+        line-height: 24px;
+      }
     }
 
     p {
@@ -1583,6 +1974,11 @@ li ol > li:before {
         font-size: 13px;
         line-height: 26px;
       }
+
+      @media (max-width: 600px) {
+        font-size: 13px;
+        line-height: 24px;
+      }
     }
 
     .row-text {
@@ -1600,6 +1996,10 @@ li ol > li:before {
         margin-bottom: .8 * $spaceFactor;
       }
 
+      @media (max-width: 600px) {
+        margin-bottom: .5 * $spaceFactor;
+      }
+
       .link-site {
         font-size: 16px;
         text-decoration: underline;
@@ -1611,7 +2011,12 @@ li ol > li:before {
         }
 
         @media (min-width: 601px) and (max-width: 992px) {
-          font-size: 13px;
+          font-size: 14px;
+          line-height: 26px;
+        }
+
+        @media (max-width: 600px) {
+          font-size: 14px;
           line-height: 26px;
         }
       }
@@ -1636,7 +2041,12 @@ li ol > li:before {
             }
     
             @media (min-width: 601px) and (max-width: 992px) {
-              font-size: 13px;
+              font-size: 14px;
+              line-height: 26px;
+            }
+
+            @media (max-width: 600px) {
+              font-size: 14px;
               line-height: 26px;
             }
           }

@@ -312,7 +312,7 @@ $(document).ready(() => {
                 ticks: {
                   fontSize: (window.typeOfDevice == 1 ? 14 :
                               (window.typeOfDevice == 2 ? 12 :
-                                window.typeOfDevice == 3 ? 12 : 12)),
+                                window.typeOfDevice == 3 ? 12 : 10)),
                   fontColor: 'rgba(255, 255, 255, 0.9)',
                   autoSkip: false,
                   maxRotation: 0,
@@ -434,7 +434,7 @@ $(document).ready(() => {
                   fontColor: 'rgba(255, 255, 255, 0.95)',
                   fontSize: (window.typeOfDevice == 1 ? 14 :
                               (window.typeOfDevice == 2 ? 12 :
-                                window.typeOfDevice == 3 ? 12 : 12)),
+                                window.typeOfDevice == 3 ? 12 : 10)),
                   autoSkip: false
                 }
               }],
@@ -547,6 +547,7 @@ $(document).ready(() => {
           },
           options: {
             responsive: true,
+            maintainAspectRatio: false,
             scales: {
               yAxes: [{
                 position: 'right',
@@ -561,7 +562,7 @@ $(document).ready(() => {
                   fontColor: 'rgba(255, 255, 255, 0.65)',
                   fontSize: (window.typeOfDevice == 1 ? 14 :
                               (window.typeOfDevice == 2 ? 12 :
-                                window.typeOfDevice == 3 ? 12 : 12)),
+                                window.typeOfDevice == 3 ? 12 : 11)),
                   autoSkip: false,
                   min: 300,
                   max: 600,
@@ -577,14 +578,14 @@ $(document).ready(() => {
                   fontColor: 'rgba(255, 255, 255, 0.95)',
                   fontSize: (window.typeOfDevice == 1 ? 14 :
                               (window.typeOfDevice == 2 ? 12 :
-                                window.typeOfDevice == 3 ? 12 : 12)),
+                                window.typeOfDevice == 3 ? 12 : 11)),
                   autoSkip: false,
                   maxRotation: (window.typeOfDevice == 1 ? 45 :
                                   (window.typeOfDevice == 2 ? 45 :
-                                    window.typeOfDevice == 3 ? 45 : 60)),
+                                    window.typeOfDevice == 3 ? 45 : 70)),
                   minRotation: (window.typeOfDevice == 1 ? 45 :
                                   (window.typeOfDevice == 2 ? 30 :
-                                    window.typeOfDevice == 3 ? 30 : 60)),
+                                    window.typeOfDevice == 3 ? 30 : 70)),
                 }
               }]
             },
@@ -1148,7 +1149,7 @@ $(document).ready(() => {
                   fontColor: 'rgba(255, 255, 255, 0.95)',
                   fontSize: (window.typeOfDevice == 1 ? 14 :
                               (window.typeOfDevice == 2 ? 14 :
-                                window.typeOfDevice == 3 ? 12 : 12)),
+                                window.typeOfDevice == 3 ? 12 : 10)),
                   autoSkip: false
                 }
               }],

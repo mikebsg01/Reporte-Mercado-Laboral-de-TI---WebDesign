@@ -21,11 +21,11 @@
     <div class="container">
       <div class="slide-content col s12">
         <div class="row">
-          <div class="col s5 logo-1-container">
+          <div class="col s12 m5 logo-1-container">
             <img class="logo-1" src="assets/img/logo_transparent_1.png">
           </div>
         </div>
-        <div class="col l7 xl6">
+        <div class="col s12 l7 xl6">
           <h1 class="title"><span>Reporte del</span><span>Mercado Laboral</span><span>de TI 2017</span></h1>
           <div class="col s12 center-align">
               <i class="p-arrow-down fas fa-chevron-down"></i>
@@ -46,7 +46,7 @@
             </div>
           </div>
         </div>
-        <div class="col m8 l6">
+        <div class="col s12 m8 l6">
           <h2 class="title">Introducción</h2>
           <p>La revolución digital de información crece de manera acelerada, 
              todo lo que conocemos se ha transformado debido a la implementación 
@@ -78,7 +78,7 @@
   <div class="slide slide-table-of-contents row">
     <div class="container">
       <div class="slide-content col s12">
-        <div class="col s12 l8 xl6">
+        <div class="col s12 l8 xl7">
           <h2 class="title left-align">Contenido del informe</h2>
           <ol>
             <li>
@@ -130,13 +130,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="col m6 chart-container">
+          <div class="col s12 m6 chart-container">
             <p class="chart-title">Estados con más ofertas de empleo en 2017</p>
             <div class="chart-canvas-container">
               <canvas id="chart-points-scored-1"></canvas>
             </div>
           </div>
-          <div class="col m6 chart-container">
+          <div class="col s12 m6 chart-container">
             <p class="chart-title">Estados con más crecimiento de ofertas de empleo en 2017 comparado con el año anterior</p>
             <div class="chart-canvas-container">
               <canvas id="chart-states-with-the-highest-growth"></canvas>
@@ -210,7 +210,7 @@
           </div>
           <div class="col s12 l10 offset-l1 chart-container">
             <div class="chart-canvas-container">
-              <canvas id="chart-job-offers-per-month-in-2017"></canvas>
+              <canvas id="chart-job-offers-per-month-in-2017" width="200" height="210"></canvas>
             </div>
           </div>
         </div>
@@ -235,28 +235,28 @@
           </div>
         </div>
         <div class="chart-group row">
-          <div class="chart-container col s3">
+          <div class="chart-container col s12 m3">
             <p class="chart-title">Portales de reclutamiento</p>
             <div class="chart-canvas-container">
               <p class="chart-percentage">90.3%</p>
               <canvas id="chart-job-portals"></canvas>
             </div>
           </div>
-          <div class="chart-container col s3">
+          <div class="chart-container col s12 m3">
             <p class="chart-title">LinkedIn</p>
             <div class="chart-canvas-container">
               <p class="chart-percentage">79.8%</p>
               <canvas id="chart-linkedin"></canvas>
             </div>
           </div>
-          <div class="chart-container col s3">
+          <div class="chart-container col s12 m3">
             <p class="chart-title">Recomendaciones</p>
             <div class="chart-canvas-container">
               <p class="chart-percentage">43.6%</p>
               <canvas id="chart-recomendations"></canvas>
             </div>
           </div>
-          <div class="chart-container col s3">
+          <div class="chart-container col s12 m3">
             <p class="chart-title">Buscadores en Internet</p>
             <div class="chart-canvas-container">
               <p class="chart-percentage">37.6%</p>
@@ -333,20 +333,28 @@
             </div>
             <div class="chart-legend">
               <div class="chart-label-container">
-                <div class="chart-label-box box-1"></div>
-                <p class="chart-label">Busqué un nuevo empleo</p>
+                <div class="chart-label">
+                  <div class="chart-label-box box-1"></div>
+                  Busqué un nuevo empleo
+                </div>
               </div>
               <div class="chart-label-container">
-                <div class="chart-label-box box-2"></div>
-                <p class="chart-label">Obtuve un nuevo empleo</p>
+                <div class="chart-label">
+                  <div class="chart-label-box box-2"></div>
+                  Obtuve un nuevo empleo
+                </div>
               </div>
               <div class="chart-label-container">
-                <div class="chart-label-box box-3"></div>
-                <p class="chart-label">No busco, pero monitoreo ofertas de trabajo</p>
+                <div class="chart-label">
+                  <div class="chart-label-box box-3"></div>
+                  No busco, pero monitoreo ofertas de trabajo
+                </div>
               </div>
               <div class="chart-label-container">
-                <div class="chart-label-box box-4"></div>
-                <p class="chart-label">No estoy interesado en buscar o cambiar de trabajo</p>
+                <div class="chart-label">
+                  <div class="chart-label-box box-4"></div>
+                  No estoy interesado en buscar o cambiar de trabajo
+                </div>
               </div>
             </div>
           </div>
@@ -406,7 +414,7 @@
             <div class="chart-container">
               <p class="chart-title">¿Cuáles son las principales razones por las que renunciaste a tu empleo anterior?</p>
               <div class="chart-canvas-container">
-                <canvas id="chart-main-reasons-for-renouncing"></canvas>
+                <canvas id="chart-main-reasons-for-renouncing" width="300" height="300"></canvas>
               </div>
             </div>
           </div>
