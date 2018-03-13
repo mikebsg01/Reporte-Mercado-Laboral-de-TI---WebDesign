@@ -16,6 +16,7 @@ gulp.task('minifyLibrariesJS', () => {
   return gulp
     .src([
       './assets/js/jquery-3.2.1.min.js',
+      './assets/js/jquery.anchor.js',
       './assets/js/materialize.min.js',
       './assets/js/scrollspy.min.js',
       './assets/js/Chart.min.js',
@@ -56,6 +57,7 @@ gulp.task('watch', () => {
 
   gulp.watch([
     './assets/js/jquery-3.2.1.min.js',
+    './assets/js/jquery.anchor.js',
     './assets/js/materialize.min.js',
     './assets/js/scrollspy.min.js',
     './assets/js/Chart.min.js',

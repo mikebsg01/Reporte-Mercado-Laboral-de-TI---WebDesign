@@ -15,6 +15,7 @@ $(document).ready(() => {
   }
 
   $('.parallax').parallax();
+  $('a.anchorLink').anchorAnimate();
 
   /*
   $('.first-slide').on('scrollSpy:exit', function() {
