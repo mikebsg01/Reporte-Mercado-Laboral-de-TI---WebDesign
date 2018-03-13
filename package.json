@@ -1,0 +1,35 @@
+{
+  "name": "reporte-mercado-laboral-ti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.babel.js",
+  "dependencies": {
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikebsg01/Reporte-Mercado-Laboral-de-TI---WebDesign.git"
+  },
+  "keywords": [
+    "webdesign",
+    "ux",
+    "ui"
+  ],
+  "author": "Michael Serrato",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikebsg01/Reporte-Mercado-Laboral-de-TI---WebDesign/issues"
+  },
+  "homepage": "https://github.com/mikebsg01/Reporte-Mercado-Laboral-de-TI---WebDesign#readme"
+}
