@@ -1262,7 +1262,7 @@ $(document).ready(() => {
   var chartObjects = {};
 
   var makeCharts = (forced) => {
-    let scrollTopPosition = $(this).scrollTop(),
+    var scrollTopPosition = $(window).scrollTop(),
         firstDivPosition = $('.page-navbar-2-container').offset().top;
     
     if (scrollTopPosition >= firstDivPosition) {

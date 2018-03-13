@@ -1503,11 +1503,7 @@ li ol > li:before {
           .chart-label-box {
             width: 40px;
             height: 15px;
-
-            /* mqh */
-            @media (max-width: 600px) {
-              margin-right: 5px;
-            }
+            margin-right: 5px;
 
             &.box-1 {
               background-color: rgba(255, 255, 255, 0.65);
