@@ -556,6 +556,16 @@ li ol > li:before {
       border-top: 14px solid #1E1E1E;
     }
 
+    a {
+      color: white;
+
+      &:hover,
+      &:focus,
+      &:active {
+        text-decoration: underline;
+      }
+    }
+
     li {
       font-weight: 400;
 
