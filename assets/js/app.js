@@ -1361,17 +1361,17 @@ $(document).ready(() => {
     ChartPlaceOfResidence.draw(data, options);
   }
 
-  $(window).resize(() => {
+  $(window).resize(function() {
     if (this.resizeTO) {
       clearTimeout(this.resizeTO);
     }
 
-    this.resizeTO = setTimeout(() => {
+    this.resizeTO = setTimeout(function(){
         $(this).trigger('resizeEnd');
     }, 500);
   });
 
-  $(window).on('resizeEnd', () => {
+  $(window).on('resizeEnd', function() {
     checkTypeOfDevice();
     google.charts.setOnLoadCallback(drawChartPlaceOfResidence);
     accommodateSpecialDiv1();
