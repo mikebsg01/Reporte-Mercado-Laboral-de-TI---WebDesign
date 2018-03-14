@@ -355,10 +355,21 @@ li ol > li:before {
 .pagination {
   position: fixed;
   top: 50%;
-  left: 20px;
+  left: 12px;
   margin-top: -238.5px;
   min-width: 32px;
   z-index: 999999;
+
+  @media (max-width: 747px) {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+  }
+
+  /* mqh */
+  @media (min-width: 748px) {
+    left: 10px;
+  }
 
   ul {
     margin-top: .2 * $spaceFactor;
@@ -382,6 +393,13 @@ li ol > li:before {
     width: 30px;
     height: 3px;
     background-color: rgba(255, 255, 255, 0.4);
+
+    /* mqh */
+    @media (min-width: 748px) and (max-width: 1200px) {
+      width: 28px;
+      margin-left: 3px;
+      margin-right: 6px;
+    }
   }
 
   ul.links {
@@ -390,15 +408,34 @@ li ol > li:before {
       max-width: 38px;
       overflow: hidden;
 
+      /* mqh */
+      @media (min-width: 748px) and (max-width: 1200px) {
+        max-width: 34px;
+      }
+
       a {
         border-radius: 3px;
-        padding-top: .2 * $spaceFactor;
-        padding-bottom: .2 * $spaceFactor;
+        padding-top: 3px;
+        padding-bottom: 3px;
+
+        /* mqh */
+        @media (min-width: 748px) and (max-width: 1200px) {
+          padding-top: 2px;
+          padding-bottom: 2px;
+        }
 
         i.icon {
+          vertical-align: middle;
           font-size: 12px;
           margin-left: 3px;
           margin-right: 9px;
+
+          /* mqh */
+          @media (min-width: 748px) and (max-width: 1200px) {
+            font-size: 8px;
+            margin-left: 3px;
+            margin-right: 10px;
+          }
         }
       }
 
@@ -425,6 +462,11 @@ li ol > li:before {
 
         i.icon {
           font-size: 18px;
+
+          /* mqh */
+          @media (min-width: 748px) and (max-width: 1200px) {
+            font-size: 16px;
+          }
         }
 
         &:hover,
