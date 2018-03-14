@@ -8,7 +8,9 @@ gulp.task('minifyCSS', () => {
   return gulp
     .src('./assets/css/sass-project/main.scss')
     .pipe(concat('style.css'))
-    .pipe(sass({outputStyle: 'compressed'}))
+    .pipe(sass({outputStyle: 'compressed'}).on('error', (e) => {
+      console.log(e);
+    }))
     .pipe(gulp.dest('./assets/css'))
 });
 

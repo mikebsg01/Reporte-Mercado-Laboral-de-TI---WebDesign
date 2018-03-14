@@ -35,6 +35,14 @@ $etiNewColor13: #2d2d2d;
 
 // General Styles
 
+@mixin all-transition {
+  -webkit-transition: all .2s;
+  -moz-transition: all .2s;
+  -ms-transition: all .2s;
+  -o-transition: all .2s;
+  transition: all .2s;
+}
+
 @mixin custom-scrollbar-mixin {
   &::-webkit-scrollbar-track{
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -338,6 +346,93 @@ li ol > li:before {
 
         @media (max-width: 600px) {
           margin-top: .4 * $spaceFactor;
+        }
+      }
+    }
+  }
+}
+
+.pagination {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  margin-top: -223.5px;
+  min-width: 32px;
+  z-index: 999999;
+
+  ul {
+    margin-top: .2 * $spaceFactor;
+    margin-bottom: .2 * $spaceFactor;
+    
+    li {
+      display: block;
+      text-align: left;
+
+      a {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 14px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .divider {
+    display: block;
+    margin: 9px 4px;
+    width: 30px;
+    height: 3px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  ul.links {
+
+    li {
+      max-width: 38px;
+      overflow: hidden;
+
+      a {
+        border-radius: 3px;
+        padding-top: .2 * $spaceFactor;
+        padding-bottom: .2 * $spaceFactor;
+
+        i.icon {
+          font-size: 12px;
+          margin-left: 3px;
+          margin-right: 9px;
+        }
+      }
+
+      &:hover,
+      &:active,
+      &:focus {
+        max-width: none;
+        overflow: initial;
+
+        & > a {
+          color: rgba(255, 255, 255, 1);
+          background-color: rgba(0, 0, 0, 0.84);
+          box-shadow: 1px 5px 12px rgba(25,25,25,0.4);
+        }
+      }
+    }
+  }
+
+  ul.social-networks {
+    
+    li {
+      
+      a {
+
+        i.icon {
+          font-size: 18px;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+          @include all-transition;
+          color: rgba(255, 255, 255, 1);
+          text-shadow: 0 0 16px rgba(255, 255, 255, 0.8);
         }
       }
     }
