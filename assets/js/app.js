@@ -17,6 +17,17 @@ $(document).ready(() => {
   $('.parallax').parallax();
   $('a.anchorLink').anchorAnimate();
 
+  $('a.link-popup').click(function(event) {
+    event.preventDefault();
+    var $element = $(this);
+
+    window.open(
+      $element.attr('href'),
+      $element.attr('title'),
+      'width=320,height=480,resizable,scrollbars,status'
+    );
+  });
+
   /*
   $('.first-slide').on('scrollSpy:exit', function() {
     $('.page-navbar-2').addClass('fixed-top');
