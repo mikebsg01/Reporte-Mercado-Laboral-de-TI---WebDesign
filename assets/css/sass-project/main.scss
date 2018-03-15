@@ -566,6 +566,20 @@ li ol > li:before {
           margin-bottom: 1.33 * $spaceFactor;
         }
       }
+
+      a.link-popup {
+        color: rgba(225, 225, 225, 0.8);
+        padding-left: .4 * $spaceFactor;
+        padding-right: .4 * $spaceFactor;
+
+        &:hover,
+        &:active,
+        &:focus {
+          @include all-transition;
+          color: rgba(255, 255, 255, 1);
+          text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+        }
+      }
     }
   }
 
