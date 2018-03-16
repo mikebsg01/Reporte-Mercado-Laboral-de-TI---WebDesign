@@ -24,7 +24,7 @@ $(document).ready(() => {
     window.open(
       $element.attr('href'),
       $element.attr('title'),
-      'width=320,height=480,resizable,scrollbars,status'
+      'width=512,height=512,resizable,scrollbars,status'
     );
   });
 

@@ -569,8 +569,18 @@ li ol > li:before {
 
       a.link-popup {
         color: rgba(225, 225, 225, 0.8);
-        padding-left: .4 * $spaceFactor;
-        padding-right: .4 * $spaceFactor;
+        padding-left: .66 * $spaceFactor;
+        padding-right: .66 * $spaceFactor;
+
+        @media (max-width: 992px) {
+          font-size: 13px;
+          padding-left: .4 * $spaceFactor;
+          padding-right: .4 * $spaceFactor;
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
 
         &:hover,
         &:active,
@@ -578,6 +588,10 @@ li ol > li:before {
           @include all-transition;
           color: rgba(255, 255, 255, 1);
           text-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+        }
+
+        i.icon {
+          margin-right: .2 * $spaceFactor;
         }
       }
     }
@@ -1379,24 +1393,24 @@ li ol > li:before {
     }
 
     .text-container {
-      padding-left: 2 * $spaceFactor;
+      padding-right: 2 * $spaceFactor;
 
       /* mqh */
       @media (min-width: 601px) and (max-width: 992px) {
-        padding-left: 0;
+        padding-right: 0;
       }
       @media (max-width: 600px) {
-        padding-left: 0.66 * $spaceFactor;
+        padding-right: 0.66 * $spaceFactor;
       }
     }
 
     .chart-container {
-      padding-right: 2 * $spaceFactor;
+      padding-left: 2 * $spaceFactor;
       text-align: center;
 
       /* mqh */
       @media (max-width: 600px) {
-        padding-right: 0.66 * $spaceFactor;
+        padding-left: 0.66 * $spaceFactor;
       }
 
       .chart-title {
@@ -1405,12 +1419,12 @@ li ol > li:before {
         font-size: 16px;
         font-weight: bold;
         position: relative;
-        margin-top: 4.5 * $spaceFactor;
-        margin-left: -1.5 * $spaceFactor;
+        margin-top: 2 * $spaceFactor;
         margin-bottom: -1 * $spaceFactor;
 
         /* mqh */
         @media (min-width: 993px) and (max-width: 1200px) {
+          margin-top: 1 * $spaceFactor;
           margin-bottom: -0.2 * $spaceFactor;
         }
 
@@ -1426,7 +1440,7 @@ li ol > li:before {
         @media (max-width: 600px) {
           margin-top: .66 * $spaceFactor;
           margin-left: 0;
-          margin-bottom: 1.4 * $spaceFactor;
+          margin-bottom: .66 * $spaceFactor;
           text-align: center;
           font-size: 14px;
           line-height: 24px;
@@ -1434,7 +1448,7 @@ li ol > li:before {
       }
 
       .chart-legend {
-        text-align: right;
+        text-align: left;
 
         /* mqh */
         @media (min-width: 1201px) {
@@ -1442,7 +1456,7 @@ li ol > li:before {
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
-          margin-top: 3 * $spaceFactor;
+          margin-top: .66 * $spaceFactor;
         }
 
         @media (min-width: 601px) and (max-width: 992px) {
@@ -1487,7 +1501,7 @@ li ol > li:before {
           }
 
           .chart-label {
-            padding-right: 5px;
+            padding-left: 5px;
             font-family: 'Ubuntu', sans-serif;
             font-weight: 400;
             line-height: 18px;
@@ -1519,35 +1533,37 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 2.66 * $spaceFactor;
+          margin-top: 5 * $spaceFactor;
           
           &, & canvas {
-            width: 498px !important;
+            width: 540px !important;
             height: 270px !important;
           }
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
-          margin-top: 3 * $spaceFactor;
+          margin-top: 4.8 * $spaceFactor;
 
           &, & canvas {
-            width: 339px !important;
+            width: 368px !important;
             height: 169px !important;
           }
         }
 
         @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: 1.66 * $spaceFactor;
 
           &, & canvas {
-            width: 200px !important;
+            width: 550px !important;
             height: 200px !important;
           }
         }
 
         @media (max-width: 600px) {
+          margin-top: 1.66 * $spaceFactor;
           
           &, & canvas {
-            width: 261px !important;
+            width: 300px !important;
             height: 150px !important;
           }
         }
@@ -1605,9 +1621,8 @@ li ol > li:before {
         font-size: 16px;
         font-weight: bold;
         position: relative;
-        margin-top: 4.5 * $spaceFactor;
-        margin-left: -1.5 * $spaceFactor;
-        margin-bottom: -2 * $spaceFactor;
+        margin-top: 2 * $spaceFactor;
+        margin-bottom: -1 * $spaceFactor;
 
         /* mqh */
         @media (min-width: 601px) and (max-width: 992px) {
@@ -1622,7 +1637,7 @@ li ol > li:before {
         @media (max-width: 600px) {
           margin-top: .66 * $spaceFactor;
           margin-left: 0;
-          margin-bottom: 1.4 * $spaceFactor;
+          margin-bottom: .66 * $spaceFactor;
           text-align: center;
           font-size: 14px;
           line-height: 24px;
@@ -1638,7 +1653,7 @@ li ol > li:before {
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
-          margin-top: 3 * $spaceFactor;
+          margin-top: 1.33 * $spaceFactor;
         }
 
         @media (min-width: 601px) and (max-width: 992px) {
@@ -1688,7 +1703,6 @@ li ol > li:before {
           }
 
           .chart-label {
-            padding-left: 5px;
             font-family: 'Ubuntu', sans-serif;
             font-weight: 400;
             line-height: 18px;
@@ -1721,35 +1735,37 @@ li ol > li:before {
 
         /* mqh */
         @media (min-width: 1201px) {
-          margin-top: 2.66 * $spaceFactor;
+          margin-top: 5 * $spaceFactor;
 
           &, & canvas {
-            width: 498px !important;
+            width: 540px !important;
             height: 270px !important;
           }
         }
 
         @media (min-width: 993px) and (max-width: 1200px) {
-          margin-top: 5 * $spaceFactor;
+          margin-top: 4.8 * $spaceFactor;
           
           &, & canvas {
-            width: 339px !important;
+            width: 368px !important;
             height: 169px !important;
           }
         }
 
         @media (min-width: 601px) and (max-width: 992px) {
+          margin-top: 1.66 * $spaceFactor;
 
           &, & canvas {
-            width: 200px !important;
+            width: 550px !important;
             height: 200px !important;
           }
         }
 
         @media (max-width: 600px) {
+          margin-top: 1.66 * $spaceFactor;
 
           &, & canvas {
-            width: 281px !important;
+            width: 300px !important;
             height: 150px !important;
           }
         }
