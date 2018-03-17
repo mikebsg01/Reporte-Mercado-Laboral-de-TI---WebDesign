@@ -1354,10 +1354,12 @@ $(document).ready(() => {
       colorAxis: {
         minValue: 1,
         maxValue: 35,
-        colors: ['#AFAFAF', '#B5B5B5']
+        colors: ['rgb(174, 187, 190)', 'rgb(204, 217, 220)']
       },
-      backgroundColor: '#033a43',
-      datalessRegionColor: '#777777',
+      backgroundColor: {
+        fill: 'transparent' 
+      },
+      datalessRegionColor: 'rgb(78, 114, 120)',
       defaultColor: '#f5f5f5',
       magnifyingGlass: {
         enable: true,
