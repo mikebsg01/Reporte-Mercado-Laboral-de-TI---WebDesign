@@ -1272,7 +1272,7 @@ $(document).ready(() => {
 
   var chartObjects = {};
 
-  var makeCharts = (forced) => {
+  var onScroll = (forced) => {
     var scrollTopPosition = $(window).scrollTop(),
         firstDivPosition = $('.page-navbar-2-container').offset().top;
     
@@ -1282,7 +1282,7 @@ $(document).ready(() => {
       $('.page-navbar-2').removeClass('fixed-top');
     }
 
-    for (let chartName in chartElements) {
+    for (const chartName in chartElements) {
       if (forced || isScrolledIntoElement(chartElements[chartName].divName)) {
         if (forced !== true && chartElements[chartName].isOn) {
           continue;
@@ -1298,6 +1298,27 @@ $(document).ready(() => {
         }
       }
     }
+
+    $('.pagination .links .anchorLink').each(function() {
+      var $this = $(this),
+          divId = $this.attr('href');
+
+      if (isScrolledIntoElement(divId)) {
+        if ($this.hasClass('on')) {
+          return true;
+        }
+
+        var $icon = $('i.icon', $this);
+
+        $icon.toggleClass('far fa');
+        $this.addClass('on');
+      } else if ($this.hasClass('on')) {
+        var $icon = $('i.icon', $this);
+
+        $icon.toggleClass('fa far');
+        $this.removeClass('on');
+      }
+    });
   };
 
   var accommodateSpecialDiv1 = () => {
@@ -1315,11 +1336,11 @@ $(document).ready(() => {
   };
 
   checkTypeOfDevice();
-  makeCharts(true);
+  onScroll(true);
   accommodateSpecialDiv1();
 
   $(window).scroll(() => {
-    makeCharts();
+    onScroll();
   });
 
   /* Start 'ChartPlaceOfResidence' */
