@@ -1262,13 +1262,39 @@ $(document).ready(() => {
   };
 
   var isScrolledIntoElement = (elem) => {
-    let scrollTopPos = $(window).scrollTop(),
+    var scrollTopPos = $(window).scrollTop(),
         scrollDownPos = scrollTopPos + $(window).height(),
         elemTopPos = $(elem).offset().top,
         elemDownPos = elemTopPos + $(elem).height();
 
     return elemTopPos <= scrollDownPos && elemDownPos >= scrollTopPos;
   };
+
+  var $linkOfMostVisibleSection = () => {
+    var $window = $(window),
+        windowHeight = $window.height(),
+        scrollTopPos = $window.scrollTop(),
+        scrollDownPos = scrollTopPos + windowHeight,
+        firstAttempt = true,
+        maxVis = 0.0,
+        $mvs = null;
+
+    $('.pagination .links .anchorLink').each(function() {
+      var $link = $(this),
+          $elem = $($link.attr('href')),
+          elemTopPos = $elem.offset().top,
+          elemDownPos = elemTopPos + $elem.height(),
+          vis = Math.min(elemDownPos, scrollDownPos) - Math.max(elemTopPos, scrollTopPos);
+      
+      if ((firstAttempt || vis > maxVis) && vis > (0.55 * windowHeight)) {
+        firstAttempt = false;
+        maxVis = vis;
+        $mvs = $link;
+      }
+    });
+
+    return $mvs;
+  }
 
   var chartObjects = {};
 
@@ -1299,26 +1325,19 @@ $(document).ready(() => {
       }
     }
 
-    $('.pagination .links .anchorLink').each(function() {
-      var $this = $(this),
-          divId = $this.attr('href');
+    var $link = $linkOfMostVisibleSection();
 
-      if (isScrolledIntoElement(divId)) {
-        if ($this.hasClass('on')) {
-          return true;
-        }
+    if ($link === null || ! $link.hasClass('on')) {
+      $('.pagination .links .anchorLink.on').each(function() {
+        $(this).removeClass('on');
+        $('i.icon', this).removeClass('fa').addClass('far');
+      });
 
-        var $icon = $('i.icon', $this);
-
-        $icon.toggleClass('far fa');
-        $this.addClass('on');
-      } else if ($this.hasClass('on')) {
-        var $icon = $('i.icon', $this);
-
-        $icon.toggleClass('fa far');
-        $this.removeClass('on');
+      if ($link !== null) {
+        $link.addClass('on');
+        $('i.icon', $link).removeClass('far').addClass('fa');
       }
-    });
+    }
   };
 
   var accommodateSpecialDiv1 = () => {
